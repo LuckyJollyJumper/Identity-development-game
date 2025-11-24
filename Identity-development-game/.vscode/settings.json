@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "Identity development game.slnx"
+    "dotnet.defaultSolution": "Identity-development-game.slnx"
 }
