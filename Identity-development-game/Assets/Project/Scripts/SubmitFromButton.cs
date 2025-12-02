@@ -3,11 +3,27 @@ using UnityEngine.UI;
 
 public class SubmitFromButton : MonoBehaviour
 {
-    [SerializeField] public InputField inputField;
-    void OnSubmit()
-    {
+    [SerializeField] public TMPro.TMP_InputField inputField;
+    [SerializeField] public GameObject namePanel;
+    [SerializeField] public GameObject stylePanel;
+
+    public void Start(){
+        if (inputField == null){
+            inputField = GetComponent<TMPro.TMP_InputField>();
+        }
+        namePanel.SetActive(true);
+        stylePanel.SetActive(false);
+    }
+    public void OnNameSubmit(){
         string text = inputField.text;
-        Debug.Log("Input Field Text: " + text);
         inputField.interactable = false;
+        namePanel.SetActive(false);
+
+        stylePanel.GetComponentInChildren<TMPro.TMP_Text>().text = "Welkom\n" + text;
+        stylePanel.SetActive(true);
+    }
+
+    public void OnStyleSubmit(){
+        stylePanel.SetActive(false);
     }
 }
