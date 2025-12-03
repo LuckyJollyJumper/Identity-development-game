@@ -9,17 +9,18 @@ public class Player : MonoBehaviour
 {
     [SerializeField] public Transform player;
     [SerializeField] public string playerName;
-    private float exp;
-    private int level;
-    private float coins;
-    
+    [HideInInspector] public PlayerData playerData;
 }
 
 public class PlayerData
 {
-    public int level;
-    public float coins;
     public string playerName;
+    public int level;
+    public int exp;
+    public int coins;
+    public int progress;
+    public string[] inventory;
+    public string[] characterStyle;
 }
 
 
@@ -28,36 +29,22 @@ public class JsonSaveSystem : MonoBehaviour
 {
     private string savePath;
 
-    private void Awake()
-    {
+    private void Awake(){
         savePath = Path.Combine(Application.persistentDataPath, "playerSave.json");
     }
 
-    public void SaveGame()
-    {
-        PlayerData data = new PlayerData()
-        {
-            level = 5,
-            coins = 200,
-            playerName = "Rahul"
-        };
-
-        string json = JsonUtility.ToJson(data, true);
+    public void SavePlayerData(PlayerData player){
+        string json = JsonUtility.ToJson(player, true);
         File.WriteAllText(savePath, json);
         Debug.Log("Game saved to: " + savePath);
     }
 
-    public void LoadGame()
-    {
-        if (File.Exists(savePath))
-        {
+    public void LoadPlayerData(){
+        if (File.Exists(savePath)){
             string json = File.ReadAllText(savePath);
             PlayerData data = JsonUtility.FromJson<PlayerData>(json);
-            Debug.Log($"Loaded: Level {data.level}, Coins {data.coins}, Name {data.playerName}");
+            Debug.Log($"Loaded: Name {data.playerName}");
         }
-        else
-        {
-            Debug.LogWarning("No save file found!");
-        }
+        else{ Debug.LogWarning("No save file found!"); }
     }
 }
