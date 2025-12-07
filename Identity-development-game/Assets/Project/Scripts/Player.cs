@@ -7,9 +7,13 @@ using System.IO;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] public Transform player;
-    [SerializeField] public string playerName;
+    [SerializeField] public Transform transform;
     [HideInInspector] public PlayerData playerData;
+
+    public void Start(){
+        this.transform = this.transform;
+        this.playerData = new();
+    }
 }
 
 public class PlayerData
@@ -39,12 +43,24 @@ public class JsonSaveSystem : MonoBehaviour
         Debug.Log("Game saved to: " + savePath);
     }
 
-    public void LoadPlayerData(){
+    public (bool, PlayerData) LoadPlayerData(){
         if (File.Exists(savePath)){
             string json = File.ReadAllText(savePath);
             PlayerData data = JsonUtility.FromJson<PlayerData>(json);
             Debug.Log($"Loaded: Name {data.playerName}");
+            return (true, data);
         }
-        else{ Debug.LogWarning("No save file found!"); }
+        else{ 
+             Debug.LogWarning("No save file found!"); 
+            return (false, new Player());
+        }
     }
+    public void DeleteSaveData(){
+        if (File.Exists(savePath)){
+            File.Delete(savePath);
+            Debug.Log("Save file deleted.");
+        }
+        else{ Debug.LogWarning("No save file to delete."); }
+    }
+
 }
