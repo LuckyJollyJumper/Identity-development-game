@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ScenesManager : MonoBehaviour{
-    [SerializebleField] public static ScenesManager Instance;
+    [HideInInspector] public static ScenesManager Instance;
 
     public enum scenes{
         MainMenu, // Should check if a player is active and then use the player data and stay or go to the character creator
@@ -13,7 +13,6 @@ public class ScenesManager : MonoBehaviour{
 
     public void Awake(){
         Instance = this;
-        DontDestroyOnLoad(this.gameObject);
     }
 
     public void LoadScene(scenes scene){
