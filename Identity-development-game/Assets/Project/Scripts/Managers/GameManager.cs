@@ -1,6 +1,9 @@
 using UnityEngine;
 //using PL = Assets.Project.Scripts.Player.Player;
 
+/// <summary>
+/// Game manager to handle Startup, Saving/Loading, and overall game state.
+/// </summary>     
 public class GameManager : MonoBehaviour
 {
     [SerializeField] public ScenesManager _scenesManager;
@@ -18,7 +21,8 @@ public class GameManager : MonoBehaviour
         }
         else{
             _playerData = data;
-            // Load player data into the game
+            UIMainMenu uiMainMenu = FindFirstObjectByType<UIMainMenu>();
+            uiMainMenu.LoadPlayerData(data);
         }
 
     }

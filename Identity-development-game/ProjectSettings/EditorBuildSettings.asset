@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Project/Scenes/MainMenu.unity
     guid: 4e467e06f84f2d14eab02c1ef5358271
   - enabled: 1
-    path: Assets/Project/Scenes/PlayerCustomisation.unity
+    path: Assets/Project/Scenes/CharacterCreator.unity
     guid: 3ba4b324bbee0834188ab48f03dfcdae
   - enabled: 1
-    path: Assets/Project/Scenes/PersonaGameScreen.unity
+    path: Assets/Project/Scenes/PersonaGame.unity
     guid: 772fd15cd3b164f48a84ee07deef5a64
   - enabled: 1
     path: Assets/Project/Scenes/OpeningScreen.unity
