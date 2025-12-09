@@ -31,7 +31,7 @@ public class PlayerData
 public class JsonSaveSystem
 {
     [HideInInspector] public string savePath;
-    private string ID = "- JsonSaveSystem:";
+    private string ID = "[JsonSaveSystem]";
 
     public JsonSaveSystem(){
         savePath = Path.Combine(Application.persistentDataPath, "playerSave.json");

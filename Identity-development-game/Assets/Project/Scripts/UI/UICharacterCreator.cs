@@ -19,12 +19,17 @@ public class SubmitFromButton : MonoBehaviour
         inputField.interactable = false;
         namePanel.SetActive(false);
 
+        GameManager.Instance.SetPlayerDataField("playerName", text);
+
         stylePanel.GetComponentInChildren<TMPro.TMP_Text>().text = "Welkom\n" + text;
         stylePanel.SetActive(true);
     }
 
     public void OnStyleSubmit(){
+         // TODO: Save style selection to PlayerData
         stylePanel.SetActive(false);
-        //TODO: add code to save here
+        GameManager.Instance.LoadScene(ScenesManager.scenes.PersonaGame);
+        GameManager.Instance.SaveGame();
+       
     }
 }

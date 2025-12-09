@@ -7,8 +7,7 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] public TMPro.TextMeshProUGUI playerlvlText;
     [SerializeField] public TMPro.TextMeshProUGUI playerPointsText;
 
-    public void LoadPlayerData(PlayerData data){
-        Debug.Log($"Player Data Loaded: Name {data.playerName}");
+    public void DisplayPlayerData(PlayerData data){
         playerNameText.text = data.playerName;
         playerlvlText.text = $"lvl {data.level.ToString()}";
         playerPointsText.text = data.coins.ToString();
