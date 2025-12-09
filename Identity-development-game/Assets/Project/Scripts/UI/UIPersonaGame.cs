@@ -13,4 +13,8 @@ public class UIPersonaGame : MonoBehaviour
     {
         
     }
+
+    public void OnSubmitPersona(){
+        GameManager.Instance.LoadScene(ScenesManager.scenes.MainMenu);
+    }
 }
