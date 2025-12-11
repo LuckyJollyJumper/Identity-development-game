@@ -14,6 +14,7 @@ public class UIMainMenu : MonoBehaviour
     }
 
     public void ContinueGame(){
+        ScenesManager.Instance.LoadScene(ScenesManager.scenes.SchoolMap);
         ScenesManager.Instance.LoadScene(ScenesManager.scenes.StoryIntro);
     }
 }

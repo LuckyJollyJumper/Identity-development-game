@@ -9,28 +9,28 @@ public class Playercontroller : MonoBehaviour
     [SerializeField] public float speed;// 120-150 for normal movement
     [SerializeField] public int JID = 1;
     [SerializeField] public GameObject player;
-    private Rigidbody body;
     [SerializeField] public GameObject canvas;
-
+    private Rigidbody body;
     private Vector3 screenBoundsMin;
     private Vector3 screenBoundsMax;
 
     void Start(){
         body = player.GetComponent<Rigidbody>();
-        getScreenBounds();
+        SetScreenBounds();
     }
 
     void Update(){
         float h = VirtualJoystick.GetAxis("Horizontal", JID);
         float v = VirtualJoystick.GetAxis("Vertical", JID);
+        Debug.Log($"Horizontal: {h}, Vertical: {v}");
 
         // move in world space using speed and delta time
-        Vector3 delta = new Vector3(h * speed * Time.deltaTime, v * speed * Time.deltaTime, 0f);
+        Vector3 delta = new Vector3(h * speed * Time.deltaTime, 0f, v * speed * Time.deltaTime);//x, y, z
         if (player != null){
             // Clamp the player inside the precomputed world bounds
             Vector3 deltaP = player.transform.position + delta;
-            deltaP.x = Mathf.Clamp(deltaP.x, screenBoundsMin.x, screenBoundsMax.x);
-            deltaP.y = Mathf.Clamp(deltaP.y, screenBoundsMin.y, screenBoundsMax.y);
+            //deltaP.x = Mathf.Clamp(deltaP.x, screenBoundsMin.x, screenBoundsMax.x);
+            //deltaP.y = Mathf.Clamp(deltaP.y, screenBoundsMin.y, screenBoundsMax.y);
             player.transform.position = deltaP;
         } 
     }
@@ -39,7 +39,7 @@ public class Playercontroller : MonoBehaviour
      * Get the world-space screen bounds at the object's z distance from the canvas background and
      * save them to screenBoundsMin and screenBoundsMax
      */
-    void getScreenBounds(){
+    public void SetScreenBounds(){
         Vector3[] worldCorners = new Vector3[4];
         canvas.GetComponent<RectTransform>().GetWorldCorners(worldCorners);
         Vector3 bottomLeft = worldCorners[0]; 

@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    [SerializeField]public Transform player;
+    [SerializeField] public Transform player;
+    [SerializeField] public float followSpeed = 5f; // adjust for smoothness (higher = faster follow)
 
-    // Update is called once per frame
-    void Update () {
-        if (player != null) transform.position = player.transform.position + new Vector3(0, 1, -5);
+    void Update(){    
+        if (player != null){
+            Vector3 targetPos = new Vector3(player.position.x, 4.0f, player.position.z-3.5f);
+            transform.position = Vector3.Lerp(transform.position, targetPos, followSpeed * Time.deltaTime);
+        }
     }
 }

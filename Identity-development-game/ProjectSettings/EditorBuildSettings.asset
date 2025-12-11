@@ -17,9 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/StoryIntro.unity
     guid: c7689e9ef5eb38f48b737d2bc6c984cb
-  - enabled: 0
-    path: Assets/Project/Scenes/Tests/OpeningScreen.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Project/Scenes/SchoolMap.unity
+    guid: 1f3b0fbdef1ce0a448ce6936b1e41ebf
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 05072ce03f428c14d9008879b7712f21, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 3f2ec4ef5a69ba24eb8ba863834cd65f, type: 2}
