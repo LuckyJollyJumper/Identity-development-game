@@ -6,7 +6,8 @@ public class UIPersonaGame : MonoBehaviour
     [SerializeField] public GameObject grid;
 
     public void OnSubmitPersona(){
-        GameManager.Instance.SetPlayerDataField("selectedPersonas1", GetAllGridItemSelections().ToString());
+        GameManager.Instance.SetPlayerDataField("selectedPersonas1", string.Join(", ", GetAllGridItemSelections()));
+        GameManager.Instance.SaveGame();
         GameManager.Instance.LoadScene(ScenesManager.scenes.MainMenu);
         if (grid == null){ grid = GameObject.Find("VerticalLayout"); }
     }
