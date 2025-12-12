@@ -1943,6 +1943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92d84d95378b1746a30d1107aa51232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  grid: {fileID: 78666904}
 --- !u!224 &1423963695 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}

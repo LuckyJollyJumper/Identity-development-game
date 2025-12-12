@@ -3,7 +3,13 @@ using UnityEngine.EventSystems;
 
 public class SelectedItem : MonoBehaviour, IPointerClickHandler
 {
-    private bool isSelected = false;
+    public bool isSelected = false;
+    public string category;
+
+    public void Awake()
+    {
+        this.category = gameObject.GetComponentInChildren<TMPro.TMP_Text>().text;
+    }
     public void OnPointerClick(PointerEventData eventData)
     {
         isSelected = !isSelected;

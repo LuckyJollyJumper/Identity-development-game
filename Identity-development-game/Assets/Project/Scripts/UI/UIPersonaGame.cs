@@ -1,11 +1,26 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class UIPersonaGame : MonoBehaviour
 {
     [SerializeField] public GameObject grid;
+
     public void OnSubmitPersona(){
-        // TODO:cGet data and save to PlayerData
-        //this.grid.GetComponentsInChildren<TMPro.TMP_InputField>();
+        GameManager.Instance.SetPlayerDataField("selectedPersonas1", GetAllGridItemSelections().ToString());
         GameManager.Instance.LoadScene(ScenesManager.scenes.MainMenu);
+        if (grid == null){ grid = GameObject.Find("VerticalLayout"); }
+    }
+
+    public string[] GetAllGridItemSelections(){
+        SelectedItem[] items = grid.GetComponentsInChildren<SelectedItem>();
+
+        var selectedStates = new List<string>();
+        foreach(SelectedItem item in items){
+            if (item.isSelected){
+                selectedStates.Add(item.category);
+            }
+        }
+        Debug.Log("Selected personas: " + string.Join(", ", selectedStates));
+        return selectedStates.ToArray();
     }
 }

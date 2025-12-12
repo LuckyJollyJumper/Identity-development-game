@@ -24,6 +24,7 @@ public class PlayerData
     public int progress;
     public string[] inventory;
     public string[] characterStyle;
+    public string[] selectedPersonas1;
 }
 
 
