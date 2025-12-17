@@ -5,11 +5,9 @@ public class ScenesManager : MonoBehaviour{
     [HideInInspector] public static ScenesManager Instance;
 
     public enum scenes{
-        MainMenu, // Should check if a player is active and then use the player data and stay or go to the character creator
+        SchoolMap, // Main map to navigate the school and access different areas
         CharacterCreator, // Sets name and character
         PersonaGame, // Minigame to find out the persona
-        StoryIntro, // Intro to the story and interaction with first character
-        SchoolMap, // Main map to navigate the school and access different areas
     }
 
     public void Awake(){
