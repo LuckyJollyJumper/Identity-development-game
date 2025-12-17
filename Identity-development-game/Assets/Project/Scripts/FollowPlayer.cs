@@ -7,7 +7,7 @@ public class FollowPlayer : MonoBehaviour
 
     void Update(){    
         if (player != null){
-            Vector3 targetPos = new Vector3(player.position.x, 4.0f, player.position.z-3.5f);
+            Vector3 targetPos = new Vector3(player.position.x, 9.0f, player.position.z-3.5f);
             transform.position = Vector3.Lerp(transform.position, targetPos, followSpeed * Time.deltaTime);
         }
     }
