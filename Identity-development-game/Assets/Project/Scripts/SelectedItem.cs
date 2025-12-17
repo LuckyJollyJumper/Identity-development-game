@@ -10,7 +10,7 @@ public class SelectedItem : MonoBehaviour, IPointerClickHandler
     {
         this.category = gameObject.GetComponentInChildren<TMPro.TMP_Text>().text;
     }
-    public void OnPointerClick(PointerEventData eventData)
+    public virtual void OnPointerClick(PointerEventData eventData)
     {
         isSelected = !isSelected;
         this.GetComponent<UnityEngine.UI.RawImage>().color = isSelected ? Color.green : Color.white;

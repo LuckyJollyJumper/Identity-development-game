@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class SelectedItemText : SelectedItem
 {
@@ -6,7 +7,16 @@ public class SelectedItemText : SelectedItem
     public override void Awake()
     {
         this.inputField = gameObject.GetComponentInChildren<TMPro.TMP_InputField>();
+        this.inputField.interactable = false;
     }
+
+    public override void OnPointerClick(PointerEventData eventData)
+    {
+        isSelected = !isSelected;
+        this.inputField.interactable = isSelected;
+        this.GetComponent<UnityEngine.UI.RawImage>().color = isSelected ? Color.green : Color.white;
+    }
+
     public void onTextChanged(string newText)
     {
         this.category = this.inputField.text;
