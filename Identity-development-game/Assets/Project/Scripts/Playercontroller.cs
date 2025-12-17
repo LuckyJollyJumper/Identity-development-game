@@ -51,4 +51,17 @@ public class Playercontroller : MonoBehaviour
         // screenBoundsMax  = cam.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, cam.nearClipPlane));
         print("Screen LB: " + screenBoundsMin + " RU: " + screenBoundsMax);
     } 
+
+
+    public void InteractWithObject(){
+        Ray ray = new Ray(player.transform.position, player.transform.forward);
+        Debug.DrawRay(ray.origin, ray.direction * 10);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit)){
+            if (hit != null){
+                Debug.Log("Interacted with: " + hit.collider.gameObject.name);
+                hit.OnInteract();
+            }
+        }
+    }
 } 
