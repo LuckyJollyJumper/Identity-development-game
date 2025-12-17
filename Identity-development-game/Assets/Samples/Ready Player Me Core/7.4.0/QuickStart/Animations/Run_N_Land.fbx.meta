@@ -917,3 +917,10 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 259814
+  packageName: Ready Player Me Avatar and Character Creator
+  packageVersion: 7.3.1
+  assetPath: Assets/Samples/Ready Player Me Core/7.4.0/QuickStart/Animations/Run_N_Land.fbx
+  uploadId: 704624
