@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("===== Game started =====");
         _jsonSaveSystem = new JsonSaveSystem();
 
+        // Load player data if it is on disk otherwise start new character creation
         (bool newPlayer, PlayerData data) = _jsonSaveSystem.LoadPlayerData();
         if (newPlayer){
             _scenesManager.LoadScene(ScenesManager.scenes.CharacterCreator);
