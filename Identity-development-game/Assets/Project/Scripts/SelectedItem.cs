@@ -6,7 +6,7 @@ public class SelectedItem : MonoBehaviour, IPointerClickHandler
     public bool isSelected = false;
     public string category;
 
-    public void Awake()
+    public virtual void Awake()
     {
         this.category = gameObject.GetComponentInChildren<TMPro.TMP_Text>().text;
     }
@@ -17,3 +17,5 @@ public class SelectedItem : MonoBehaviour, IPointerClickHandler
     }
     
 }
+
+

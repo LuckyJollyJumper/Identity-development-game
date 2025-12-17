@@ -164,8 +164,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -295,3 +295,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1e532c88194d6f44b0371ccb239783c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectedItem
+  isSelected: 0
+  category: 

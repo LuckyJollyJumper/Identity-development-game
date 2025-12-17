@@ -8,7 +8,7 @@ public class UIPersonaGame : MonoBehaviour
     public void OnSubmitPersona(){
         GameManager.Instance.SetPlayerDataField("selectedPersonas1", string.Join(", ", GetAllGridItemSelections()));
         GameManager.Instance.SaveGame();
-        GameManager.Instance.LoadScene(ScenesManager.scenes.MainMenu);
+        GameManager.Instance.LoadScene(ScenesManager.scenes.SchoolMap);
         if (grid == null){ grid = GameObject.Find("VerticalLayout"); }
     }
 
