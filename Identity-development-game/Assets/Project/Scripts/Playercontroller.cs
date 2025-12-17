@@ -37,8 +37,8 @@ public class Playercontroller : MonoBehaviour
 
         // example usage: check nearby and get the GameObject
         InteractableObject nearbyIO;
-        if (IsInteractableNearby(3f, out nearbyIO, interactableLayer)){
-            Debug.Log("Nearby interactable: " + nearbyIO.gameObject.name);
+        if (IsInteractableNearby(3f, out nearbyIO)){
+            nearbyIO.OnInteract();
         }
     }
 
@@ -56,7 +56,6 @@ public class Playercontroller : MonoBehaviour
 
         // screenBoundsMin  = cam.ScreenToWorldPoint(new Vector3(0, 0, cam.nearClipPlane));
         // screenBoundsMax  = cam.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, cam.nearClipPlane));
-        print("Screen LB: " + screenBoundsMin + " RU: " + screenBoundsMax);
     } 
 
 
@@ -67,7 +66,7 @@ public class Playercontroller : MonoBehaviour
         if (Physics.Raycast(ray, out hit)){
             if (hit.collider != null){
                 Debug.Log("Interacted with: " + hit.collider.gameObject.name);
-                hit.collider.gameObject.GetComponent<InteractableObject>()?.OnInteract();
+                hit.collider.gameObject.GetComponent<InteractableObject>().OnInteract();
             }
         }
     }
@@ -76,84 +75,37 @@ public class Playercontroller : MonoBehaviour
     /// Checks whether any InteractableObject exists within the given radius around the player.
     /// Returns true and the nearest InteractableObject if found.
     /// </summary>
-    public bool IsInteractableNearby(float radius, out InteractableObject nearest, LayerMask? mask = null)
+    // Overload that accepts a LayerMask to filter which colliders to consider.
+    public bool IsInteractableNearby(float radius, out InteractableObject nearest, LayerMask mask)
     {
         nearest = null;
         if (player == null) return false;
 
-        Collider[] cols;
-        if (mask.HasValue)
-            cols = Physics.OverlapSphere(player.transform.position, radius, mask.Value);
-        else
-            cols = Physics.OverlapSphere(player.transform.position, radius);
+        Collider[] colliders = Physics.OverlapSphere(player.transform.position, radius, mask);
+        if (colliders.Length == 0) return false;
 
         float bestDist = float.MaxValue;
-        foreach (var c in cols)
+        Collider playerCollider = player.GetComponent<Collider>();
+        foreach (var c in colliders)
         {
-            if (c == null) continue;
-            var io = c.GetComponent<InteractableObject>();
-            if (io == null) continue;
+            if (playerCollider != null && c == playerCollider) continue;
+            var interactable = c.GetComponent<InteractableObject>();
+            if (interactable == null) continue;
             float d = Vector3.Distance(player.transform.position, c.transform.position);
+
             if (d < bestDist)
             {
                 bestDist = d;
-                nearest = io;
+                nearest = interactable;
             }
         }
-
         return nearest != null;
     }
 
-    /// <summary>
-    /// Convenience getter that returns the nearest interactable GameObject within radius, or null.
-    /// </summary>
-    public GameObject GetNearestInteractableNearby(float radius)
+    // Backwards-compatible method: uses the serialized interactableLayer mask.
+    public bool IsInteractableNearby(float radius, out InteractableObject nearest)
     {
-        if (IsInteractableNearby(radius, out InteractableObject io, interactableLayer))
-            return io.gameObject;
-        return null;
+        return IsInteractableNearby(radius, out nearest, interactableLayer);
     }
 
-    /// <summary>
-    /// Checks whether an InteractableObject is roughly in front of the player within a cone.
-    /// </summary>
-    public bool IsInteractableInFront(float maxDistance, float maxAngleDegrees, out InteractableObject nearest, LayerMask? mask = null)
-    {
-        nearest = null;
-        if (player == null) return false;
-
-        // Use the same OverlapSphere to find candidates then filter by angle and distance
-        Collider[] cols = mask.HasValue ? Physics.OverlapSphere(player.transform.position, maxDistance, mask.Value)
-                                        : Physics.OverlapSphere(player.transform.position, maxDistance);
-
-        float bestDist = float.MaxValue;
-        Vector3 forward = player.transform.forward;
-        foreach (var c in cols)
-        {
-            if (c == null) continue;
-            var io = c.GetComponent<InteractableObject>();
-            if (io == null) continue;
-            Vector3 to = (c.transform.position - player.transform.position);
-            float angle = Vector3.Angle(forward, to);
-            if (angle > maxAngleDegrees) continue;
-            float d = to.magnitude;
-            if (d < bestDist)
-            {
-                bestDist = d;
-                nearest = io;
-            }
-        }
-
-        return nearest != null;
-    }
-
-    /// <summary>
-    /// Convenience getter that returns the nearest interactable GameObject in front (within cone), or null.
-    /// </summary>
-    public GameObject GetNearestInteractableInFront(float maxDistance, float maxAngleDegrees)
-    {
-        if (IsInteractableInFront(maxDistance, maxAngleDegrees, out InteractableObject io, interactableLayer))
-            return io.gameObject;
-        return null;
-    }
-} 
+}

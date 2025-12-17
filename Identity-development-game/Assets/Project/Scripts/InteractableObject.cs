@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    [SerializeField] public GameObject interactionObject;
     public virtual void OnInteract()
     {
-        Debug.Log("Interacted with " + gameObject.name);
+        this.interactionObject.SetActive(true);
     }
 }
