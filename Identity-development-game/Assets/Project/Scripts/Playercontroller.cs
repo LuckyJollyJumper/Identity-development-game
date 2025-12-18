@@ -75,9 +75,7 @@ public class Playercontroller : MonoBehaviour
     /// Checks whether any InteractableObject exists within the given radius around the player.
     /// Returns true and the nearest InteractableObject if found.
     /// </summary>
-    // Overload that accepts a LayerMask to filter which colliders to consider.
-    public bool IsInteractableNearby(float radius, out InteractableObject nearest, LayerMask mask)
-    {
+    public bool IsInteractableNearby(float radius, out InteractableObject nearest, LayerMask mask){
         nearest = null;
         if (player == null) return false;
 
@@ -86,15 +84,13 @@ public class Playercontroller : MonoBehaviour
 
         float bestDist = float.MaxValue;
         Collider playerCollider = player.GetComponent<Collider>();
-        foreach (var c in colliders)
-        {
+        foreach (var c in colliders){
             if (playerCollider != null && c == playerCollider) continue;
             var interactable = c.GetComponent<InteractableObject>();
             if (interactable == null) continue;
             float d = Vector3.Distance(player.transform.position, c.transform.position);
 
-            if (d < bestDist)
-            {
+            if (d < bestDist){
                 bestDist = d;
                 nearest = interactable;
             }
