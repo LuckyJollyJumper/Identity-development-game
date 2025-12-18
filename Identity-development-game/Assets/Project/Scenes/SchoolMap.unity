@@ -595,7 +595,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!136 &250393419
 CapsuleCollider:
@@ -2592,6 +2592,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1435818152}
     m_Modifications:
+    - target: {fileID: 1671801537978847786, guid: 9646ac27dbf0ab74e93eadca940ca827, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4617319732214417811, guid: 9646ac27dbf0ab74e93eadca940ca827, type: 3}
       propertyPath: m_Name
       value: locker_double
@@ -5369,6 +5373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1af1df4c75ee674fb9e1cc023c7d7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableCharacter
+  interactionObject: {fileID: 0}
+  UI: {fileID: 0}
 --- !u!1001 &1749903868
 PrefabInstance:
   m_ObjectHideFlags: 0

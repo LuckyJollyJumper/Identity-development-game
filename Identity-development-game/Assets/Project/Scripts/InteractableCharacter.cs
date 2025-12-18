@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class InteractableCharacter : MonoBehaviour
+public class InteractableCharacter : InteractableObject
 {
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
