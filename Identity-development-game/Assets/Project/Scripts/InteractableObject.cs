@@ -19,7 +19,7 @@ public class InteractableObject : MonoBehaviour
         this.UI.SetActive(false);
     }
 
-    public void OnEndReadyForInteraction(){
+    public virtual void OnEndReadyForInteraction(){
         this.interactionObject.SetActive(false);
     }
 

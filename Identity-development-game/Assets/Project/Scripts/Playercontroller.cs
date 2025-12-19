@@ -1,5 +1,6 @@
 using UnityEngine;
 using Terresquall;
+using UnityEngine.InputSystem.EnhancedTouch;
 
 /// <summary>
 /// Player controller that moves a player GameObject using a virtual joystick,
@@ -25,6 +26,8 @@ public class Playercontroller : MonoBehaviour
         MovePlayer();
         // Check for object in proximity and activate them
         ActivateSurroundingObjects();
+
+        MouseInteract();
     }
 
     public void MovePlayer(){
@@ -112,4 +115,23 @@ public class Playercontroller : MonoBehaviour
             }
         }
     }
+
+
+    public void MouseInteract(){
+        if (Input.touchCount > 0){
+            Touch touch = Input.GetTouch(0); // Get the first touch
+            Vector3 touchPosition3D = Camera.main.ScreenToWorldPoint(touch.position); // for 3d games
+
+            if (Physics.Raycast(rayOrigin, out RaycastHit hitInfo))  {
+                GameObject GO = hitInfo.collider.gameObject;
+                MeshRenderer renderer = GO.GetComponent<MeshRenderer>();
+                if (renderer != null)
+                {
+                    renderer.material.color = new Color(Random.value, Random.value, Random.value);
+                }
+;
+            }
+        }
+    }
+
 }

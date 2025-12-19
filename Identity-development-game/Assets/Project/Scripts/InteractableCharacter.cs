@@ -2,16 +2,8 @@ using UnityEngine;
 
 public class InteractableCharacter : InteractableObject
 {
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public override void OnEndReadyForInteraction(){
+        base.OnEndReadyForInteraction();
+        Debug.Log("Character ended ready for interaction: " + this.gameObject.name);
     }
 }
