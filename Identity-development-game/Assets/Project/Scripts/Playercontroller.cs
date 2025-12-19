@@ -7,69 +7,57 @@ using Terresquall;
 public class Playercontroller : MonoBehaviour
 {
     [SerializeField] public float speed;// 120-150 for normal movement
-    [SerializeField] public int JID = 1;
+    [SerializeField] public int JID = 1;//ID of Joystick
     [SerializeField] public GameObject player;
-    [SerializeField] public GameObject canvas;
     [SerializeField] public LayerMask interactableLayer = ~0; // default: everything
+    public InteractableObject currentInteractableObject;
     private Rigidbody body;
-    private Vector3 screenBoundsMin;
-    private Vector3 screenBoundsMax;
+    private enum InteractionState{Idle, Searching, FoundObject};
+    private InteractionState playerState;
 
     void Start(){
-        body = player.GetComponent<Rigidbody>();
-        SetScreenBounds();
+        this.body = player.GetComponent<Rigidbody>();
+        this.playerState = InteractionState.Searching;
     }
 
     void Update(){
+        // Move in world space using speed and delta time
+        MovePlayer();
+        // Check for object in proximity and activate them
+        ActivateSurroundingObjects();
+    }
+
+    public void MovePlayer(){
         float h = VirtualJoystick.GetAxis("Horizontal", JID);
         float v = VirtualJoystick.GetAxis("Vertical", JID);
-        //Debug.Log($"Horizontal: {h}, Vertical: {v}");
 
-        // move in world space using speed and delta time
         Vector3 delta = new Vector3(h * speed * Time.deltaTime, 0f, v * speed * Time.deltaTime);//x, y, z
         if (player != null){
-            // Clamp the player inside the precomputed world bounds
             Vector3 deltaP = player.transform.position + delta;
-            //deltaP.x = Mathf.Clamp(deltaP.x, screenBoundsMin.x, screenBoundsMax.x);
-            //deltaP.y = Mathf.Clamp(deltaP.y, screenBoundsMin.y, screenBoundsMax.y);
             player.transform.position = deltaP;
         }
-
-        // example usage: check nearby and get the GameObject
-        InteractableObject nearbyIO;
-        if (IsInteractableNearby(3f, out nearbyIO)){
-            nearbyIO.OnInteract();
-        }
     }
 
-    /*  
-     * Get the world-space screen bounds at the object's z distance from the canvas background and
-     * save them to screenBoundsMin and screenBoundsMax
-     */
-    public void SetScreenBounds(){
-        Vector3[] worldCorners = new Vector3[4];
-        canvas.GetComponent<RectTransform>().GetWorldCorners(worldCorners);
-        Vector3 bottomLeft = worldCorners[0]; 
-        Vector3 topRight = worldCorners[2]; 
-        screenBoundsMin = bottomLeft;
-        screenBoundsMax = topRight;
 
-        // screenBoundsMin  = cam.ScreenToWorldPoint(new Vector3(0, 0, cam.nearClipPlane));
-        // screenBoundsMax  = cam.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, cam.nearClipPlane));
-    } 
-
-
-    public void InteractWithObject(){
-        Ray ray = new Ray(player.transform.position, player.transform.forward);
-        Debug.DrawRay(ray.origin, ray.direction * 10);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit)){
-            if (hit.collider != null){
-                Debug.Log("Interacted with: " + hit.collider.gameObject.name);
-                hit.collider.gameObject.GetComponent<InteractableObject>().OnInteract();
+    public void ActivateSurroundingObjects(){
+        if (IsInteractableNearby(3f, out InteractableObject nearbyIO)){
+            // Only used on initial discovery of object
+            if (playerState == InteractionState.Searching){
+                playerState = InteractionState.FoundObject;
+                this.currentInteractableObject = nearbyIO;
+                nearbyIO.SetInteractionState(InteractableObject.ObjectState.ReadyForInteraction);
+                Debug.Log("Found interactable: " + nearbyIO.gameObject.name);
             }
         }
+        // Used to close object if player walks out of proximity
+        else if (playerState == InteractionState.FoundObject){ 
+            currentInteractableObject.SetInteractionState(InteractableObject.ObjectState.Idle);
+            playerState = InteractionState.Searching;     
+            Debug.Log("Lost interactable: " + currentInteractableObject.gameObject.name);   
+            currentInteractableObject = null;    
+        }
     }
+
 
     /// <summary>
     /// Checks whether any InteractableObject exists within the given radius around the player.
@@ -97,11 +85,31 @@ public class Playercontroller : MonoBehaviour
         }
         return nearest != null;
     }
-
     // Backwards-compatible method: uses the serialized interactableLayer mask.
-    public bool IsInteractableNearby(float radius, out InteractableObject nearest)
-    {
+    public bool IsInteractableNearby(float radius, out InteractableObject nearest){
         return IsInteractableNearby(radius, out nearest, interactableLayer);
     }
 
+    public void InteractWithObject(){
+        Ray ray = new Ray(player.transform.position, player.transform.forward);
+        Debug.DrawRay(ray.origin, ray.direction * 10);
+        if (Physics.Raycast(ray, out RaycastHit hit)){
+            if (hit.collider != null){
+                Debug.Log("Interacted with: " + hit.collider.gameObject.name);
+                hit.collider.gameObject.GetComponent<InteractableObject>().OnInteract();
+            }
+        }
+    }
+
+
+    public void RayCastFromTouch(Vector2 touchPos){
+        Ray ray = Camera.main.ScreenPointToRay(touchPos);
+        Debug.DrawRay(ray.origin, ray.direction * 10);
+        if (Physics.Raycast(ray, out RaycastHit hit)){
+            if (hit.collider != null){
+                Debug.Log("Interacted with: " + hit.collider.gameObject.name);
+                hit.collider.gameObject.GetComponent<InteractableObject>().OnInteract();
+            }
+        }
+    }
 }
