@@ -1006,6 +1006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
   interactionObject: {fileID: 9141854978378495345}
   UI: {fileID: 722382493000385146}
+  currentState: 0
 --- !u!4 &5431292195224851241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ba789c5bb37233543be8c98d41e5a743, type: 3}
