@@ -118,20 +118,20 @@ public class Playercontroller : MonoBehaviour
 
 
     public void MouseInteract(){
-        if (Input.touchCount > 0){
-            Touch touch = Input.GetTouch(0); // Get the first touch
-            Vector3 touchPosition3D = Camera.main.ScreenToWorldPoint(touch.position); // for 3d games
+//         if (Input.touchCount > 0){
+//             Touch touch = Input.GetTouch(0); // Get the first touch
+//             Vector3 touchPosition3D = Camera.main.ScreenToWorldPoint(touch.position); // for 3d games
 
-            if (Physics.Raycast(rayOrigin, out RaycastHit hitInfo))  {
-                GameObject GO = hitInfo.collider.gameObject;
-                MeshRenderer renderer = GO.GetComponent<MeshRenderer>();
-                if (renderer != null)
-                {
-                    renderer.material.color = new Color(Random.value, Random.value, Random.value);
-                }
-;
-            }
-        }
+//             if (Physics.Raycast(rayOrigin, out RaycastHit hitInfo))  {
+//                 GameObject GO = hitInfo.collider.gameObject;
+//                 MeshRenderer renderer = GO.GetComponent<MeshRenderer>();
+//                 if (renderer != null)
+//                 {
+//                     renderer.material.color = new Color(Random.value, Random.value, Random.value);
+//                 }
+// ;
+//             }
+//         }
     }
 
 }
