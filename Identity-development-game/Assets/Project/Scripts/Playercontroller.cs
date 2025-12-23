@@ -12,6 +12,7 @@ public class Playercontroller : MonoBehaviour
     [SerializeField] public GameObject player;
     [SerializeField] public LayerMask interactableLayer = ~0; // default: everything
     public InteractableObject currentInteractableObject;
+    public float interactionRadius = 1.5f;
     private Rigidbody body;
     private enum InteractionState{Idle, Searching, FoundObject};
     private InteractionState playerState;
@@ -43,7 +44,7 @@ public class Playercontroller : MonoBehaviour
 
 
     public void ActivateSurroundingObjects(){
-        if (IsInteractableNearby(3f, out InteractableObject nearbyIO)){
+        if (IsInteractableNearby(interactionRadius, out InteractableObject nearbyIO)){
             // Only used on initial discovery of object
             if (playerState == InteractionState.Searching){
                 playerState = InteractionState.FoundObject;
