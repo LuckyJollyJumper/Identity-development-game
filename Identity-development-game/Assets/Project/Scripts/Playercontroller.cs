@@ -1,6 +1,7 @@
 using UnityEngine;
 using Terresquall;
 using UnityEngine.InputSystem.EnhancedTouch;
+using System.Collections.Generic;
 
 /// <summary>
 /// Player controller that moves a player GameObject using a virtual joystick,
@@ -10,9 +11,10 @@ public class Playercontroller : MonoBehaviour
     [SerializeField] public float speed;// 120-150 for normal movement
     [SerializeField] public int JID = 1;//ID of Joystick
     [SerializeField] public GameObject player;
+    [SerializeField] public float floorHeight = 0.03f;
     [SerializeField] public LayerMask interactableLayer = ~0; // default: everything
-    public InteractableObject currentInteractableObject;
-    public float interactionRadius = 1.5f;
+    public Dictionary<InteractableObject, float> currentInteractableObjects;
+    public float interactionRadius = 0.5f;
     private Rigidbody body;
     private enum InteractionState{Idle, Searching, FoundObject};
     private InteractionState playerState;
@@ -40,41 +42,46 @@ public class Playercontroller : MonoBehaviour
             Vector3 deltaP = player.transform.position + delta;
             player.transform.position = deltaP;
         }
+
+        // Move player rotation to face movement direction
+        Vector3 direction = new Vector3(h, 0f, v);
+        if (direction.magnitude > 0.1f){
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            player.transform.rotation = Quaternion.Slerp(player.transform.rotation, targetRotation, Time.deltaTime * 10f);
+        }
     }
 
-
+    // Mistake is that if 2 objects are close the leave trigger does not 
+    // do anything and objects do not get closed and stay interactable until all objects are gone
     public void ActivateSurroundingObjects(){
-        if (IsInteractableNearby(interactionRadius, out InteractableObject nearbyIO)){
+        if (IsInteractableNearby(interactionRadius+0.5f, out Dictionary<InteractableObject, float> nearbyIO, interactableLayer)){
             // Only used on initial discovery of object
-            if (playerState == InteractionState.Searching){
-                playerState = InteractionState.FoundObject;
-                this.currentInteractableObject = nearbyIO;
-                nearbyIO.SetInteractionState(InteractableObject.ObjectState.ReadyForInteraction);
-                Debug.Log("Found interactable: " + nearbyIO.gameObject.name);
+            foreach (var io in nearbyIO){
+                // If within interaction radius and currently idle, set to ready for interaction (Ignore if already ready or interacting)
+                if (io.Value <= interactionRadius && io.Key.currentState == InteractableObject.ObjectState.Idle){
+                    io.Key.SetInteractionState(InteractableObject.ObjectState.ReadyForInteraction);
+                    Debug.Log("Found interactable: " + io.Key.gameObject.name);
+                }else if (io.Value > interactionRadius && io.Key.currentState != InteractableObject.ObjectState.Idle){
+                    io.Key.SetInteractionState(InteractableObject.ObjectState.Idle);
+                    Debug.Log("Closing interactable: " + io.Key.gameObject.name);
+                }
             }
-        }
-        // Used to close object if player walks out of proximity
-        else if (playerState == InteractionState.FoundObject){ 
-            currentInteractableObject.SetInteractionState(InteractableObject.ObjectState.Idle);
-            playerState = InteractionState.Searching;     
-            Debug.Log("Lost interactable: " + currentInteractableObject.gameObject.name);   
-            currentInteractableObject = null;    
+           
         }
     }
 
 
     /// <summary>
     /// Checks whether any InteractableObject exists within the given radius around the player.
-    /// Returns true and the nearest InteractableObject if found.
+    /// Returns true and the all InteractableObjects with distance if found.
     /// </summary>
-    public bool IsInteractableNearby(float radius, out InteractableObject nearest, LayerMask mask){
-        nearest = null;
+    public bool IsInteractableNearby(float radius, out Dictionary<InteractableObject, float> foundObjects, LayerMask mask){
+        foundObjects = new Dictionary<InteractableObject, float>();
         if (player == null) return false;
 
         Collider[] colliders = Physics.OverlapSphere(player.transform.position, radius, mask);
         if (colliders.Length == 0) return false;
 
-        float bestDist = float.MaxValue;
         Collider playerCollider = player.GetComponent<Collider>();
         foreach (var c in colliders){
             if (playerCollider != null && c == playerCollider) continue;
@@ -82,16 +89,9 @@ public class Playercontroller : MonoBehaviour
             if (interactable == null) continue;
             float d = Vector3.Distance(player.transform.position, c.transform.position);
 
-            if (d < bestDist){
-                bestDist = d;
-                nearest = interactable;
-            }
+            foundObjects.Add(interactable, d);
         }
-        return nearest != null;
-    }
-    // Backwards-compatible method: uses the serialized interactableLayer mask.
-    public bool IsInteractableNearby(float radius, out InteractableObject nearest){
-        return IsInteractableNearby(radius, out nearest, interactableLayer);
+        return foundObjects.Count > 0;
     }
 
     public void InteractWithObject(){
@@ -133,6 +133,13 @@ public class Playercontroller : MonoBehaviour
 // ;
 //             }
 //         }
+    }
+
+    // Draw only the interaction radius sphere in the editor for debugging
+    void OnDrawGizmosSelected(){
+        if (player == null) return;
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(player.transform.position, interactionRadius);
     }
 
 }

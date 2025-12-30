@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d7a42a7ffb3e1f84f916974bd4327e98
+guid: 32909eb6382d3764b8325a41974e9746
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Red Brick
-    second: {fileID: 2100000, guid: 6a08e085cf4d18a4c82c87364e16216d, type: 2}
+      name: Door
+    second: {fileID: 2100000, guid: 20c996017f854d047b241e4be1ccffb4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorWindow
+    second: {fileID: 2100000, guid: 225a3e7e03430624483666b6e5631420, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -26,7 +26,7 @@ public class InteractableObject : MonoBehaviour
     public void SetInteractionState(ObjectState newState){
         if (newState == this.currentState) return;
         if (newState == ObjectState.ReadyForInteraction){  // Player walks into proximity
-            OnReadyForInteraction(); 
+            OnReadyForInteraction();
         }else if (newState == ObjectState.Idle){
             if (this.currentState == ObjectState.ReadyForInteraction){ // Player walks out of proximity
                 OnEndReadyForInteraction();

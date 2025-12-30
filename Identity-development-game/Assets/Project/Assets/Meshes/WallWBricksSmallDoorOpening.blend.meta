@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: d7a42a7ffb3e1f84f916974bd4327e98
+guid: 1945b46f16c2fd24ea0c3ae46dd7bae6
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Red Brick
-    second: {fileID: 2100000, guid: 6a08e085cf4d18a4c82c87364e16216d, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
