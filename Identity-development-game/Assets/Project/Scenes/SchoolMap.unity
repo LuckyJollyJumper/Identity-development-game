@@ -2607,6 +2607,28 @@ CapsuleCollider:
   m_Height: 1.9222647
   m_Direction: 1
   m_Center: {x: 0.002887249, y: 0.9260218, z: 0}
+--- !u!95 &250393420
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250393416}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 86c1953e30abb0743a7a92441f5463ff, type: 2}
+  m_Controller: {fileID: 9100000, guid: bea63b6083163f247878bb28fe8da8be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &252520756 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
@@ -2749,9 +2771,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1435818152}
-  - {fileID: 2010999473}
   - {fileID: 1164524416}
   - {fileID: 539292742}
+  - {fileID: 2010999473}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &278497567 stripped
@@ -18725,6 +18747,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6635245195314443262, guid: c053c054fc5d4ee42a02877ce265b03a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 250393419}
+    - targetCorrespondingSourceObject: {fileID: 6635245195314443262, guid: c053c054fc5d4ee42a02877ce265b03a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 250393420}
   m_SourcePrefab: {fileID: -4161369568681901532, guid: c053c054fc5d4ee42a02877ce265b03a, type: 3}
 --- !u!1001 &1407844476
 PrefabInstance:

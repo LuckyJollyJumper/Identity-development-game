@@ -13,7 +13,15 @@ public class InteractableDoor : InteractableObject
         SlidingDoorAnimator.SetTrigger("SlidingDoorClose");
     }
 
-    public override void OnInteract(){ }
+    public override void OnInteract(){ 
+        // Ignore the onInteract for the door
+        if (this.currentState == ObjectState.ReadyForInteraction){
+            SetInteractionState(ObjectState.ReadyForInteraction);
+        }else{
+            SetInteractionState(ObjectState.Idle);
+        }
+         
+    }
     public override void OnEndInteract(){ }
 
 

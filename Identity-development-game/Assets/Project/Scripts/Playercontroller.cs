@@ -2,6 +2,7 @@ using UnityEngine;
 using Terresquall;
 using UnityEngine.InputSystem.EnhancedTouch;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Player controller that moves a player GameObject using a virtual joystick,
@@ -94,52 +95,40 @@ public class Playercontroller : MonoBehaviour
         return foundObjects.Count > 0;
     }
 
-    public void InteractWithObject(){
-        Ray ray = new Ray(player.transform.position, player.transform.forward);
-        Debug.DrawRay(ray.origin, ray.direction * 10);
-        if (Physics.Raycast(ray, out RaycastHit hit)){
-            if (hit.collider != null){
-                Debug.Log("Interacted with: " + hit.collider.gameObject.name);
-                hit.collider.gameObject.GetComponent<InteractableObject>().OnInteract();
-            }
+
+    public void MouseInteract(){
+        Vector2 mousePosition = Mouse.current.position.ReadValue();
+        if (Mouse.current.leftButton.wasPressedThisFrame){
+            RayCastFromTouch(mousePosition);
         }
     }
-
 
     public void RayCastFromTouch(Vector2 touchPos){
         Ray ray = Camera.main.ScreenPointToRay(touchPos);
         Debug.DrawRay(ray.origin, ray.direction * 10);
         if (Physics.Raycast(ray, out RaycastHit hit)){
             if (hit.collider != null){
-                Debug.Log("Interacted with: " + hit.collider.gameObject.name);
-                hit.collider.gameObject.GetComponent<InteractableObject>().OnInteract();
+                try {
+                    hit.collider.gameObject.GetComponent<InteractableObject>().OnInteract();
+                    Debug.Log("Interacted with: " + hit.collider.gameObject.name);
+                }
+                catch {Debug.Log("No InteractableObject component found on " + hit.collider.gameObject.name);}
             }
         }
     }
 
-
-    public void MouseInteract(){
-//         if (Input.touchCount > 0){
-//             Touch touch = Input.GetTouch(0); // Get the first touch
-//             Vector3 touchPosition3D = Camera.main.ScreenToWorldPoint(touch.position); // for 3d games
-
-//             if (Physics.Raycast(rayOrigin, out RaycastHit hitInfo))  {
-//                 GameObject GO = hitInfo.collider.gameObject;
-//                 MeshRenderer renderer = GO.GetComponent<MeshRenderer>();
-//                 if (renderer != null)
-//                 {
-//                     renderer.material.color = new Color(Random.value, Random.value, Random.value);
-//                 }
-// ;
-//             }
-//         }
-    }
-
-    // Draw only the interaction radius sphere in the editor for debugging
-    void OnDrawGizmosSelected(){
-        if (player == null) return;
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(player.transform.position, interactionRadius);
+    /// <summary>
+    /// Casts a ray from a screen position and returns the first GameObject hit, or null if none.
+    /// Uses the `interactableLayer` mask and an optional max distance.
+    /// </summary>
+    public GameObject RaycastFromScreen(Vector2 screenPos, float maxDistance = 100f){
+        if (Camera.main == null) return null;
+        Ray ray = Camera.main.ScreenPointToRay(screenPos);
+        Debug.DrawRay(ray.origin, ray.direction * Mathf.Min(maxDistance, 100f));
+        if (Physics.Raycast(ray, out RaycastHit hit, maxDistance, interactableLayer)){
+            return hit.collider != null ? hit.collider.gameObject : null;
+        }
+        return null;
     }
 
 }
