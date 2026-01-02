@@ -3,8 +3,14 @@
   <Project Path="ReadyPlayerMe.Samples.AvatarCreatorElements.csproj" />
   <Project Path="ReadyPlayerMe.Samples.QuickStart.csproj" />
   <Project Path="ReadyPlayerMe.Samples.WebGLSample.csproj" />
+  <Project Path="CFXRRuntime.csproj" />
+  <Project Path="CFXRDemo.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
   <Project Path="ReadyPlayerMe.Samples.AvatarCreatorWizard.csproj" />
+  <Project Path="CFXREditor.csproj" />
+  <Project Path="KinoBloom.Runtime.csproj" />
+  <Project Path="CFXR.WelcomeScreen.csproj" />
+  <Project Path="ToonyColorsPro.Demo.Editor.csproj" />
   <Project Path="ReadyPlayerMe.Samples.AvatarRenders.csproj" />
   <Project Path="ReadyPlayerMe.Core.WebGLSample.Editor.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />

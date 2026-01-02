@@ -16,7 +16,7 @@ public class InteractableDoor : InteractableObject
     public override void OnInteract(){ 
         // Ignore the onInteract for the door
         if (this.currentState == ObjectState.ReadyForInteraction){
-            SetInteractionState(ObjectState.ReadyForInteraction);
+            return;
         }else{
             SetInteractionState(ObjectState.Idle);
         }

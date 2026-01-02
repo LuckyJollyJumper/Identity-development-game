@@ -10,12 +10,12 @@ using UnityEngine.InputSystem;
 public class Playercontroller : MonoBehaviour
 {
     [SerializeField] public float speed;// 120-150 for normal movement
+    [SerializeField] public float interactionRadius = 0.5f;
+
+    [Header("Setup variables")]
     [SerializeField] public int JID = 1;//ID of Joystick
     [SerializeField] public GameObject player;
-    [SerializeField] public float floorHeight = 0.03f;
     [SerializeField] public LayerMask interactableLayer = ~0; // default: everything
-    public Dictionary<InteractableObject, float> currentInteractableObjects;
-    public float interactionRadius = 0.5f;
     private Rigidbody body;
     private enum InteractionState{Idle, Searching, FoundObject};
     private InteractionState playerState;
@@ -52,8 +52,10 @@ public class Playercontroller : MonoBehaviour
         }
     }
 
-    // Mistake is that if 2 objects are close the leave trigger does not 
-    // do anything and objects do not get closed and stay interactable until all objects are gone
+    /// <summary>
+    /// Activates nearby InteractableObjects within interactionRadius. Calls ActivateSurroundingObjects with higher radius to
+    /// detect objects entering/leaving interaction range. 
+    /// </summary>
     public void ActivateSurroundingObjects(){
         if (IsInteractableNearby(interactionRadius+0.5f, out Dictionary<InteractableObject, float> nearbyIO, interactableLayer)){
             // Only used on initial discovery of object
@@ -103,32 +105,28 @@ public class Playercontroller : MonoBehaviour
         }
     }
 
+    public void TouchInteract(Touch touch){
+        // TODO
+    }
+
+    public void ActivateObject(GameObject obj){
+        if (obj.TryGetComponent<InteractableObject>(out InteractableObject interactable)){
+            interactable.OnInteract();
+        }
+        else{
+            obj.GetComponentInParent<InteractableObject>()?.OnInteract();
+        }
+    }
+
     public void RayCastFromTouch(Vector2 touchPos){
         Ray ray = Camera.main.ScreenPointToRay(touchPos);
         Debug.DrawRay(ray.origin, ray.direction * 10);
         if (Physics.Raycast(ray, out RaycastHit hit)){
             if (hit.collider != null){
-                try {
-                    hit.collider.gameObject.GetComponent<InteractableObject>().OnInteract();
-                    Debug.Log("Interacted with: " + hit.collider.gameObject.name);
-                }
-                catch {Debug.Log("No InteractableObject component found on " + hit.collider.gameObject.name);}
+                ActivateObject(hit.collider.gameObject);
             }
         }
     }
 
-    /// <summary>
-    /// Casts a ray from a screen position and returns the first GameObject hit, or null if none.
-    /// Uses the `interactableLayer` mask and an optional max distance.
-    /// </summary>
-    public GameObject RaycastFromScreen(Vector2 screenPos, float maxDistance = 100f){
-        if (Camera.main == null) return null;
-        Ray ray = Camera.main.ScreenPointToRay(screenPos);
-        Debug.DrawRay(ray.origin, ray.direction * Mathf.Min(maxDistance, 100f));
-        if (Physics.Raycast(ray, out RaycastHit hit, maxDistance, interactableLayer)){
-            return hit.collider != null ? hit.collider.gameObject : null;
-        }
-        return null;
-    }
 
 }
