@@ -11,14 +11,16 @@ public class Playercontroller : MonoBehaviour
 {
     [SerializeField] public float speed;// 120-150 for normal movement
     [SerializeField] public float interactionRadius = 0.5f;
+    [SerializeField] public LayerMask interactableLayer = ~0; // default: everything
 
-    [Header("Setup variables")]
+    [Header("References")]
     [SerializeField] public int JID = 1;//ID of Joystick
     [SerializeField] public GameObject player;
-    [SerializeField] public LayerMask interactableLayer = ~0; // default: everything
+    
     private Rigidbody body;
-    private enum InteractionState{Idle, Searching, FoundObject};
+    private enum InteractionState{Idle, Searching, Interacting};
     private InteractionState playerState;
+    private string DebugID = "[PlayerController]";
 
     void Start(){
         this.body = player.GetComponent<Rigidbody>();
@@ -52,6 +54,7 @@ public class Playercontroller : MonoBehaviour
         }
     }
 
+
     /// <summary>
     /// Activates nearby InteractableObjects within interactionRadius. Calls ActivateSurroundingObjects with higher radius to
     /// detect objects entering/leaving interaction range. 
@@ -63,10 +66,10 @@ public class Playercontroller : MonoBehaviour
                 // If within interaction radius and currently idle, set to ready for interaction (Ignore if already ready or interacting)
                 if (io.Value <= interactionRadius && io.Key.currentState == InteractableObject.ObjectState.Idle){
                     io.Key.SetInteractionState(InteractableObject.ObjectState.ReadyForInteraction);
-                    Debug.Log("Found interactable: " + io.Key.gameObject.name);
+                    Debug.Log($"{DebugID} Found interactable: {io.Key.gameObject.name}");
                 }else if (io.Value > interactionRadius && io.Key.currentState != InteractableObject.ObjectState.Idle){
                     io.Key.SetInteractionState(InteractableObject.ObjectState.Idle);
-                    Debug.Log("Closing interactable: " + io.Key.gameObject.name);
+                    Debug.Log($"{DebugID} Closing interactable: {io.Key.gameObject.name}");
                 }
             }
            
@@ -76,7 +79,7 @@ public class Playercontroller : MonoBehaviour
 
     /// <summary>
     /// Checks whether any InteractableObject exists within the given radius around the player.
-    /// Returns true and the all InteractableObjects with distance if found.
+    /// Returns true and all InteractableObjects with distance if found.
     /// </summary>
     public bool IsInteractableNearby(float radius, out Dictionary<InteractableObject, float> foundObjects, LayerMask mask){
         foundObjects = new Dictionary<InteractableObject, float>();
@@ -105,7 +108,7 @@ public class Playercontroller : MonoBehaviour
         }
     }
 
-    public void TouchInteract(Touch touch){
+    public void TouchInteract(){
         // TODO
     }
 
@@ -113,9 +116,14 @@ public class Playercontroller : MonoBehaviour
         if (obj.TryGetComponent<InteractableObject>(out InteractableObject interactable)){
             interactable.OnInteract();
         }
-        else{
+        else if (obj.GetComponentInParent<InteractableObject>() != null){
+            Debug.Log($"{DebugID} Parent interactable found");
             obj.GetComponentInParent<InteractableObject>()?.OnInteract();
         }
+        else{
+            return;
+        }
+        this.player.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
     }
 
     public void RayCastFromTouch(Vector2 touchPos){

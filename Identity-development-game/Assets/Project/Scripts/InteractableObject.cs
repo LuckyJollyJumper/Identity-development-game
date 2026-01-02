@@ -2,10 +2,18 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    [Header("References")]
+    [Tooltip("Object that appears when player is in proximity")]
     [SerializeField] public GameObject interactionObject;
+    [Tooltip("UI that appears when player interacts with the object")]
     [SerializeField] public GameObject UI;
     public enum ObjectState { Idle, ReadyForInteraction, Interacting };
     public ObjectState currentState = ObjectState.Idle;
+
+    public virtual void Start(){
+        this.interactionObject.SetActive(false);
+        this.UI.SetActive(false);
+    }
 
     public virtual void OnReadyForInteraction(){
        this.interactionObject.SetActive(true);

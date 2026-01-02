@@ -1,27 +1,39 @@
 using UnityEngine;
+using TMPro;
 
 public class TextBubble : MonoBehaviour
 {
-    public Transform textBubble; // The target the text bubble will follow
-    public Camera mainCamera; // Reference to the main camera
+    [SerializeField] GameObject parentObject;
+
+    [Header("Billboard (facing camera)")]
     [Tooltip("Higher values rotate faster; use smoothing to avoid sudden flips")]
-    public float rotationSmoothing = 8f;
+    [SerializeField] public float rotationSmoothing = 8f;
     [Tooltip("Maximum absolute pitch angle (degrees) for pitch toward camera")]
-    public float maxXAngle = 30f;
+    [SerializeField] public float maxXAngle = 30f;
 
     [Header("Spin (local axis)")]
     [Tooltip("Degrees per second to spin around the local axis (0 disables)")]
-    public float spinSpeed = 0f;
+    [SerializeField] public float spinSpeed = 0f;
     [Tooltip("Local axis to spin around (in local space)")]
-    public Vector3 spinAxis = Vector3.forward;
+    [SerializeField] public Vector3 spinAxis = Vector3.forward;
+    [SerializeField] public float spinAngle = 0f;
+    private Transform textBubble; // The target the text bubble will follow
+    private Camera mainCamera; // Reference to the main camera
 
-    float spinAngle = 0f;
+    [Header("References")]
+    [SerializeField] TMP_Text bubbleText;
 
     void Awake(){
         this.mainCamera = Camera.main;
         this.textBubble = GetComponent<Transform>();
     }
 
+    public void SetBubbleText(string newText){
+        if (bubbleText == null){
+            bubbleText = GetComponentInChildren<TMPro.TextMeshProUGUI>();
+        }
+        bubbleText.text = newText;
+    }
     // LateUpdate is called after all Update methods — for camera-facing logic
     void LateUpdate(){
         Vector3 directionToCamera = mainCamera.transform.position - textBubble.position;

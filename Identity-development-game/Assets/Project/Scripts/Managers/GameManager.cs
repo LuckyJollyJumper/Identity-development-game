@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public ScenesManager _scenesManager;
     [HideInInspector] public PlayerData _playerData;
     private JsonSaveSystem _jsonSaveSystem;
-    private string ID = "[GameManager]";
+    private string DebugID = "[GameManager]";
    
     public void Awake(){
         if (instance == null){
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
 
         var targetField = typeof(PlayerData).GetField(fieldName);
         if (targetField == null){
-            Debug.LogWarning($"{ID} SetPlayerDataField: field '{fieldName}' not found on PlayerData.");
+            Debug.LogWarning($"{DebugID} SetPlayerDataField: field '{fieldName}' not found on PlayerData.");
             return false;
         }
 
@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
                     targetField.SetValue(_playerData, iv);
                     return true;
                 }
-                Debug.LogWarning($"{ID} SetPlayerDataField: cannot parse '{rawValue}' as int for field '{fieldName}'.");
+                Debug.LogWarning($"{DebugID} SetPlayerDataField: cannot parse '{rawValue}' as int for field '{fieldName}'.");
                 return false;
             }
 
@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
                         parts = wrapper.items ?? new string[] { };
                     }
                     catch (Exception parseEx){
-                        Debug.LogWarning($"{ID} SetPlayerDataField: JSON array parsing failed for '{rawValue}': {parseEx.Message}. Attempting fallback comma-split.");
+                        Debug.LogWarning($"{DebugID} SetPlayerDataField: JSON array parsing failed for '{rawValue}': {parseEx.Message}. Attempting fallback comma-split.");
                         // Fallback: simple comma-separated parsing
                         string inner = rawValue.Substring(1, rawValue.Length - 2).Trim();
                         parts = string.IsNullOrEmpty(inner) 
@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour
             return true;
         }
         catch (Exception ex){
-            Debug.LogWarning($"{ID} SetPlayerDataField: failed to set '{fieldName}' with value '{rawValue}': {ex.Message}");
+            Debug.LogWarning($"{DebugID} SetPlayerDataField: failed to set '{fieldName}' with value '{rawValue}': {ex.Message}");
             return false;
         }
 

@@ -3,6 +3,8 @@ using UnityEngine;
 public class InteractableDoor : InteractableObject
 {
     [SerializeField] public Animator SlidingDoorAnimator;
+
+    public override void Start(){ }
     public override void OnReadyForInteraction(){
         Debug.Log("Door opening");
         SlidingDoorAnimator.SetTrigger("SlidingDoorOpen");
