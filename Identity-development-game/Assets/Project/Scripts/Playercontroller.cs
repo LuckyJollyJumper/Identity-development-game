@@ -115,8 +115,7 @@ public class Playercontroller : MonoBehaviour
     public void ActivateObject(GameObject obj){
         if (obj.TryGetComponent<InteractableObject>(out InteractableObject interactable)){
             interactable.OnInteract();
-        }
-        else if (obj.GetComponentInParent<InteractableObject>() != null){
+        }else if (obj.GetComponentInParent<InteractableObject>() != null){
             Debug.Log($"{DebugID} Parent interactable found");
             obj.GetComponentInParent<InteractableObject>()?.OnInteract();
         }
