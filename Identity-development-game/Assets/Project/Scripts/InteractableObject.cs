@@ -3,12 +3,13 @@ using UnityEngine;
 public class InteractableObject : MonoBehaviour
 {
     [Header("References")]
-    [Tooltip("Object that appears when player is in proximity")]
+    [Tooltip("Object that gets activated when player is in proximity")]
     [SerializeField] public GameObject interactionObject;
     [Tooltip("UI that appears when player interacts with the object")]
     [SerializeField] public GameObject UI;
     public enum ObjectState { Idle, ReadyForInteraction, Interacting };
-    public ObjectState currentState = ObjectState.Idle;
+    [SerializeField] public ObjectState currentState = ObjectState.Idle;
+    private Playercontroller interactingPlayer;
 
     public virtual void Start(){
         this.interactionObject.SetActive(false);
@@ -19,12 +20,15 @@ public class InteractableObject : MonoBehaviour
        this.interactionObject.SetActive(true);
     }
 
-    public virtual void OnInteract(){
+    public virtual void OnInteract(Playercontroller player){
         this.UI.SetActive(true);
+        this.interactingPlayer = player;
     }
 
     public virtual void OnEndInteract(){
         this.UI.SetActive(false);
+        Debug.Log("Ending interaction with player");
+        this.interactingPlayer.EndInteraction();
     }
 
     public virtual void OnEndReadyForInteraction(){

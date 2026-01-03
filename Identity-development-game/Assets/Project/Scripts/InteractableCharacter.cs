@@ -13,7 +13,5 @@ public class InteractableCharacter : InteractableObject
         textBubble.SetBubbleText(popUpText);
        
     }
-    public override void OnEndReadyForInteraction(){
-        base.OnEndReadyForInteraction();
-    }
+    
 }

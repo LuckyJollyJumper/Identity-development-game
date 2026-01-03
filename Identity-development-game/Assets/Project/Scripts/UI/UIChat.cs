@@ -12,7 +12,7 @@ public class UIChat : MonoBehaviour
     }
 
     public void CloseChat(){
-        this.gameObject.SetActive(false);
+        characterScript.OnEndInteract();
     }
 
 }

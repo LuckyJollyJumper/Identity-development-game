@@ -7,6 +7,6 @@ public class UIMainProfile : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public void CloseLocker(){
-        gameObject.SetActive(false);
+        locker.GetComponent<InteractableObject>().OnEndInteract();
     }
 }

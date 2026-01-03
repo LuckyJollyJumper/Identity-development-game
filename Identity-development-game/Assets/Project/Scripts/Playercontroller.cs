@@ -16,18 +16,20 @@ public class Playercontroller : MonoBehaviour
     [Header("References")]
     [SerializeField] public int JID = 1;//ID of Joystick
     [SerializeField] public GameObject player;
+    [SerializeField] public GameObject JoystickObject;
     
     private Rigidbody body;
-    private enum InteractionState{Idle, Searching, Interacting};
+    public enum InteractionState{Moving, Interacting}; // Moving = Can move and interact, Interacting = Only interacting with UI
     private InteractionState playerState;
     private string DebugID = "[PlayerController]";
 
     void Start(){
         this.body = player.GetComponent<Rigidbody>();
-        this.playerState = InteractionState.Searching;
+        this.playerState = InteractionState.Moving;
     }
 
     void Update(){
+        if (playerState != InteractionState.Moving) return;
         // Move in world space using speed and delta time
         MovePlayer();
         // Check for object in proximity and activate them
@@ -66,7 +68,7 @@ public class Playercontroller : MonoBehaviour
                 // If within interaction radius and currently idle, set to ready for interaction (Ignore if already ready or interacting)
                 if (io.Value <= interactionRadius && io.Key.currentState == InteractableObject.ObjectState.Idle){
                     io.Key.SetInteractionState(InteractableObject.ObjectState.ReadyForInteraction);
-                    Debug.Log($"{DebugID} Found interactable: {io.Key.gameObject.name}");
+                    Debug.Log($"{DebugID} Opening interactable: {io.Key.gameObject.name}");
                 }else if (io.Value > interactionRadius && io.Key.currentState != InteractableObject.ObjectState.Idle){
                     io.Key.SetInteractionState(InteractableObject.ObjectState.Idle);
                     Debug.Log($"{DebugID} Closing interactable: {io.Key.gameObject.name}");
@@ -112,19 +114,6 @@ public class Playercontroller : MonoBehaviour
         // TODO
     }
 
-    public void ActivateObject(GameObject obj){
-        if (obj.TryGetComponent<InteractableObject>(out InteractableObject interactable)){
-            interactable.OnInteract();
-        }else if (obj.GetComponentInParent<InteractableObject>() != null){
-            Debug.Log($"{DebugID} Parent interactable found");
-            obj.GetComponentInParent<InteractableObject>()?.OnInteract();
-        }
-        else{
-            return;
-        }
-        this.player.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
-    }
-
     public void RayCastFromTouch(Vector2 touchPos){
         Ray ray = Camera.main.ScreenPointToRay(touchPos);
         Debug.DrawRay(ray.origin, ray.direction * 10);
@@ -135,5 +124,37 @@ public class Playercontroller : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Activates the given GameObject if it has an InteractableObject component (or in parent) and sets the
+    /// player state to Interacting.
+    /// </summary>
+    public void ActivateObject(GameObject obj){
+        if (obj.TryGetComponent<InteractableObject>(out InteractableObject interactable)){
+            SetPlayerState(InteractionState.Interacting);
+            interactable.OnInteract(this);
+        }else if (obj.GetComponentInParent<InteractableObject>() != null){
+            SetPlayerState(InteractionState.Interacting);
+            obj.GetComponentInParent<InteractableObject>()?.OnInteract(this);
+        }
+        else{
+            return;
+        }
+    }
+
+    public void EndInteraction(){
+        SetPlayerState(InteractionState.Moving);
+    }
+
+    public void SetPlayerState(InteractionState newState){
+        if (newState == this.playerState) return;
+        if (newState == InteractionState.Interacting && this.playerState != InteractionState.Interacting){ 
+            JoystickObject.SetActive(false); 
+            this.player.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+        }
+        else if (newState == InteractionState.Moving && this.playerState == InteractionState.Interacting){ 
+            JoystickObject.SetActive(true); 
+        }
+        this.playerState = newState;
+    }
 
 }
