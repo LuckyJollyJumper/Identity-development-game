@@ -5531,10 +5531,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemToggleText
       objectReference: {fileID: 0}
-    - target: {fileID: 7845336928494160869, guid: 81158aaa8c2073d4280f0b3e1f74c99d, type: 3}
-      propertyPath: m_Interactable
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
