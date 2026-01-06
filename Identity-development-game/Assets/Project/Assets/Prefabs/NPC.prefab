@@ -41,6 +41,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1394544549650952421}
     m_Modifications:
+    - target: {fileID: 31062337659033298, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 31062337659033298, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d33d1bfa695c72648930a82ece02c0d2, type: 3}
+    - target: {fileID: 31062337659033298, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 31062337659033298, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 31062337659033298, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 31062337659033298, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880294734050322963, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 11c3291a4b956254182f67bf606ddd1a, type: 3}
     - target: {fileID: 2056858430346343124, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -169,6 +197,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4172611372900360239, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172611372900360239, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172611372900360239, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172611372900360239, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: a78c9f5193c49d04bae1617990e3a5b4, type: 3}
     - target: {fileID: 5485262377301057071, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -184,6 +228,18 @@ PrefabInstance:
     - target: {fileID: 5485262377301057071, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489990158143239213, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489990158143239213, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5489990158143239213, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5551500855697088575, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -339,17 +395,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2115010429618218315, guid: c8bf996f7d322e94485534c2544ec84f, type: 3}
   m_PrefabInstance: {fileID: 5879738088722147915}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8361669761872760688 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2707676005238252859, guid: c8bf996f7d322e94485534c2544ec84f, type: 3}
-  m_PrefabInstance: {fileID: 5879738088722147915}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5531265197361975040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfc67a37c097ae645863d1d2db3f3e02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TextBubble
 --- !u!1001 &8416214363126180546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -806,7 +851,6 @@ MonoBehaviour:
   interactionObject: {fileID: 5531265197361975040}
   UI: {fileID: 5138346307764991280}
   currentState: 0
-  textBubble: {fileID: 8361669761872760688}
   name: David
   popUpText: Hey!
   dialogueText: Jij bent nieuw hier op school?
