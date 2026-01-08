@@ -92,15 +92,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 3.3063622, y: 6.104065, z: 3.815033, w: 40.924805}
+  m_margin: {x: 3.3063622, y: 6.104065, z: 3.815033, w: 61.884766}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -172,8 +172,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 26.1}
-  m_SizeDelta: {x: -14, y: 31.1}
+  m_AnchoredPosition: {x: 0, y: 33.3}
+  m_SizeDelta: {x: -14, y: 57.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8104912413278889481
 CanvasRenderer:
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.9685534, g: 0.9685534, b: 0.9685534, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -415,8 +415,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectedItemText
   isSelected: 0
-  category: 
-  image: {fileID: 0}
+  displayText: 
+  exampleImage: {fileID: 0}
+  background: {fileID: 8436266602547198192}
+  exampleImagePlaceHolder: {fileID: 0}
 --- !u!1 &2569952268788472813
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +431,7 @@ GameObject:
   - component: {fileID: 3553790102930221937}
   - component: {fileID: 8436266602547198192}
   m_Layer: 5
-  m_Name: Image
+  m_Name: PanelImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -451,8 +453,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.7999878}
-  m_SizeDelta: {x: 0, y: -0.0000009536743}
+  m_AnchoredPosition: {x: 0, y: -2.4005127}
+  m_SizeDelta: {x: 3.199998, y: 8.658999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3553790102930221937
 CanvasRenderer:

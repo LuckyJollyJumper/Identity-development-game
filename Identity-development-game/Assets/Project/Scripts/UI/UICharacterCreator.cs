@@ -21,7 +21,7 @@ public class SubmitFromButton : MonoBehaviour
 
         GameManager.Instance.SetPlayerDataField("playerName", text);
 
-        stylePanel.GetComponentInChildren<TMPro.TMP_Text>().text = "Welkom\n" + text;
+        stylePanel.GetComponentInChildren<TMPro.TMP_Text>().text = "Welkom " + text;
         stylePanel.SetActive(true);
     }
 

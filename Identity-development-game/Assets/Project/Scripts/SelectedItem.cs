@@ -3,20 +3,28 @@ using UnityEngine.EventSystems;
 
 public class SelectedItem : MonoBehaviour, IPointerClickHandler
 {
+    [Tooltip("Image to explain the activity visually")]
+
     [Header("Selection State")]
     [SerializeField] public bool isSelected = false;
-    [SerializeField] public string category;
+    [Tooltip("Text to be displayed for this item")]
+    [SerializeField] public string displayText;
+    [SerializeField] public UnityEngine.UI.RawImage exampleImage;
+
+    
     [Header("References")]
-    [SerializeField] public UnityEngine.UI.Image image;
+    [SerializeField] public UnityEngine.UI.Image background;
+    [SerializeField] public UnityEngine.UI.RawImage exampleImagePlaceHolder;
 
     public virtual void Awake()
     {
-        this.category = gameObject.GetComponentInChildren<TMPro.TMP_Text>().text;
+        gameObject.GetComponentInChildren<TMPro.TMP_Text>().text = displayText;
+        try{this.exampleImagePlaceHolder = this.exampleImage;}catch{}
     }
     public virtual void OnPointerClick(PointerEventData eventData)
     {
         isSelected = !isSelected;
-        this.image.color = isSelected ? Color.green : Color.white;
+        this.background.color = isSelected ? Color.green : Color.white;
     }
     
 }

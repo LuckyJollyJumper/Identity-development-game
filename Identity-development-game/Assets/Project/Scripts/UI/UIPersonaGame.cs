@@ -18,7 +18,7 @@ public class UIPersonaGame : MonoBehaviour
         var selectedStates = new List<string>();
         foreach(SelectedItem item in items){
             if (item.isSelected){
-                selectedStates.Add(item.category);
+                selectedStates.Add(item.displayText);
             }
         }
         Debug.Log("Selected personas: " + string.Join(", ", selectedStates));
