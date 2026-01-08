@@ -5429,7 +5429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &474658218386724348
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5611,9 +5611,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2101471414236658167}
     m_Modifications:
+    - target: {fileID: 22378272561222002, guid: 181846209b116d049a392ca69cab2dcc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 209643973621519826, guid: 181846209b116d049a392ca69cab2dcc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1717918308625148368, guid: 181846209b116d049a392ca69cab2dcc, type: 3}
       propertyPath: m_Name
       value: Meshes
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975361773801745626, guid: 181846209b116d049a392ca69cab2dcc, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3531000650160815961, guid: 181846209b116d049a392ca69cab2dcc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5654,6 +5666,26 @@ PrefabInstance:
     - target: {fileID: 3531000650160815961, guid: 181846209b116d049a392ca69cab2dcc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610567717658999876, guid: 181846209b116d049a392ca69cab2dcc, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3630593389555093200, guid: 181846209b116d049a392ca69cab2dcc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4832164703091240090, guid: 181846209b116d049a392ca69cab2dcc, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077949223578650664, guid: 181846209b116d049a392ca69cab2dcc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490263722490296225, guid: 181846209b116d049a392ca69cab2dcc, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -37,13 +37,7 @@ Transform:
   - {fileID: 1206691922964750996}
   - {fileID: 2549584208564575369}
   - {fileID: 1667414671893862926}
-  - {fileID: 5539823460515056932}
-  - {fileID: 2893712749953664696}
-  - {fileID: 8305620655150212137}
-  - {fileID: 5963703077893971727}
-  - {fileID: 7829176741835014566}
   - {fileID: 8601496571019756479}
-  - {fileID: 8471693590738211449}
   - {fileID: 4081383282543538459}
   - {fileID: 9148516627016277288}
   - {fileID: 3732630735819655768}
@@ -272,10 +266,6 @@ Transform:
   - {fileID: 3234730638368401729}
   - {fileID: 4542409833760126622}
   - {fileID: 8276727920719600633}
-  - {fileID: 8817154793832517233}
-  - {fileID: 7469388747602032273}
-  - {fileID: 8747738654304151965}
-  - {fileID: 7900569683899927596}
   - {fileID: 6896927114599758642}
   - {fileID: 3893062960963308369}
   - {fileID: 4538573510947077178}
@@ -423,7 +413,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6921930152334778199}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.58055997, y: 0, z: 1.3126903}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -495,6 +485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -557,6 +551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -618,6 +616,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -747,6 +749,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -808,6 +814,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -871,6 +881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -932,6 +946,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -995,6 +1013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1056,6 +1078,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1119,6 +1145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1180,6 +1210,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1243,6 +1277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1304,6 +1342,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1367,6 +1409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1428,6 +1474,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1491,6 +1541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1552,6 +1606,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1615,6 +1673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1676,6 +1738,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1739,6 +1805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1800,6 +1870,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1863,6 +1937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1924,6 +2002,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1987,6 +2069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2048,6 +2134,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2111,6 +2201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2172,6 +2266,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2301,6 +2399,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2362,6 +2464,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2425,6 +2531,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2486,6 +2596,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2549,6 +2663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2610,6 +2728,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2673,6 +2795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2734,6 +2860,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2797,6 +2927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2858,6 +2992,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2921,6 +3059,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2982,6 +3124,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3045,6 +3191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3106,6 +3256,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3169,6 +3323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3230,6 +3388,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3293,6 +3455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3354,6 +3520,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3417,6 +3587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3478,6 +3652,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3541,6 +3719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3602,6 +3784,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3731,6 +3917,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3792,6 +3982,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3855,6 +4049,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3916,6 +4114,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3979,6 +4181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4040,6 +4246,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4103,6 +4313,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4164,6 +4378,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4227,6 +4445,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4288,6 +4510,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4351,6 +4577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4412,6 +4642,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4475,6 +4709,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4536,6 +4774,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4665,6 +4907,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4726,6 +4972,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4789,6 +5039,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4850,6 +5104,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4913,6 +5171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4974,6 +5236,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5037,6 +5303,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5098,6 +5368,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5161,6 +5435,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5222,6 +5500,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5285,6 +5567,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5346,6 +5632,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5409,6 +5699,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5470,6 +5764,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5533,6 +5831,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5594,6 +5896,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5657,6 +5963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5719,6 +6029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5780,6 +6094,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5909,6 +6227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5970,6 +6292,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6033,6 +6359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6094,6 +6424,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6157,6 +6491,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6218,6 +6556,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6281,6 +6623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6342,6 +6688,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6405,6 +6755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6466,6 +6820,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6529,6 +6887,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6590,6 +6952,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6653,6 +7019,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6714,6 +7084,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6777,6 +7151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6838,6 +7216,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6901,6 +7283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6910,72 +7296,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
   m_PrefabInstance: {fileID: 3379981448657711701}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3432359842503500115
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2471278523204964240}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -9
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_Name
-      value: GrassTile
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b65f121023c578349afbcf890b21935a, type: 3}
---- !u!4 &2893712749953664696 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-  m_PrefabInstance: {fileID: 3432359842503500115}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3512285457715100854
 PrefabInstance:
@@ -7028,6 +7348,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7091,6 +7415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7152,6 +7480,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7215,6 +7547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7276,6 +7612,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7339,6 +7679,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7400,6 +7744,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7463,6 +7811,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7524,6 +7876,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7587,6 +7943,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7648,6 +8008,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7711,6 +8075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7772,6 +8140,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7835,6 +8207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7896,6 +8272,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7959,6 +8339,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8020,6 +8404,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8083,6 +8471,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8144,6 +8536,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8207,6 +8603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8268,6 +8668,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8331,6 +8735,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8392,6 +8800,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8455,6 +8867,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8516,6 +8932,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8579,6 +8999,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8640,6 +9064,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8703,6 +9131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8764,6 +9196,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8827,6 +9263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8888,6 +9328,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8951,6 +9395,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9012,6 +9460,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9075,6 +9527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9136,6 +9592,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9199,6 +9659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9260,6 +9724,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9323,6 +9791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9384,6 +9856,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9447,6 +9923,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9508,6 +9988,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9571,6 +10055,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9632,6 +10120,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9695,6 +10187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9756,6 +10252,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9819,6 +10319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9880,6 +10384,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9943,6 +10451,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10004,6 +10516,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10067,6 +10583,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10128,6 +10648,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10191,6 +10715,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10252,6 +10780,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10315,6 +10847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10324,72 +10860,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
   m_PrefabInstance: {fileID: 5390343840398403697}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5434667634805009103
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2471278523204964240}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -9
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_Name
-      value: GrassTile
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b65f121023c578349afbcf890b21935a, type: 3}
---- !u!4 &5539823460515056932 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-  m_PrefabInstance: {fileID: 5434667634805009103}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5436466252001107821
 PrefabInstance:
@@ -10442,6 +10912,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10505,6 +10979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10566,6 +11044,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10629,6 +11111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10690,6 +11176,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10753,6 +11243,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10814,6 +11308,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10877,6 +11375,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10938,6 +11440,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11001,6 +11507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11062,6 +11572,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11125,6 +11639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11186,6 +11704,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11249,6 +11771,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11310,6 +11836,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11373,6 +11903,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11434,6 +11968,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11497,6 +12035,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11559,6 +12101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11568,72 +12114,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
   m_PrefabInstance: {fileID: 6112842695700736526}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6145703919650306276
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2471278523204964240}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -9
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_Name
-      value: GrassTile
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b65f121023c578349afbcf890b21935a, type: 3}
---- !u!4 &5963703077893971727 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-  m_PrefabInstance: {fileID: 6145703919650306276}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6156073632111161935
 PrefabInstance:
@@ -11686,6 +12166,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11749,6 +12233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11810,6 +12298,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11873,6 +12365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11934,6 +12430,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11997,6 +12497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12058,6 +12562,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12121,6 +12629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12182,6 +12694,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12245,6 +12761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12306,6 +12826,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12369,6 +12893,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12430,6 +12958,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12493,6 +13025,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12554,6 +13090,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12617,6 +13157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12678,6 +13222,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12741,6 +13289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12802,6 +13354,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12865,6 +13421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12926,6 +13486,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12989,6 +13553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13050,6 +13618,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13113,6 +13685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13122,68 +13698,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
   m_PrefabInstance: {fileID: 6893078865370466319}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6927134364184809850
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2471278523204964240}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_Name
-      value: GrassTile
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b65f121023c578349afbcf890b21935a, type: 3}
---- !u!4 &7469388747602032273 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-  m_PrefabInstance: {fileID: 6927134364184809850}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7015707841456225229
 PrefabInstance:
@@ -13236,6 +13750,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13299,6 +13817,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13360,6 +13882,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13423,6 +13949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13484,6 +14014,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13547,6 +14081,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13608,6 +14146,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13671,6 +14213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13732,6 +14278,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13795,6 +14345,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13856,6 +14410,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13919,6 +14477,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13980,6 +14542,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14043,6 +14609,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14104,6 +14674,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14167,6 +14741,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14176,68 +14754,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
   m_PrefabInstance: {fileID: 7634833012932157507}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &7651280663935331271
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2471278523204964240}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_Name
-      value: GrassTile
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b65f121023c578349afbcf890b21935a, type: 3}
---- !u!4 &7900569683899927596 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-  m_PrefabInstance: {fileID: 7651280663935331271}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7675901801436047842
 PrefabInstance:
@@ -14290,6 +14806,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14353,6 +14873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14362,72 +14886,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
   m_PrefabInstance: {fileID: 7702584811880017290}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &7722665905132332621
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2471278523204964240}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_Name
-      value: GrassTile
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b65f121023c578349afbcf890b21935a, type: 3}
---- !u!4 &7829176741835014566 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-  m_PrefabInstance: {fileID: 7722665905132332621}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7755227565044523527
 PrefabInstance:
@@ -14480,6 +14938,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14543,6 +15005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14604,6 +15070,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14667,6 +15137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14728,6 +15202,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14791,6 +15269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14852,6 +15334,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14915,6 +15401,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14976,6 +15466,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15039,6 +15533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15101,6 +15599,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15162,6 +15664,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15291,6 +15797,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15353,6 +15863,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15362,72 +15876,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
   m_PrefabInstance: {fileID: 8204090136961903350}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &8222228298182882706
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2471278523204964240}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_Name
-      value: GrassTile
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b65f121023c578349afbcf890b21935a, type: 3}
---- !u!4 &8471693590738211449 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-  m_PrefabInstance: {fileID: 8222228298182882706}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8278780088791915224
 PrefabInstance:
@@ -15480,6 +15928,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15543,6 +15995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15604,6 +16060,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15667,6 +16127,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15676,72 +16140,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
   m_PrefabInstance: {fileID: 8380428594851880567}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &8415473460332807106
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2471278523204964240}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -9
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_Name
-      value: GrassTile
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b65f121023c578349afbcf890b21935a, type: 3}
---- !u!4 &8305620655150212137 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-  m_PrefabInstance: {fileID: 8415473460332807106}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8455052331085593618
 PrefabInstance:
@@ -15794,6 +16192,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15857,6 +16259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15918,6 +16324,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15981,6 +16391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16042,6 +16456,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16105,6 +16523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16166,6 +16588,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
       propertyPath: m_Name
       value: floorpattern_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16229,6 +16655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16290,6 +16720,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16353,6 +16787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16414,6 +16852,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16477,6 +16919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16538,6 +16984,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16601,6 +17051,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floorpattern_001
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16662,6 +17116,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16725,6 +17183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16786,6 +17248,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16849,6 +17315,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16910,6 +17380,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16973,6 +17447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16982,68 +17460,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
   m_PrefabInstance: {fileID: 9041416360227464224}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &9067552464399002010
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2471278523204964240}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -7
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_Name
-      value: GrassTile
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b65f121023c578349afbcf890b21935a, type: 3}
---- !u!4 &8817154793832517233 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-  m_PrefabInstance: {fileID: 9067552464399002010}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9095960827015392455
 PrefabInstance:
@@ -17096,6 +17512,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17158,6 +17578,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
       propertyPath: m_Name
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17235,68 +17659,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2446f0419a949cc4784f549a55dff376, type: 3}
   m_PrefabInstance: {fileID: 9117915340984093116}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &9145839459487305334
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2471278523204964240}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: b65f121023c578349afbcf890b21935a, type: 3}
-      propertyPath: m_Name
-      value: GrassTile
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b65f121023c578349afbcf890b21935a, type: 3}
---- !u!4 &8747738654304151965 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b65f121023c578349afbcf890b21935a, type: 3}
-  m_PrefabInstance: {fileID: 9145839459487305334}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9211965389704179851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17348,6 +17710,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
       propertyPath: m_Name
       value: floorpattern
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 296b2e0b17f9cee4593cd0266410357b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
