@@ -145,6 +145,10 @@ public class Playercontroller : MonoBehaviour
         SetPlayerState(InteractionState.Moving);
     }
 
+    public void StartInteraction(){
+        SetPlayerState(InteractionState.Interacting);
+    }
+
     public void SetPlayerState(InteractionState newState){
         if (newState == this.playerState) return;
         if (newState == InteractionState.Interacting && this.playerState != InteractionState.Interacting){ 

@@ -20,6 +20,7 @@ public class InteractableObject : MonoBehaviour
        this.interactionObject.SetActive(true);
     }
 
+    // Pass player for closing
     public virtual void OnInteract(Playercontroller player){
         this.UI.SetActive(true);
         this.interactingPlayer = player;
