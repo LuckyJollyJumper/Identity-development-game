@@ -39,6 +39,8 @@ public class Playercontroller : MonoBehaviour
     }
 
     public void MovePlayer(){
+        if (VirtualJoystick.instances.ContainsKey(JID)) return;
+
         float h = VirtualJoystick.GetAxis("Horizontal", JID);
         float v = VirtualJoystick.GetAxis("Vertical", JID);
 
@@ -68,10 +70,8 @@ public class Playercontroller : MonoBehaviour
                 // If within interaction radius and currently idle, set to ready for interaction (Ignore if already ready or interacting)
                 if (io.Value <= interactionRadius && io.Key.currentState == InteractableObject.ObjectState.Idle){
                     io.Key.SetInteractionState(InteractableObject.ObjectState.ReadyForInteraction);
-                    Debug.Log($"{DebugID} Opening interactable: {io.Key.gameObject.name}");
                 }else if (io.Value > interactionRadius && io.Key.currentState != InteractableObject.ObjectState.Idle){
                     io.Key.SetInteractionState(InteractableObject.ObjectState.Idle);
-                    Debug.Log($"{DebugID} Closing interactable: {io.Key.gameObject.name}");
                 }
             }
            
