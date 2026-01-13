@@ -110,7 +110,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jouw Profiel klik hier
+  m_text: Jouw profiel, klik hier
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 16dc3dc3e894b4b48ade44acc84aedae, type: 2}
   m_sharedMaterial: {fileID: -4239297159057786491, guid: 16dc3dc3e894b4b48ade44acc84aedae, type: 2}

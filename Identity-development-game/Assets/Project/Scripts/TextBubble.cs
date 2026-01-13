@@ -29,10 +29,11 @@ public class TextBubble : MonoBehaviour
     }
 
     public void SetBubbleText(string newText){
+        Debug.Log($"[TextBubble] Setting bubble text to: {newText}, {bubbleText}");
         if (bubbleText == null){
-            bubbleText = GetComponentInChildren<TMPro.TextMeshProUGUI>();
+            this.bubbleText = GetComponentInChildren<TMPro.TextMeshProUGUI>();
         }
-        bubbleText.text = newText;
+        this.bubbleText.text = newText;
     }
     // LateUpdate is called after all Update methods — for camera-facing logic
     void LateUpdate(){

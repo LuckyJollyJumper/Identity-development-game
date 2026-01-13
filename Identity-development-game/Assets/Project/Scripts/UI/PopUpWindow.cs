@@ -11,41 +11,43 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
 {
     [Tooltip("List of texts to display in the pop-up window, in order")]
     [SerializeField] public List<string> popUpTexts;
+    [Header("Debug")]
+    [SerializeField] public bool debugMode = false;
     protected Playercontroller player;
     protected TextMeshProUGUI popUpText;
     protected string DebugID = "[PopUpWindow]";
     protected int currentTextIndex = 0;
 
     public virtual void Start(){
-        player = FindFirstObjectByType<Playercontroller>();
-        popUpText = this.GetComponentInChildren<TextMeshProUGUI>();
-        player.StartInteraction();
+        this.popUpText = GameObject.Find("PopUpText").GetComponent<TMPro.TextMeshProUGUI>();
+        this.player = FindFirstObjectByType<Playercontroller>();
+        this.player.StartInteraction();
 
         NextPopUpText();
     }
 
     public void SetPopUpText(string text){
-        popUpText.text = text;
+        this.popUpText.text = text;
     }
 
     public void NextPopUpText(){
         if (currentTextIndex < popUpTexts.Count){
             SetPopUpText(popUpTexts[currentTextIndex]);
         }else{
-            Debug.Log($"{DebugID} No more pop-up texts to display");
+            if (debugMode){ Debug.Log($"{DebugID} No more pop-up texts to display"); }
             EndInteraction();
         }
-        currentTextIndex++;
+        this.currentTextIndex++;
     }
 
     public virtual void EndInteraction(){
-        player.EndInteraction();
+        this.player.EndInteraction();
         this.gameObject.SetActive(false);
     }
 
     public virtual void OnPointerClick(PointerEventData eventData){
         NextPopUpText();
-        Debug.Log($"{DebugID} PopUpWindow clicked");
+        if (debugMode){ Debug.Log($"{DebugID} PopUpWindow clicked"); }
     }
 
 }

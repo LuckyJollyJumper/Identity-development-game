@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class PopUpWindowCharacter: PopUpWindow
 {
@@ -8,19 +9,13 @@ public class PopUpWindowCharacter: PopUpWindow
     [SerializeField] public TMPro.TextMeshProUGUI nameText;
     
     public override void Start(){
-        base.player    = FindFirstObjectByType<Playercontroller>();
-        base.popUpText = GameObject.Find("PopUpText").GetComponent<TMPro.TextMeshProUGUI>();
         this.nameText  = GameObject.Find("NameText").GetComponent<TMPro.TextMeshProUGUI>();
-
-        this.nameText.text = NPC.characterName;
-        base.popUpTexts    = NPC.dialogueTexts;
-        base.player.StartInteraction();
-
-        NextPopUpText();
+        base.Start();
     }
 
-    public void CloseChat(){
-        EndInteraction();
+    public void SetCharacterPopUpText(List<string> texts, string name){
+        base.popUpTexts = texts;
+        nameText.text = name;
     }
 
 }

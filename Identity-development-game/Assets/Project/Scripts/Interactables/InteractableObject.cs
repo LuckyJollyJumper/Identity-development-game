@@ -10,6 +10,7 @@ public class InteractableObject : MonoBehaviour
     [Tooltip("UI that appears when player interacts with the object")]
     [SerializeField] public GameObject UI;
     [SerializeField] public ObjectState currentState = ObjectState.Idle;
+    [SerializeField] public string popUpText;
     
     [Header("Debug")]
     [SerializeField] public bool debugMode = false;
@@ -17,6 +18,7 @@ public class InteractableObject : MonoBehaviour
     private string DebugID = "[InteractableObject]";
 
     public virtual void Start(){
+        this.interactionObject.GetComponentInChildren<TextBubble>().SetBubbleText(popUpText);
         this.interactionObject.SetActive(false);
         this.UI.SetActive(false);
     }
@@ -33,7 +35,7 @@ public class InteractableObject : MonoBehaviour
 
     public virtual void OnEndInteract(){
         this.UI.SetActive(false);
-        Debug.Log($"{DebugID} Ending interaction with player");
+        if (debugMode){ Debug.Log($"{DebugID} Ending interaction with player"); }
         this.interactingPlayer.EndInteraction();
     }
 
@@ -53,8 +55,6 @@ public class InteractableObject : MonoBehaviour
         }
 
         this.currentState = newState;
-        if (debugMode){
-            Debug.Log($"{DebugID} {gameObject.name} changed state to {this.currentState}");
-        }
+        if (debugMode){ Debug.Log($"{DebugID} {gameObject.name} changed state to {this.currentState}"); }
     }
 }

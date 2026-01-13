@@ -5284,6 +5284,8 @@ MonoBehaviour:
   interactionObject: {fileID: 5581964768041284555}
   UI: {fileID: 5638770450197115879}
   currentState: 0
+  popUpText: Klik hier voor jouw profiel
+  debugMode: 0
 --- !u!65 &9166374332073928691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5392,7 +5394,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &566303867805221145
 Transform:
   m_ObjectHideFlags: 0
