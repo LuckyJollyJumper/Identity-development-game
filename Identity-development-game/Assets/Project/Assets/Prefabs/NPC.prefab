@@ -169,6 +169,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5521767955796971441, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_ChildForceExpandHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5551500855697088575, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -220,6 +224,38 @@ PrefabInstance:
     - target: {fileID: 7365723947375738047, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
       propertyPath: m_Name
       value: NPCTextBoxCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416361858243657258, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432190429656472277, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 24.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432190429656472277, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432190429656472277, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7695204210502169419, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: NPC
+      value: 
+      objectReference: {fileID: 5477417865548946234}
+    - target: {fileID: 9087825327369450350, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -20.6186
+      objectReference: {fileID: 0}
+    - target: {fileID: 9087825327369450350, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.30929565
+      objectReference: {fileID: 0}
+    - target: {fileID: 9087825327369450350, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -250.90002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -771,10 +807,12 @@ MonoBehaviour:
   interactionObject: {fileID: 5531265197361975040}
   UI: {fileID: 5138346307764991280}
   currentState: 0
-  debugMode: 0
-  characterName: 
   popUpText: Hey!
-  dialogueTexts: []
+  debugMode: 0
+  characterName: Sami
+  dialogueTexts:
+  - Hallo\n\nHallo?
+  - Hallo
 --- !u!136 &100065316545013441
 CapsuleCollider:
   m_ObjectHideFlags: 0
