@@ -2,14 +2,19 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    public enum ObjectState { Idle, ReadyForInteraction, Interacting };
+
     [Header("References")]
     [Tooltip("Object that gets activated when player is in proximity")]
     [SerializeField] public GameObject interactionObject;
     [Tooltip("UI that appears when player interacts with the object")]
     [SerializeField] public GameObject UI;
-    public enum ObjectState { Idle, ReadyForInteraction, Interacting };
     [SerializeField] public ObjectState currentState = ObjectState.Idle;
+    
+    [Header("Debug")]
+    [SerializeField] public bool debugMode = false;
     private Playercontroller interactingPlayer;
+    private string DebugID = "[InteractableObject]";
 
     public virtual void Start(){
         this.interactionObject.SetActive(false);
@@ -28,7 +33,7 @@ public class InteractableObject : MonoBehaviour
 
     public virtual void OnEndInteract(){
         this.UI.SetActive(false);
-        Debug.Log("Ending interaction with player");
+        Debug.Log($"{DebugID} Ending interaction with player");
         this.interactingPlayer.EndInteraction();
     }
 
@@ -48,5 +53,8 @@ public class InteractableObject : MonoBehaviour
         }
 
         this.currentState = newState;
+        if (debugMode){
+            Debug.Log($"{DebugID} {gameObject.name} changed state to {this.currentState}");
+        }
     }
 }

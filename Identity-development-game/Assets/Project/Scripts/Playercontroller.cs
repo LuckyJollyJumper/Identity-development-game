@@ -39,7 +39,7 @@ public class Playercontroller : MonoBehaviour
     }
 
     public void MovePlayer(){
-        if (VirtualJoystick.instances.ContainsKey(JID)) return;
+        if (!VirtualJoystick.instances.ContainsKey(JID)) return;
 
         float h = VirtualJoystick.GetAxis("Horizontal", JID);
         float v = VirtualJoystick.GetAxis("Vertical", JID);
@@ -142,21 +142,24 @@ public class Playercontroller : MonoBehaviour
     }
 
     public void EndInteraction(){
+        JoystickObject.SetActive(true); 
         SetPlayerState(InteractionState.Moving);
     }
 
     public void StartInteraction(){
+        JoystickObject.SetActive(false); 
+        this.player.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
         SetPlayerState(InteractionState.Interacting);
     }
 
     public void SetPlayerState(InteractionState newState){
+        // Assumes only 2 states for now
         if (newState == this.playerState) return;
-        if (newState == InteractionState.Interacting && this.playerState != InteractionState.Interacting){ 
-            JoystickObject.SetActive(false); 
-            this.player.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+        if (newState == InteractionState.Interacting){
+            Debug.Log($"{DebugID} Setting state to Interacting");
         }
-        else if (newState == InteractionState.Moving && this.playerState == InteractionState.Interacting){ 
-            JoystickObject.SetActive(true); 
+        else if (newState == InteractionState.Moving){ 
+            Debug.Log($"{DebugID} Setting state to Moving");
         }
         this.playerState = newState;
     }

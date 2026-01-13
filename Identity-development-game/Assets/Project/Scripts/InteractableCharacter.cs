@@ -1,12 +1,13 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class InteractableCharacter : InteractableObject
 {
-
     [Header("Character Info")]
-    [SerializeField] public string name;
+    [SerializeField] public string characterName;
     [SerializeField] public string popUpText;
-    [SerializeField] public string dialogueText;
+    [Tooltip("List of dialogue texts for the character")]
+    [SerializeField] public List<string> dialogueTexts;
 
     public override void Start(){
         this.interactionObject.GetComponent<TextBubble>().SetBubbleText(popUpText);
