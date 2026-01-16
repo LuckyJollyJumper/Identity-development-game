@@ -37,7 +37,7 @@ public class InteractableObject : MonoBehaviour
         this.UI.SetActive(false);
         if (debugMode){ Debug.Log($"{DebugID} Ending interaction with player"); }
         this.interactingPlayer.EndInteraction();
-    }
+    } 
 
     public virtual void OnEndReadyForInteraction(){
         this.interactionObject.SetActive(false);

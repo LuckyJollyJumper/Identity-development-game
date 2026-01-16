@@ -13,6 +13,11 @@ public class UIMainMenu : MonoBehaviour
         playerPointsText.text = data.coins.ToString();
     }
 
+    public void DisplayServerData(ServerData data){
+        // Implementation for displaying server data if needed
+        // TODO
+    }
+
     public void ContinueGame(){
         ScenesManager.Instance.LoadScene(ScenesManager.scenes.SchoolMap);
     }

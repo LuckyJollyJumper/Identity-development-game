@@ -13352,8 +13352,30 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: debugMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: characterName
-      value: Yunus
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: dialogueTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'dialogueTexts.Array.data[0]'
+      value: Welkom op de school!\n\n Weet jij al welke vakken je gaat volgen?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'dialogueTexts.Array.data[1]'
+      value: Ik vind in de kantine werken leuk omdat ik mensen blij kan maken met
+        eten
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'dialogueTexts.Array.data[2]'
+      value: Ik vind in de kantine werken leuk omdat ik mensen blij kan maken met
+        eten
       objectReference: {fileID: 0}
     - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: m_LocalPosition.x

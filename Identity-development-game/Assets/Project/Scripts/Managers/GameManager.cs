@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] public ScenesManager _scenesManager;
     [HideInInspector] public PlayerData _playerData;
+    [HideInInspector] public ServerData _serverData;
     private JsonSaveSystem _jsonSaveSystem;
     private string DebugID = "[GameManager]";
    
@@ -35,9 +36,14 @@ public class GameManager : MonoBehaviour
         }
         else if (instance != this){ Destroy(this.gameObject); }
 
+        PrepareGameData();
+
+    }
+
+    public void PrepareGameData(){
         Debug.Log("===== Game started =====");
         _jsonSaveSystem = new JsonSaveSystem();
-
+    
         // Load player data if it is on disk otherwise start new character creation
         (bool newPlayer, PlayerData data) = _jsonSaveSystem.LoadPlayerData();
         if (newPlayer){
@@ -47,8 +53,11 @@ public class GameManager : MonoBehaviour
             _playerData = data;
             UIMainMenu uiMainMenu = FindFirstObjectByType<UIMainMenu>();
             uiMainMenu.DisplayPlayerData(data);
+            uiMainMenu.DisplayServerData(_serverData);
         }
-
+        
+        // Load server data for access during play
+        _serverData = _jsonSaveSystem.LoadServerData();
     }
 
     public void SaveGame(){ _jsonSaveSystem.SavePlayerData(_playerData); }
