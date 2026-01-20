@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 214509343}
   - component: {fileID: 214509342}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MainCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -302,7 +302,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -840,7 +840,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1248143990430081527, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Name
-      value: DropLocation
+      value: StartLocation
       objectReference: {fileID: 0}
     - target: {fileID: 3002851984652269675, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_AnchorMax.x
