@@ -14,19 +14,24 @@ public class PlayerData
         level = 1;
         points = 0;
         coins = 0;
-        progress = 0;
-        inventory = new string[] {};
-        characterStyle = new string[] {};
-        selectedPersonas1 = new string[] {};
+        progress = new List<ActivityData>();
+        inventory = new List<string>();
+        characterStyle = new List<string>();
+        selectedPersonas1 = new List<string>();
     }
     public string playerName;
     public int level;
     public int points;
     public int coins;
-    public int progress;
-    public string[] inventory;
-    public string[] characterStyle;
-    public string[] selectedPersonas1;
+    public List<ActivityData> progress; // Stores activities the player has completed, in order
+    public List<string> inventory;
+    public List<string> characterStyle;
+    public List<string> selectedPersonas1;
+
+    public void AddPoints(ActivityData activity){
+       progress.Add(activity);
+       points += activity.activityPoints;
+    }
 }
 
 public class ServerData{
