@@ -60,6 +60,8 @@ public class GameManager : MonoBehaviour
         _serverData = _jsonSaveSystem.LoadServerData();
     }
 
+
+    // Functions to be called by UI or other managers
     public void SaveGame(){ _jsonSaveSystem.SavePlayerData(_playerData); }
     public void QuitGame(){ _scenesManager.QuitGame(); }
     public void LoadScene(ScenesManager.scenes scene){ _scenesManager.LoadScene(scene); }
