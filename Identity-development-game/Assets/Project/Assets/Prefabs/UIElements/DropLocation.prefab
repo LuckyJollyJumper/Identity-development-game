@@ -51,9 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5c084386c9876438aeb35cceb8f311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  gridCoordinate: {x: 0, y: 0}
-  placedItem: {fileID: 0}
-  DebugMode: 0
+  GridCoordinate: {x: 0, y: 0}
+  PlacedItem: {fileID: 0}
 --- !u!222 &2150828866360904009
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -109,7 +108,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 80, y: 80}

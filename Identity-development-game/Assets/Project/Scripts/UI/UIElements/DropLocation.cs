@@ -4,24 +4,25 @@ using UnityEngine.UI;
 
 public class DropLocation : MonoBehaviour
 {
-    [HideInInspector] public Vector2Int gridCoordinate;
-    [HideInInspector] public GameObject placedItem;
-    [SerializeField] bool DebugMode = false;
-    private string DebugID;
+    [SerializeField] public Vector2Int GridCoordinate;
+    [SerializeField] public GameObject PlacedItem;
 
     public void Start(){
-        DebugID = $"[DropLocation {gameObject.name}]";
-        Vector2Int coord = GetGridCoordinate();
+        GridCoordinate = GetGridCoordinate();
     }
 
     /// <summary>
     /// Removes the reference to the placed item. Used by items that are moved off this drop location.
     /// </summary>
-    public void RemovePlacedItem(){ placedItem = null; }
+    public void ClearPlacedItem(){ PlacedItem = null; }
+    public void SetPlacedItem(GameObject item){ 
+        Debug.Log($"Setting placed item at {GridCoordinate} to {item.name}");
+        PlacedItem = item; }
 
 
     /// <summary>
-    /// Calculates the (x, y) grid coordinate of this drop location.
+    /// Calculates the (x, y) grid coordinate of this drop location. 
+    /// Uses GridLayoutGroup Constraint- `Fixed Column Count` to determine columns.
     /// </summary>
     public Vector2Int GetGridCoordinate(){
         int index = transform.GetSiblingIndex();

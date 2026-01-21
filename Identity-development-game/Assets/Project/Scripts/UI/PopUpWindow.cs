@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -17,12 +18,15 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
     protected TextMeshProUGUI popUpText;
     protected string DebugID = "[PopUpWindow]";
     protected int currentTextIndex = 0;
+    [HideInInspector] public event Action OnPopUpClosed; // Event triggered when the pop-up is closed
 
     public virtual void Start(){
         this.popUpText = GameObject.Find("PopUpText").GetComponent<TMPro.TextMeshProUGUI>();
         this.player = FindFirstObjectByType<Playercontroller>();
-        this.player.StartInteraction();
-
+        if (player != null) {
+            this.player.StartInteraction();
+        }
+       
         NextPopUpText();
     }
 
@@ -41,7 +45,11 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
     }
 
     public virtual void EndInteraction(){
-        this.player.EndInteraction();
+        if (this.player != null){
+            this.player.EndInteraction();
+        }
+
+        OnPopUpClosed?.Invoke();
         this.gameObject.SetActive(false);
     }
 
