@@ -8,6 +8,7 @@ public class ScenesManager : MonoBehaviour{
         SchoolMap, // Main map to navigate the school and access different areas
         CharacterCreator, // Sets name and character
         PersonaGame, // Minigame to find out the persona
+        PuzzleMiniGame, // Minigame to solve puzzles
     }
 
     public void Awake(){

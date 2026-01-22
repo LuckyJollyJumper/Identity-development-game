@@ -50,6 +50,12 @@ public class PuzzleManager : MonoBehaviour
         PuzzleTimer.StartTimer();
     }
 
+    public void QuitPuzzle(){
+        if (DebugMode){ Debug.Log($"{DebugID} Quitting puzzle and returning to main scene."); }
+        PuzzleTimer.Stop();
+        GameManager.Instance._scenesManager.LoadScene(ScenesManager.scenes.SchoolMap);
+    }
+
     /// <summary>
     /// Stops the timer and processes the puzzle completion, awarding points to the player and showing results.
     /// </summary>
@@ -62,7 +68,7 @@ public class PuzzleManager : MonoBehaviour
             activityName = "Art Puzzle",
             activityType = ActivityData.ActivityType.Art,
             activityDuration = timeTaken,
-            activityPoints = (int)(400f-timeTaken), // Example points
+            activityPoints = (int)(300f-timeTaken+5f), // Example points
             rewardCoins = 1
         };
 
@@ -72,6 +78,7 @@ public class PuzzleManager : MonoBehaviour
             $"Je hebt {activityData.activityPoints} punten en {activityData.rewardCoins} munt(en) verdiend voor je prestatie.\n\n Goed gedaan!"
         };
         Instantiate(PopupWindowPrefab, MinigameCanvas.transform);
+        PopupWindowPrefab.GetComponent<PopUpWindow>().OnPopUpClosed += QuitPuzzle;
     }
 
     

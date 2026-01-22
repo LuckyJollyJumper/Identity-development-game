@@ -13,7 +13,7 @@ public class InteractableObject : MonoBehaviour
     [SerializeField] public string popUpText;
     
     [Header("Debug")]
-    [SerializeField] public bool debugMode = false;
+    [SerializeField] public bool DebugMode = false;
     private Playercontroller interactingPlayer;
     private string DebugID = "[InteractableObject]";
 
@@ -35,7 +35,7 @@ public class InteractableObject : MonoBehaviour
 
     public virtual void OnEndInteract(){
         this.UI.SetActive(false);
-        if (debugMode){ Debug.Log($"{DebugID} Ending interaction with player"); }
+        if (DebugMode){ Debug.Log($"{DebugID} Ending interaction with player"); }
         this.interactingPlayer.EndInteraction();
     } 
 
@@ -55,6 +55,6 @@ public class InteractableObject : MonoBehaviour
         }
 
         this.currentState = newState;
-        if (debugMode){ Debug.Log($"{DebugID} {gameObject.name} changed state to {this.currentState}"); }
+        if (DebugMode){ Debug.Log($"{DebugID} {gameObject.name} changed state to {this.currentState}"); }
     }
 }

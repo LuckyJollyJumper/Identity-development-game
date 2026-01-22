@@ -7,7 +7,7 @@ using System.Collections.Generic;
 /// </summary>
 
 
-public class PlayerData
+public class PlayerData: ScriptableObject
 {
     public PlayerData(){
         playerName = "NewPlayer";

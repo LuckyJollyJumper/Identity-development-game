@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ActivityData : MonoBehaviour
+public class ActivityData : ScriptableObject
 {
     public enum ActivityType { Art, Sports, Woodworking }
     public string activityName;

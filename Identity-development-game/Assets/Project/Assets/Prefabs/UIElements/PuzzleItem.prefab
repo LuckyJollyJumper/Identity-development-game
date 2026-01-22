@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Debug text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 16dc3dc3e894b4b48ade44acc84aedae, type: 2}
   m_sharedMaterial: {fileID: -4239297159057786491, guid: 16dc3dc3e894b4b48ade44acc84aedae, type: 2}
@@ -226,4 +226,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzlePieceItem
   ParentAfterDrag: {fileID: 0}
+  DebugMode: 0
   gridPosition: {x: 0, y: 0}

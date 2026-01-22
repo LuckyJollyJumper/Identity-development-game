@@ -12,7 +12,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private Transform CanvasObject;
     [Header("Debug")]
     [SerializeField] public bool DebugMode = false;
-    private string DebugID;
+    protected string DebugID;
     
 
     public virtual void Start(){

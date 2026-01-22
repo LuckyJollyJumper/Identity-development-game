@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8676480893431170429}
-  - component: {fileID: 7992060037027278442}
   - component: {fileID: 8042959556139406657}
+  - component: {fileID: 1020509033990774202}
   m_Layer: 0
   m_Name: StartActivityObject
   m_TagString: Untagged
@@ -35,23 +35,6 @@ Transform:
   - {fileID: 6627179224183701364}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7992060037027278442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1780390897077874606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1291823e1b5da84e85fd1e9eff3d0ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableArea
-  interactionObject: {fileID: 5748726411739376596}
-  UI: {fileID: 3817319615489105019}
-  currentState: 0
-  popUpText: Begin mini-game
-  debugMode: 0
 --- !u!65 &8042959556139406657
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73,6 +56,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 0.51996595, z: 3}
   m_Center: {x: 0, y: 0.24001703, z: 0}
+--- !u!114 &1020509033990774202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780390897077874606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab88d3e33a4025344978c41121064ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableActivityObject
+  interactionObject: {fileID: 5748726411739376596}
+  UI: {fileID: 3817319615489105019}
+  currentState: 0
+  popUpText: Start mini-game
+  debugMode: 1
 --- !u!1 &3817319615489105019
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +91,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6627179224183701364
 RectTransform:
   m_ObjectHideFlags: 0
@@ -218,7 +218,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3281402246733979566, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -516.08
       objectReference: {fileID: 0}
     - target: {fileID: 3533442814958169562, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_Pivot.x
@@ -306,27 +306,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 275.3
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 42.419983
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 157.65
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -41.20999
       objectReference: {fileID: 0}
     - target: {fileID: 7347740304762721852, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: popUpTexts.Array.size

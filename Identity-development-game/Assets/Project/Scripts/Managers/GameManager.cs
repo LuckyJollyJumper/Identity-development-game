@@ -27,6 +27,13 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public PlayerData _playerData;
     [HideInInspector] public ServerData _serverData;
     private JsonSaveSystem _jsonSaveSystem;
+    public enum GameProgressStage{
+       FirstVisitIntroduction,
+       InteractedWithLeaderBoard,
+       InteractedWithFirstNPC,
+       CompletedFirstActivity,
+
+    }
     private string DebugID = "[GameManager]";
    
     public void Awake(){
