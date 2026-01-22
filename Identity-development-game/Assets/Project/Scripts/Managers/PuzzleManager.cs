@@ -64,15 +64,16 @@ public class PuzzleManager : MonoBehaviour
         PuzzleTimer.Stop();
         float timeTaken = PuzzleTimer.GetElapsedTime();
         // TODO: Needs to be done from a database
-        ActivityData activityData = new(){
-            activityName = "Art Puzzle",
-            activityType = ActivityData.ActivityType.Art,
-            activityDuration = timeTaken,
-            activityPoints = (int)(300f-timeTaken+5f), // Example points
-            rewardCoins = 1
-        };
+        ActivityData activityData = ScriptableObject.CreateInstance<ActivityData>();
+        activityData.activityName = "Art Puzzle";
+        activityData.activityType = ActivityData.ActivityType.Art;
+        activityData.activityDuration = timeTaken;
+        activityData.activityPoints = (int)(300f-timeTaken+5f); // Example points
+        activityData.rewardCoins = 1;
 
         // Create a PopUp that blocks the screen and shows the results
+        if (DebugMode){ Debug.Log("Creating new canvas"); }
+        PopupWindowPrefab = Resources.Load<GameObject>("PopUpPanel");
         PopupWindowPrefab.GetComponent<PopUpWindow>().popUpTexts = new List<string>{
             $"Gefeliciteerd! Je hebt de puzzel in {timeTaken:F2} seconden voltooid.",
             $"Je hebt {activityData.activityPoints} punten en {activityData.rewardCoins} munt(en) verdiend voor je prestatie.\n\n Goed gedaan!"

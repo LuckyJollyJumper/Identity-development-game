@@ -5,8 +5,6 @@ using System.Collections.Generic;
 /// <summary>
 /// Player data class to hold player-related information during runtime and for saving/loading.
 /// </summary>
-
-
 public class PlayerData: ScriptableObject
 {
     public PlayerData(){
@@ -52,59 +50,52 @@ public class JsonSaveSystem
         serverSavePath = Path.Combine(Application.persistentDataPath, "serverSave.json");
     }
     
+    //----------------------\\
     // Player data methods
-
+    //----------------------\\
     public void SavePlayerData(PlayerData player){
-        string json = JsonUtility.ToJson(player, true);
-        File.WriteAllText(playerSavePath, json);
-        if (debugMode){ Debug.Log($"{DebugID} Player saved to: {playerSavePath}"); }
+        try{
+            string json = JsonUtility.ToJson(player, true);
+            File.WriteAllText(playerSavePath, json);
+            
+            if(debugMode){ Debug.Log($"{DebugID} Player data saved to {playerSavePath}"); }
+        }
+        catch (System.Exception e){
+            Debug.LogError($"{DebugID} Failed to save player data: {e.Message}");
+        }
     }
 
     // returns (isExistingPlayer, PlayerData)
     public (bool, PlayerData) LoadPlayerData(){
-        if (File.Exists(playerSavePath)){
-            string json = File.ReadAllText(playerSavePath);
-            PlayerData data = JsonUtility.FromJson<PlayerData>(json);
-            if (debugMode){ Debug.Log($"{DebugID} Loaded: Name {data.playerName}"); }
-            return (false, data);
+        if(!File.Exists(playerSavePath)){
+            if(debugMode){Debug.Log($"{DebugID} No save file found at {playerSavePath}");}
+            return (false, new PlayerData());
         }
-        else{  
-            SavePlayerData(new PlayerData());
-            if (debugMode){ Debug.Log($"{DebugID} No savefile found. New player saved to: {playerSavePath}"); }
-            return (true, new PlayerData());
-        }
+
+        string json = File.ReadAllText(playerSavePath);
+        PlayerData loadedPlayer = JsonUtility.FromJson<PlayerData>(json);
+        
+        if(debugMode){Debug.Log($"{DebugID} Player data loaded from {playerSavePath}");}
+        
+        return (true, loadedPlayer);
     }
 
     public void DeleteSaveData(){
-        if (File.Exists(playerSavePath)){
-            File.Delete(playerSavePath);
-            if (debugMode){ Debug.Log($"{DebugID} Save file deleted."); }
+        try{
+            if(File.Exists(playerSavePath)){
+                File.Delete(playerSavePath);
+                
+                if(debugMode){ Debug.Log($"{DebugID} Player save data deleted from {playerSavePath}");}
+            }
+            else 
+            if(debugMode){ Debug.Log($"{DebugID} No save file found at {playerSavePath}");}
         }
-        else{ Debug.LogWarning($"{DebugID} No save file to delete."); }
-    }
-
-    // Server data methods
-
-    public void SaveServerData(ServerData data){
-        string json = JsonUtility.ToJson(data, true);
-        File.WriteAllText(serverSavePath, json);
-        if (debugMode){ Debug.Log($"{DebugID} Server data saved to: {serverSavePath}"); }
+        catch (System.Exception e){
+            Debug.LogError($"{DebugID} Failed to delete save data: {e.Message}");
+        }
     }
 
     public ServerData LoadServerData(){
-        if (File.Exists(serverSavePath)){
-            string json = File.ReadAllText(serverSavePath);
-            ServerData data = JsonUtility.FromJson<ServerData>(json);
-            if (debugMode){ Debug.Log($"{DebugID} Loaded server data from: {serverSavePath}"); }
-            return data;
-        }
-        else{  
-            ServerData newData = new ServerData();
-            newData.players = new List<PlayerData>();
-            SaveServerData(newData);
-            if (debugMode){ Debug.Log($"{DebugID} No server savefile found. New server data saved to: {serverSavePath}"); }
-            return newData;
-        }
+        return new();
     }
-
 }

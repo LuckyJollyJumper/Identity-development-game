@@ -9,7 +9,8 @@ public class InteractableActivityObject : InteractableObject
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public override void Start(){
         base.Start();
-        this.UI.GetComponent<PopUpWindow>().OnPopUpClosed += StartActivity;
+        this.UI.GetComponentInChildren<PopUpWindow>().OnPopUpClosed += StartActivity;
+        Debug.Log($"{this.UI.GetComponentInChildren<PopUpWindow>().popUpTexts.Count} pop-up texts set for activity object.");
     }
 
     public override void OnEndInteract(){
