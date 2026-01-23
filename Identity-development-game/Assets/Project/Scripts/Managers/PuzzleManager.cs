@@ -7,6 +7,9 @@ using System.Collections.Generic;
 /// </summary>
 public class PuzzleManager : MonoBehaviour
 {
+    [Header("Settings")]
+    [SerializeField] public string Puzzlename = "Art Puzzle";
+    [SerializeField] public int RewardCoins = 1;
     [HideInInspector] public List<DropLocation> DropLocations;
     [HideInInspector] public Timer PuzzleTimer;
     [HideInInspector] public TMPro.TextMeshProUGUI TimeText;
@@ -65,11 +68,11 @@ public class PuzzleManager : MonoBehaviour
         float timeTaken = PuzzleTimer.GetElapsedTime();
         // TODO: Needs to be done from a database
         ActivityData activityData = ScriptableObject.CreateInstance<ActivityData>();
-        activityData.activityName = "Art Puzzle";
+        activityData.activityName = this.Puzzlename;
         activityData.activityType = ActivityData.ActivityType.Art;
         activityData.activityDuration = timeTaken;
-        activityData.activityPoints = (int)(300f-timeTaken+5f); // Example points
-        activityData.rewardCoins = 1;
+        activityData.activityPoints = CalculatePoints; // Example points
+        activityData.rewardCoins = this.RewardCoins;
 
         // Create a PopUp that blocks the screen and shows the results
         if (DebugMode){ Debug.Log("Creating new canvas"); }
@@ -80,6 +83,13 @@ public class PuzzleManager : MonoBehaviour
         };
         Instantiate(PopupWindowPrefab, MinigameCanvas.transform);
         PopupWindowPrefab.GetComponent<PopUpWindow>().OnPopUpClosed += QuitPuzzle;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public int CalculatePoints(float timeTaken){
+        return (int)(300f-timeTaken+5f);
     }
 
     
