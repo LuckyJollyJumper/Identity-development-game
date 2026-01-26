@@ -2787,6 +2787,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1435818152}
     m_Modifications:
+    - target: {fileID: 676448189747886055, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1020509033990774202, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
       propertyPath: PopUpText
       value: Start spel
@@ -2803,6 +2807,30 @@ PrefabInstance:
       propertyPath: InteractionObject
       value: 
       objectReference: {fileID: 1896353636}
+    - target: {fileID: 1325662428680579741, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325662428680579741, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325662428680579741, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325662428680579741, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325662428680579741, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1325662428680579741, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1780390897077874606, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
       propertyPath: m_Name
       value: StartActivityObject
@@ -11997,6 +12025,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3364532591876138748, guid: b4c56e9d1a3b13d468123dd12b37a3c5, type: 3}
   m_PrefabInstance: {fileID: 35298678733181557}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1245146425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4044378705681501287, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
+  m_PrefabInstance: {fileID: 8796887867263708084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1245146429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245146425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbbe62f4a857da540bc046e08f3d6710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TypingEffect
+  TextField: {fileID: 0}
+  TypingSpeed: 0.1
 --- !u!1001 &1249326082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19934,6 +19981,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9025191263582273460, guid: 27e72c2d4ab9aae43a2c8fe05056b32b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025191263582273460, guid: 27e72c2d4ab9aae43a2c8fe05056b32b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -19989,10 +20040,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3281402246733979566, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3281402246733979566, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
-      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3533442814958169562, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
@@ -20079,10 +20126,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PopUpPanel
       objectReference: {fileID: 0}
-    - target: {fileID: 3587110054846153556, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -20104,51 +20147,36 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5548433966267910495, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5548433966267910495, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5548433966267910495, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5548433966267910495, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5548433966267910495, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5548433966267910495, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7347740304762721852, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
-      propertyPath: popUpTexts.Array.size
+      propertyPath: PopUpTexts.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7347740304762721852, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
-      propertyPath: 'popUpTexts.Array.data[0]'
-      value: Welkom op je nieuwe school!\n\n Raak ergens het scherm aan om door te
-        gaan.
+      propertyPath: 'PopUpTexts.Array.data[0]'
+      value: 'Welkom op je nieuwe school!
+
+
+        Raak ergens het scherm aan om
+        door te gaan'
       objectReference: {fileID: 0}
     - target: {fileID: 7347740304762721852, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
-      propertyPath: 'popUpTexts.Array.data[1]'
-      value: Je kan rondlopen door de cirkel beneden op het scherm te verplaatsen.\n\nVerken
-        de school maar
+      propertyPath: 'PopUpTexts.Array.data[1]'
+      value: 'Je kan rondlopen door de witte cirkel beneden op het scherm te verplaatsen
+
+
+        Veel
+        Plezier met spelen!'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4044378705681501287, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1245146429}
   m_SourcePrefab: {fileID: 100100000, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

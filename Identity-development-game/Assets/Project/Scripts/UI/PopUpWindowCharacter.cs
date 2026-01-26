@@ -11,14 +11,21 @@ public class PopUpWindowCharacter: PopUpWindow
     [Tooltip("Reference to parent object")]
     [SerializeField] public InteractableCharacter NPC;
     [SerializeField] TMPro.TextMeshProUGUI NameText;
+    [HideInInspector] TypingEffect TypingEffect;
     
     public override void Start(){
-        foreach (TMPro.TextMeshProUGUI t in GetComponentsInChildren<TMPro.TextMeshProUGUI>()){
+        base.Start();
+         foreach (TMPro.TextMeshProUGUI t in GetComponentsInChildren<TMPro.TextMeshProUGUI>()){
             if (t.name == "NameText"){
-                this.NameText = t;
+                this.NameText = t.GetComponent<TMPro.TextMeshProUGUI>();
+                // this.TypingEffect = t.GetComponent<TypingEffect>();
             }
         }
-        base.Start();
+    }
+
+    public override void SetPopUpText(string text){
+        this.PopUpText.text = text; 
+        // this.TypingEffect.StartEffect();
     }
 
     public void SetCharacterPopUpText(List<string> texts, string name){

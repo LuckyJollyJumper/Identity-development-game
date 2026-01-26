@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 2056858430346343124}
   - component: {fileID: 2352849356100104348}
   - component: {fileID: 5185957514300275675}
+  - component: {fileID: 6120326316458566833}
   m_Layer: 5
   m_Name: PopUpText
   m_TagString: Untagged
@@ -321,6 +322,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6120326316458566833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5632318201599656375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbbe62f4a857da540bc046e08f3d6710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TypingEffect
+  TextField: {fileID: 0}
+  TypingSpeed: 0.1
 --- !u!1 &5909399958666920029
 GameObject:
   m_ObjectHideFlags: 0

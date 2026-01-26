@@ -43,6 +43,7 @@ The GameManager:
     - Create a gate around the school
     - Create a carpark and bikestall
     - Hide a special activity or items to find
+- Add typing effect for popups and the NPC's
 
 
 

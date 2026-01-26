@@ -34,7 +34,7 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
     /// <summary>
     /// Displays the next text in the pop-up sequence or closes the pop-up if there are no more texts using currentTextIndex.
     /// </summary>
-    public void NextPopUpText(){
+    public virtual void NextPopUpText(){
         if (this.CurrentTextIndex < this.PopUpTexts.Count){
             SetPopUpText(PopUpTexts[this.CurrentTextIndex]);
         }else{
@@ -43,7 +43,7 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
         }
         this.CurrentTextIndex++;
     }
-    public void SetPopUpText(string text){ this.PopUpText.text = text; }
+    public virtual void SetPopUpText(string text){ this.PopUpText.text = text; }
 
 
     /// <summary>

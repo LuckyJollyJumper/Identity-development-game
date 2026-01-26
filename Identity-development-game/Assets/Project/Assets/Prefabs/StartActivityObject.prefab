@@ -68,11 +68,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab88d3e33a4025344978c41121064ed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableActivityObject
-  interactionObject: {fileID: 5748726411739376596}
+  InteractionObject: {fileID: 0}
   UI: {fileID: 3817319615489105019}
-  currentState: 0
-  popUpText: Start mini-game
-  debugMode: 1
+  CurrentState: 0
+  PopUpText: 
+  DebugMode: 0
+  DebugID: '[InteractableObject]'
+  ActivityScene: 0
 --- !u!1 &3817319615489105019
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +220,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3281402246733979566, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -516.08
+      value: -519.58
       objectReference: {fileID: 0}
     - target: {fileID: 3533442814958169562, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_Pivot.x
@@ -314,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 275.3
+      value: 277.3
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_SizeDelta.y
@@ -322,7 +324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 157.65
+      value: 158.65
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_AnchoredPosition.y
