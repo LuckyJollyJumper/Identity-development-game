@@ -26,9 +26,9 @@ public class PuzzleManager : MonoBehaviour
         try{
             PopupWindowPrefab = Resources.Load<GameObject>("PopUpPanel");
             PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpTexts = new List<string>{
-                "Welkom bij het schilderij puzzel! Plaats de stukken op de juiste plek om het kunstwerk te voltooien.",
+                "Welkom bij de schilderij puzzel! Plaats de stukken op de juiste plek om het kunstwerk te voltooien.",
                 "Sleep elk puzzelstuk onderin het scherm naar de juiste positie op het raster.",
-                "Als alle stukken correct geplaatst zijn, voltooi je de puzzel. Hoe sneller je het voltooit, hoe meer punten verdien je. Veel succes!"
+                "Als alle stukken correct geplaatst zijn, voltooi je de puzzel. Hoe sneller je het voltooit, hoe meer punten je verdient. Veel succes!"
             };
             if (DebugMode){ Debug.Log($"{DebugID} Starting Puzzle Manager, showing instructions popup."); }
             GameObject popupInstance = Instantiate(PopupWindowPrefab, MinigameCanvas.transform);
@@ -76,14 +76,14 @@ public class PuzzleManager : MonoBehaviour
         activityData.RewardCoins = this.RewardCoins;
 
         // Create a PopUp that blocks the screen and shows the results
-        if (DebugMode){ Debug.Log("Creating new canvas"); }
+        if (DebugMode){ Debug.Log($"{DebugID} Creating new canvas"); }
         PopupWindowPrefab = Resources.Load<GameObject>("PopUpPanel");
         PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpTexts = new List<string>{
             $"Gefeliciteerd! Je hebt de puzzel in {timeTaken:F2} seconden voltooid.",
-            $"Je hebt {activityData.ActivityPoints} punten en {activityData.RewardCoins} munt(en) verdiend voor je prestatie.\n\n Goed gedaan!"
+            $"Je hebt {activityData.ActivityPoints} punten en {activityData.RewardCoins} <Sprite index=0> verdiend voor je prestatie.\n\n Goed gedaan!"
         };
-        Instantiate(PopupWindowPrefab, MinigameCanvas.transform);
-        PopupWindowPrefab.GetComponent<PopUpWindow>().OnPopUpClosed += QuitPuzzle;
+        GameObject popupInstance = Instantiate(PopupWindowPrefab, MinigameCanvas.transform);
+        popupInstance.GetComponent<PopUpWindow>().OnPopUpClosed += QuitPuzzle;
     }
 
     /// <summary>

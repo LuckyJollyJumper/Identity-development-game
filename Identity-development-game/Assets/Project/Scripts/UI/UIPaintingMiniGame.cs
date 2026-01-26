@@ -13,6 +13,10 @@ public class UIPaintingMiniGame : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start(){
         PuzzleManager = GameObject.Find("PuzzleManager").GetComponent<PuzzleManager>();
+        if (PuzzleManager == null)
+        {
+            Debug.Log($"[UIPaintingMiniGame] No PuzzleManager found");
+        }
         
         DropLocations = new List<DropLocation>(FindObjectsByType<DropLocation>(FindObjectsSortMode.None));
         DropLocation startDropLocation = DropLocations.Find(dl => dl.gameObject.name == "StartDropLocation");
