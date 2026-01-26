@@ -23,13 +23,20 @@ public class TextBubble : MonoBehaviour
     [Header("References")]
     [SerializeField] TMP_Text bubbleText;
 
+    [Header("Debug")]
+    [SerializeField] public bool DebugMode = false;
+    private string DebugID;
+
     void Awake(){
         this.mainCamera = Camera.main;
         this.textBubble = GetComponent<Transform>();
+        if (DebugMode){
+            DebugID = $"[{parentObject.name}/TextBubble]";
+        }
     }
 
     public void SetBubbleText(string newText){
-        Debug.Log($"[TextBubble] Setting bubble text to: {newText}, {bubbleText}");
+        if (DebugMode){ Debug.Log($"{DebugID} Setting bubble text to: {newText}, {bubbleText}"); }
         if (bubbleText == null){
             this.bubbleText = GetComponentInChildren<TMPro.TextMeshProUGUI>();
         }

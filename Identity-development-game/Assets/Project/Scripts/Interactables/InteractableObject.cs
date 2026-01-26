@@ -19,12 +19,13 @@ public class InteractableObject : MonoBehaviour
     [Header("Debug")]
     [SerializeField] public bool DebugMode = false;
     private Playercontroller InteractingPlayer;
-    private string DebugID = "[InteractableObject]";
+    [HideInInspector] public string DebugID = "[InteractableObject]";
 
     public virtual void Start(){
         this.InteractionObject.GetComponentInChildren<TextBubble>().SetBubbleText(PopUpText);
         this.InteractionObject.SetActive(false);
         this.UI.SetActive(false);
+        this.DebugID = $"[InteractableObject/{this.gameObject.name}]";
     }
 
     public virtual void OnReadyForInteraction(){
