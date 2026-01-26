@@ -123,11 +123,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1291823e1b5da84e85fd1e9eff3d0ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableObject
-  interactionObject: {fileID: 2923495318452743853}
+  InteractionObject: {fileID: 0}
   UI: {fileID: 8604074040487155271}
-  currentState: 0
-  popUpText: Scorebord
-  debugMode: 0
+  CurrentState: 0
+  PopUpText: 
+  DebugMode: 0
+  DebugID: '[InteractableObject]'
 --- !u!65 &209425875273120394
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1743,7 +1744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1631562944979136901, guid: 04b98312c4308554096dc92538feecbb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.05719
+      value: 0.66
       objectReference: {fileID: 0}
     - target: {fileID: 1631562944979136901, guid: 04b98312c4308554096dc92538feecbb, type: 3}
       propertyPath: m_LocalPosition.z
