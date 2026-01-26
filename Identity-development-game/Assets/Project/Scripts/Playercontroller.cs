@@ -68,9 +68,9 @@ public class Playercontroller : MonoBehaviour
             // Only used on initial discovery of object
             foreach (var io in nearbyIO){
                 // If within interaction radius and currently idle, set to ready for interaction (Ignore if already ready or interacting)
-                if (io.Value <= interactionRadius && io.Key.currentState == InteractableObject.ObjectState.Idle){
+                if (io.Value <= interactionRadius && io.Key.CurrentState == InteractableObject.ObjectState.Idle){
                     io.Key.SetInteractionState(InteractableObject.ObjectState.ReadyForInteraction);
-                }else if (io.Value > interactionRadius && io.Key.currentState != InteractableObject.ObjectState.Idle){
+                }else if (io.Value > interactionRadius && io.Key.CurrentState != InteractableObject.ObjectState.Idle){
                     io.Key.SetInteractionState(InteractableObject.ObjectState.Idle);
                 }
             }

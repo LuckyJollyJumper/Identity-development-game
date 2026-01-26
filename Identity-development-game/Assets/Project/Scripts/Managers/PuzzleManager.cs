@@ -9,6 +9,7 @@ public class PuzzleManager : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] public string Puzzlename = "Art Puzzle";
+    [SerializeField] public ActivityData.ActivitiesType PuzzleType;
     [SerializeField] public int RewardCoins = 1;
     [HideInInspector] public List<DropLocation> DropLocations;
     [HideInInspector] public Timer PuzzleTimer;
@@ -24,7 +25,7 @@ public class PuzzleManager : MonoBehaviour
         PuzzleTimer = GetComponent<Timer>();
         try{
             PopupWindowPrefab = Resources.Load<GameObject>("PopUpPanel");
-            PopupWindowPrefab.GetComponent<PopUpWindow>().popUpTexts = new List<string>{
+            PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpTexts = new List<string>{
                 "Welkom bij het schilderij puzzel! Plaats de stukken op de juiste plek om het kunstwerk te voltooien.",
                 "Sleep elk puzzelstuk onderin het scherm naar de juiste positie op het raster.",
                 "Als alle stukken correct geplaatst zijn, voltooi je de puzzel. Hoe sneller je het voltooit, hoe meer punten verdien je. Veel succes!"
@@ -56,7 +57,7 @@ public class PuzzleManager : MonoBehaviour
     public void QuitPuzzle(){
         if (DebugMode){ Debug.Log($"{DebugID} Quitting puzzle and returning to main scene."); }
         PuzzleTimer.Stop();
-        GameManager.Instance._scenesManager.LoadScene(ScenesManager.scenes.SchoolMap);
+        GameManager.Instance._scenesManager.LoadScene(ScenesManager.Scenes.SchoolMap);
     }
 
     /// <summary>
@@ -68,18 +69,18 @@ public class PuzzleManager : MonoBehaviour
         float timeTaken = PuzzleTimer.GetElapsedTime();
         // TODO: Needs to be done from a database
         ActivityData activityData = ScriptableObject.CreateInstance<ActivityData>();
-        activityData.activityName = this.Puzzlename;
-        activityData.activityType = ActivityData.ActivityType.Art;
-        activityData.activityDuration = timeTaken;
-        activityData.activityPoints = CalculatePoints; // Example points
-        activityData.rewardCoins = this.RewardCoins;
+        activityData.ActivityName = this.Puzzlename;
+        activityData.ActivityType = this.PuzzleType;
+        activityData.ActivityDuration = timeTaken;
+        activityData.ActivityPoints = CalculatePoints(timeTaken); // Example points
+        activityData.RewardCoins = this.RewardCoins;
 
         // Create a PopUp that blocks the screen and shows the results
         if (DebugMode){ Debug.Log("Creating new canvas"); }
         PopupWindowPrefab = Resources.Load<GameObject>("PopUpPanel");
-        PopupWindowPrefab.GetComponent<PopUpWindow>().popUpTexts = new List<string>{
+        PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpTexts = new List<string>{
             $"Gefeliciteerd! Je hebt de puzzel in {timeTaken:F2} seconden voltooid.",
-            $"Je hebt {activityData.activityPoints} punten en {activityData.rewardCoins} munt(en) verdiend voor je prestatie.\n\n Goed gedaan!"
+            $"Je hebt {activityData.ActivityPoints} punten en {activityData.RewardCoins} munt(en) verdiend voor je prestatie.\n\n Goed gedaan!"
         };
         Instantiate(PopupWindowPrefab, MinigameCanvas.transform);
         PopupWindowPrefab.GetComponent<PopUpWindow>().OnPopUpClosed += QuitPuzzle;

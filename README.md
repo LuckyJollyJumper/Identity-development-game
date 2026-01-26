@@ -28,9 +28,13 @@ The GameManager:
 - Make the charactercreation
 - Create the homequests interactableobject
 - Create the shop with items
+- UIMainMenu script should be included into the playerHUD prefab and thus deleted
+- More of the Persona games
+    - Make the prediction of these personas
 
 #### Optimisations
-- Make puzzle mini-game such that you input an image and a size and the game handles everything
+- Make puzzle mini-game such that you input an image and a size and the game handles 
+
 
 #### Aesthetics
 - Create the outside world with border

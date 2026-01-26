@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class ScenesManager : MonoBehaviour{
     [HideInInspector] public static ScenesManager Instance;
 
-    public enum scenes{
+    public enum Scenes{
         SchoolMap, // Main map to navigate the school and access different areas
         CharacterCreator, // Sets name and character
         PersonaGame, // Minigame to find out the persona
@@ -15,7 +15,7 @@ public class ScenesManager : MonoBehaviour{
         Instance = this;
     }
 
-    public void LoadScene(scenes scene){
+    public void LoadScene(Scenes scene){
         SceneManager.LoadScene(scene.ToString());
     }
     public void ReloadCurrentScene(){

@@ -2,20 +2,28 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
+/// <summary>
+/// PopUpWindow child that adds a nametext box to the PopUp
+/// </summary>
 public class PopUpWindowCharacter: PopUpWindow
 {
     [Header("Character Chat References")]
+    [Tooltip("Reference to parent object")]
     [SerializeField] public InteractableCharacter NPC;
-    [SerializeField] public TMPro.TextMeshProUGUI nameText;
+    [SerializeField] TMPro.TextMeshProUGUI NameText;
     
     public override void Start(){
-        this.nameText  = GameObject.Find("NameText").GetComponent<TMPro.TextMeshProUGUI>();
+        foreach (TMPro.TextMeshProUGUI t in GetComponentsInChildren<TMPro.TextMeshProUGUI>()){
+            if (t.name == "NameText"){
+                this.NameText = t;
+            }
+        }
         base.Start();
     }
 
     public void SetCharacterPopUpText(List<string> texts, string name){
-        base.popUpTexts = texts;
-        nameText.text = name;
+        base.PopUpTexts = texts;
+        this.NameText.text = name;
     }
 
 }

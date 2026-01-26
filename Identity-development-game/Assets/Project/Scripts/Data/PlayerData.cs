@@ -5,6 +5,7 @@ using System.Collections.Generic;
 /// <summary>
 /// Player data class to hold player-related information during runtime and for saving/loading.
 /// </summary>
+[CreateAssetMenu(fileName = "PlayerData", menuName = "Scriptable Objects/PlayerData")]
 public class PlayerData: ScriptableObject
 {
     public PlayerData(){
@@ -28,12 +29,8 @@ public class PlayerData: ScriptableObject
 
     public void AddPoints(ActivityData activity){
        progress.Add(activity);
-       points += activity.activityPoints;
+       points += activity.ActivityPoints;
     }
-}
-
-public class ServerData{
-    public List<PlayerData> players;
 }
 
 
@@ -95,6 +92,9 @@ public class JsonSaveSystem
         }
     }
 
+    //----------------------\\
+    // Server data methods
+    //----------------------\\
     public ServerData LoadServerData(){
         return new();
     }

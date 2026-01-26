@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+/// <summary>
+/// UI class that controls all the UI elements for the puzzle minigame.
+/// </summary>
 public class UIPaintingMiniGame : MonoBehaviour
 {
     [HideInInspector] public TMPro.TextMeshProUGUI TimeText;
@@ -47,8 +50,8 @@ public class UIPaintingMiniGame : MonoBehaviour
                 return isCorrect = false;
             }
             PuzzlePieceItem piece = dropLocation.PlacedItem.GetComponent<PuzzlePieceItem>();
-            if (piece.gridPosition != dropLocation.GridCoordinate){
-                Debug.Log($"Piece at {dropLocation.GridCoordinate} is incorrect. piece at {piece.gridPosition} with drop at {dropLocation.GridCoordinate}"); 
+            if (piece.GridPosition != dropLocation.GridCoordinate){
+                Debug.Log($"Piece at {dropLocation.GridCoordinate} is incorrect. piece at {piece.GridPosition} with drop at {dropLocation.GridCoordinate}"); 
                 return isCorrect = false;
             }
             Debug.Log($"Piece at {dropLocation.GridCoordinate} is correct.");

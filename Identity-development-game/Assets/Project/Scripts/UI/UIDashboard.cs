@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/// <summary>
+/// UI class that controls all the UI elements for the dashboard created for the teachers.
+/// The dashboard is currently only as a mockup and so is not connected to the game.
+/// </summary>
 public class UIDashboard : MonoBehaviour
 {
     [SerializeField] private GameObject ClassesPanel;

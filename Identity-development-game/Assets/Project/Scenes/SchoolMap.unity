@@ -887,6 +887,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5564747418734929963, guid: 0b4f5405ae57b14458a09cf303079bcf, type: 3}
   m_PrefabInstance: {fileID: 1481917338}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &120070919 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5581964768041284555, guid: b4c56e9d1a3b13d468123dd12b37a3c5, type: 3}
+  m_PrefabInstance: {fileID: 35298678733181557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &133509004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1900,9 +1905,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 1435818152}
     m_Modifications:
     - target: {fileID: 1020509033990774202, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
+      propertyPath: PopUpText
+      value: Start spel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020509033990774202, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
+      propertyPath: ActivityScene
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1020509033990774202, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
       propertyPath: activityScene
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1020509033990774202, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
+      propertyPath: InteractionObject
+      value: 
+      objectReference: {fileID: 1896353636}
     - target: {fileID: 1780390897077874606, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
       propertyPath: m_Name
       value: StartActivityObject
@@ -7664,6 +7681,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3879704020579845810, guid: 51483b6b6a6fda4449d0d8eb3a3cc668, type: 3}
   m_PrefabInstance: {fileID: 46155972}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1218749131 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3364532591876138748, guid: b4c56e9d1a3b13d468123dd12b37a3c5, type: 3}
+  m_PrefabInstance: {fileID: 35298678733181557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1249326082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7962,6 +7984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   _scenesManager: {fileID: 1947006165}
   _playerData: {fileID: 0}
+  _serverData: {fileID: 0}
 --- !u!4 &1298471688
 Transform:
   m_ObjectHideFlags: 0
@@ -9376,6 +9399,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8715262926995364744, guid: 9c87bd1d3769ecb49a633db6afb46dfe, type: 3}
   m_PrefabInstance: {fileID: 1508041977}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1542861173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6829350583332474693, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+  m_PrefabInstance: {fileID: 5706052158298946879}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1548136184
 PrefabInstance:
@@ -11010,10 +11038,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8288398288256303752, guid: cfb5b33802c6d214db30ce8fea343aac, type: 3}
   m_PrefabInstance: {fileID: 1499224633}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1896353636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5748726411739376596, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
+  m_PrefabInstance: {fileID: 259519796}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1904965190 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1494169647776655443, guid: a8a5ad5a3c7c6e14b93838307a2f1112, type: 3}
   m_PrefabInstance: {fileID: 705244967779829663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1913246808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2923495318452743853, guid: 38362dfd13872b2409faf49411846a7d, type: 3}
+  m_PrefabInstance: {fileID: 3702622787255127737}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1939835227
 PrefabInstance:
@@ -12155,6 +12193,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1435818152}
     m_Modifications:
+    - target: {fileID: 629208096605652337, guid: b4c56e9d1a3b13d468123dd12b37a3c5, type: 3}
+      propertyPath: Locker
+      value: 
+      objectReference: {fileID: 1218749131}
     - target: {fileID: 2101471414236658167, guid: b4c56e9d1a3b13d468123dd12b37a3c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.35576987
@@ -12203,6 +12245,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6369333666331935055, guid: b4c56e9d1a3b13d468123dd12b37a3c5, type: 3}
+      propertyPath: PopUpText
+      value: Jouw profiel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6369333666331935055, guid: b4c56e9d1a3b13d468123dd12b37a3c5, type: 3}
+      propertyPath: InteractionObject
+      value: 
+      objectReference: {fileID: 120070919}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12958,6 +13008,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5761844320735415339, guid: 38362dfd13872b2409faf49411846a7d, type: 3}
+      propertyPath: PopUpText
+      value: Scorebord
+      objectReference: {fileID: 0}
+    - target: {fileID: 5761844320735415339, guid: 38362dfd13872b2409faf49411846a7d, type: 3}
+      propertyPath: InteractionObject
+      value: 
+      objectReference: {fileID: 1913246808}
     - target: {fileID: 5784986642036059617, guid: 38362dfd13872b2409faf49411846a7d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -13302,16 +13360,45 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: PopUpText
+      value: Hey!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: debugMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: CharacterName
+      value: Bas
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: characterName
       value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: InteractionObject
+      value: 
+      objectReference: {fileID: 1542861173}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: DialogueTexts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: dialogueTexts.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'DialogueTexts.Array.data[0]'
+      value: Hallo! Ik heb jou niet eerder op deze school gezien.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'DialogueTexts.Array.data[1]'
+      value: Welke vakken ga jij volgen?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'DialogueTexts.Array.data[2]'
+      value: Ik vind het leuk om in de kantine te werken omdat ik dan anderen blij
+        kan maken met eten.
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: 'dialogueTexts.Array.data[0]'

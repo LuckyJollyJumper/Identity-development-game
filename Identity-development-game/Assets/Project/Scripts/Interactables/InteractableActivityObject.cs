@@ -5,12 +5,13 @@ using UnityEngine;
 /// </summary>
 public class InteractableActivityObject : InteractableObject
 {
-    public ScenesManager.scenes activityScene;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [Tooltip("The scene that the Object will launch when interacted with")]
+    public ScenesManager.Scenes ActivityScene;
+   
     public override void Start(){
         base.Start();
         this.UI.GetComponentInChildren<PopUpWindow>().OnPopUpClosed += StartActivity;
-        Debug.Log($"{this.UI.GetComponentInChildren<PopUpWindow>().popUpTexts.Count} pop-up texts set for activity object.");
+        Debug.Log($"{this.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts.Count} pop-up texts set for activity object.");
     }
 
     public override void OnEndInteract(){
@@ -20,9 +21,9 @@ public class InteractableActivityObject : InteractableObject
 
     public void StartActivity(){
         if (DebugMode) {
-            Debug.Log($"[DebugMode] Starting activity: {activityScene}");
+            Debug.Log($"[DebugMode] Starting activity: {ActivityScene}");
         }
-        GameManager.Instance._scenesManager.LoadScene(activityScene);
+        GameManager.Instance._scenesManager.LoadScene(ActivityScene);
     }
 
 }

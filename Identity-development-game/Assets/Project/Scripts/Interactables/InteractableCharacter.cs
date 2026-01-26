@@ -1,15 +1,18 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+/// <summary>
+/// InteractableObject for NPC characters. Uses a different PopUpWindow than base.
+/// </summary>
 public class InteractableCharacter : InteractableObject
 {
     [Header("Character Info")]
-    [SerializeField] public string characterName;
+    [SerializeField] public string CharacterName;
     [Tooltip("List of dialogue texts for the character")]
-    [SerializeField] public List<string> dialogueTexts;
+    [TextArea][SerializeField] public List<string> DialogueTexts;
 
     public override void Start(){
-        base.UI.GetComponent<PopUpWindowCharacter>().SetCharacterPopUpText(dialogueTexts, characterName);
+        base.UI.GetComponent<PopUpWindowCharacter>().SetCharacterPopUpText(DialogueTexts, CharacterName);
         base.Start();
     }
     

@@ -2,9 +2,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+/// <summary>
+/// Class to function as a place for a DraggableItem to be dragged to adn stored in UI.
+/// TODO: Should be made to handle only image and size input.
+/// </summary>
 public class DropLocation : MonoBehaviour
 {
     [SerializeField] public Vector2Int GridCoordinate;
+    [Tooltip("Shown here for debug purposes")]
     [SerializeField] public GameObject PlacedItem;
 
     public void Start(){

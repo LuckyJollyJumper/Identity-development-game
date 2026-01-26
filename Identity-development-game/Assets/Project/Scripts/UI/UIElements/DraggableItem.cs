@@ -3,13 +3,17 @@ using System;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+/// <summary>
+/// Parent class for objects that can be dragged and dropped in the UI.
+/// </summary>
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 { 
     public event Action OnItemPlaced; // Event triggered when the item is placed on a new empty drop location
-    [Tooltip("Parent transform to return to after dragging")]
+    [Tooltip("Parent transform to return to after dragging. Displayed for Debug purposes")]
     public Transform ParentAfterDrag;
     private Image ItemImage;
     private Transform CanvasObject;
+    
     [Header("Debug")]
     [SerializeField] public bool DebugMode = false;
     protected string DebugID;

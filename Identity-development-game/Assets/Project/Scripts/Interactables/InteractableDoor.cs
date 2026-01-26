@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// InteractableObject child that only uses the proximity of the player and has no interaction
+/// </summary>
 public class InteractableDoor : InteractableObject
 {
     [SerializeField] public Animator SlidingDoorAnimator;

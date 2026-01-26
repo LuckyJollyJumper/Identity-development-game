@@ -11,20 +11,20 @@ using System.Collections.Generic;
 public class PopUpWindow : MonoBehaviour, IPointerClickHandler
 {
     [Tooltip("List of texts to display in the pop-up window, in order")]
-    [SerializeField] public List<string> popUpTexts;
+    [TextArea][SerializeField] public List<string> PopUpTexts;
     [Header("Debug")]
-    [SerializeField] public bool debugMode = false;
+    [SerializeField] public bool DebugMode = false;
     protected string DebugID = "[PopUpWindow]";
-    protected Playercontroller player;
-    protected TextMeshProUGUI popUpText;
-    protected int currentTextIndex = 0;
+    protected Playercontroller Player;
+    protected TextMeshProUGUI PopUpText;
+    protected int CurrentTextIndex = 0;
     [HideInInspector] public event Action OnPopUpClosed; // Event triggered when the pop-up is closed
 
     public virtual void Start(){
-        this.popUpText = GameObject.Find("PopUpText").GetComponent<TMPro.TextMeshProUGUI>();
-        this.player = FindFirstObjectByType<Playercontroller>();
-        if (player != null) {
-            this.player.StartInteraction();
+        this.PopUpText = GameObject.Find("PopUpText").GetComponent<TMPro.TextMeshProUGUI>();
+        this.Player = FindFirstObjectByType<Playercontroller>();
+        if (this.Player != null) {
+            this.Player.StartInteraction();
         }
        
         NextPopUpText();
@@ -35,15 +35,15 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
     /// Displays the next text in the pop-up sequence or closes the pop-up if there are no more texts using currentTextIndex.
     /// </summary>
     public void NextPopUpText(){
-        if (currentTextIndex < popUpTexts.Count){
-            SetPopUpText(popUpTexts[currentTextIndex]);
+        if (this.CurrentTextIndex < this.PopUpTexts.Count){
+            SetPopUpText(PopUpTexts[this.CurrentTextIndex]);
         }else{
-            if (debugMode){ Debug.Log($"{DebugID} No more pop-up texts to display"); }
+            if (DebugMode){ Debug.Log($"{DebugID} No more pop-up texts to display"); }
             EndInteraction();
         }
-        this.currentTextIndex++;
+        this.CurrentTextIndex++;
     }
-    public void SetPopUpText(string text){ this.popUpText.text = text; }
+    public void SetPopUpText(string text){ this.PopUpText.text = text; }
 
 
     /// <summary>
@@ -51,14 +51,14 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
     /// the pop-up window and allows the player to resume interaction.
     /// </summary>
     public virtual void EndInteraction(){
-        if (this.player != null){
-            this.player.EndInteraction();
+        if (this.Player != null){
+            this.Player.EndInteraction();
         }
 
         OnPopUpClosed?.Invoke();
         this.gameObject.SetActive(false);
         
-        if (debugMode){ Debug.Log($"{DebugID} Pop-up interaction ended and window closed"); }
+        if (DebugMode){ Debug.Log($"{DebugID} Pop-up interaction ended and window closed"); }
         Destroy(this.gameObject);
        
     }
@@ -66,7 +66,7 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
 
     public virtual void OnPointerClick(PointerEventData eventData){
         NextPopUpText();
-        if (debugMode){ Debug.Log($"{DebugID} PopUpWindow clicked"); }
+        if (DebugMode){ Debug.Log($"{DebugID} PopUpWindow clicked"); }
     }
 
 }

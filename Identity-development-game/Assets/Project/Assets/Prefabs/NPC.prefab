@@ -50,6 +50,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2056858430346343124, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056858430346343124, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056858430346343124, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -198,6 +206,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5668737454104072881, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668737454104072881, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5668737454104072881, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -230,6 +246,10 @@ PrefabInstance:
       value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 7432190429656472277, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7432190429656472277, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
       propertyPath: m_SizeDelta.y
       value: 24.89
       objectReference: {fileID: 0}
@@ -248,6 +268,10 @@ PrefabInstance:
     - target: {fileID: 9087825327369450350, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
       propertyPath: m_SizeDelta.x
       value: -20.6186
+      objectReference: {fileID: 0}
+    - target: {fileID: 9087825327369450350, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9087825327369450350, guid: f8c6c9c1470440346afd87b7207c61f2, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -344,11 +368,6 @@ PrefabInstance:
 --- !u!4 &5133399308253912014 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1631562944979136901, guid: c8bf996f7d322e94485534c2544ec84f, type: 3}
-  m_PrefabInstance: {fileID: 5879738088722147915}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5531265197361975040 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2115010429618218315, guid: c8bf996f7d322e94485534c2544ec84f, type: 3}
   m_PrefabInstance: {fileID: 5879738088722147915}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8416214363126180546
@@ -804,15 +823,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1af1df4c75ee674fb9e1cc023c7d7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractableCharacter
-  interactionObject: {fileID: 5531265197361975040}
+  InteractionObject: {fileID: 0}
   UI: {fileID: 5138346307764991280}
-  currentState: 0
-  popUpText: Hey!
-  debugMode: 0
-  characterName: Sami
-  dialogueTexts:
-  - Hallo\n\nHallo?
-  - Hallo
+  CurrentState: 0
+  PopUpText: 
+  DebugMode: 0
+  CharacterName: 
+  DialogueTexts: []
 --- !u!136 &100065316545013441
 CapsuleCollider:
   m_ObjectHideFlags: 0

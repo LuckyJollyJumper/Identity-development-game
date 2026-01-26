@@ -3,21 +3,21 @@ using UnityEngine.EventSystems;
 
 public class SelectedItemText : SelectedItem
 {
-    private TMPro.TMP_InputField inputField;
+    private TMPro.TMP_InputField InputField;
     public override void Awake(){
         base.Awake();
-        this.inputField = gameObject.GetComponentInChildren<TMPro.TMP_InputField>();
-        this.inputField.interactable = false;
+        this.InputField = gameObject.GetComponentInChildren<TMPro.TMP_InputField>();
+        this.InputField.interactable = false;
     }
 
     public override void OnPointerClick(PointerEventData eventData){
         base.OnPointerClick(eventData);
-        this.inputField.interactable = isSelected;
+        this.InputField.interactable = base.IsSelected;
     }
 
     public void onTextChanged(string newText){
-        this.displayText = this.inputField.text;
-        Debug.Log("Updated display text to: " + this.displayText);
+        this.DisplayText = this.InputField.text;
+        Debug.Log("Updated display text to: " + this.DisplayText);
     }
     
 }

@@ -779,10 +779,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d8fe6d1f083af4490c4463aef808f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UINPCChat
-  popUpTexts: []
-  debugMode: 0
+  PopUpTexts: []
+  DebugMode: 0
   NPC: {fileID: 0}
-  nameText: {fileID: 3976000326817885967}
+  NameText: {fileID: 3976000326817885967}
 --- !u!222 &8491490973982575097
 CanvasRenderer:
   m_ObjectHideFlags: 0

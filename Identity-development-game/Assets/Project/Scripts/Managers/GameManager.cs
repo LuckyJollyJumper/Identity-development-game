@@ -54,13 +54,13 @@ public class GameManager : MonoBehaviour
         // Load player data if it is on disk otherwise start new character creation
         (bool newPlayer, PlayerData data) = _jsonSaveSystem.LoadPlayerData();
         if (newPlayer){
-            _scenesManager.LoadScene(ScenesManager.scenes.CharacterCreator);
+            _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
         }
         else{
             _playerData = data;
-            UIMainMenu uiMainMenu = FindFirstObjectByType<UIMainMenu>();
-            uiMainMenu.DisplayPlayerData(data);
-            uiMainMenu.DisplayServerData(_serverData);
+            UIPlayerInfo playerHud = FindFirstObjectByType<UIPlayerInfo>();
+            playerHud.DisplayPlayerData(_playerData);
+            // uiMainMenu.DisplayServerData(_serverData);
         }
         
         // Load server data for access during play
@@ -73,11 +73,11 @@ public class GameManager : MonoBehaviour
     //--------------------------------------------------//
     public void SaveGame(){ _jsonSaveSystem.SavePlayerData(_playerData); }
     public void QuitGame(){ _scenesManager.QuitGame(); }
-    public void LoadScene(ScenesManager.scenes scene){ _scenesManager.LoadScene(scene); }
+    public void LoadScene(ScenesManager.Scenes scene){ _scenesManager.LoadScene(scene); }
     public void DeleteSave(){ 
         _jsonSaveSystem.DeleteSaveData();
         _playerData = new PlayerData();
-        _scenesManager.LoadScene(ScenesManager.scenes.CharacterCreator);
+        _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
     }
 
 

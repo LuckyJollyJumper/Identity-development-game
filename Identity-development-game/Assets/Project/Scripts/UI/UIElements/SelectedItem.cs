@@ -6,25 +6,25 @@ public class SelectedItem : MonoBehaviour, IPointerClickHandler
     [Tooltip("Image to explain the activity visually")]
 
     [Header("Selection State")]
-    [SerializeField] public bool isSelected = false;
+    [SerializeField] public bool IsSelected = false;
     [Tooltip("Text to be displayed for this item")]
-    [SerializeField] public string displayText;
-    [SerializeField] public UnityEngine.UI.RawImage exampleImage;
+    [SerializeField] public string DisplayText;
+    [SerializeField] public UnityEngine.UI.RawImage ExampleImage;
 
     
     [Header("References")]
-    [SerializeField] public UnityEngine.UI.Image background;
-    [SerializeField] public UnityEngine.UI.RawImage exampleImagePlaceHolder;
+    [SerializeField] public UnityEngine.UI.Image Background;
+    [SerializeField] public UnityEngine.UI.RawImage ExampleImagePlaceHolder;
 
     public virtual void Awake()
     {
-        gameObject.GetComponentInChildren<TMPro.TMP_Text>().text = displayText;
-        try{this.exampleImagePlaceHolder = this.exampleImage;}catch{}
+        gameObject.GetComponentInChildren<TMPro.TMP_Text>().text = DisplayText;
+        try{this.ExampleImagePlaceHolder = this.ExampleImage;}catch{}
     }
     public virtual void OnPointerClick(PointerEventData eventData)
     {
-        isSelected = !isSelected;
-        this.background.color = isSelected ? Color.green : Color.white;
+        IsSelected = !IsSelected;
+        this.Background.color = IsSelected ? Color.green : Color.white;
     }
     
 }
