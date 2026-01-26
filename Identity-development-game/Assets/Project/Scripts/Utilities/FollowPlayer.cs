@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    [SerializeField] public Transform player;
-    [SerializeField] public float followSpeed = 5f; // adjust for smoothness (higher = faster follow)
+    [SerializeField] public Transform Player;
+    [SerializeField] public float FollowSpeed = 5f; // adjust for smoothness (higher = faster follow)
 
     void Update(){    
-        if (player != null){
-            Vector3 targetPos = new Vector3(player.position.x, 9.0f, player.position.z-3.5f);
-            transform.position = Vector3.Lerp(transform.position, targetPos, followSpeed * Time.deltaTime);
+        if (Player != null){
+            Vector3 targetPos = new Vector3(Player.position.x, 9.0f, Player.position.z-3.5f);
+            transform.position = Vector3.Lerp(transform.position, targetPos, FollowSpeed * Time.deltaTime);
         }
     }
 }

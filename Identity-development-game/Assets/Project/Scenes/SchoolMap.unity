@@ -5032,8 +5032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b05d8bc85a2b6142851afa242f700c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FollowPlayer
-  player: {fileID: 250393417}
-  followSpeed: 5
+  Player: {fileID: 250393417}
+  FollowSpeed: 5
 --- !u!4 &678327286 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8349065738534621491, guid: cef1e6a79a48a0548bab4746cb1c086a, type: 3}
