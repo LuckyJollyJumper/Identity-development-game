@@ -232,7 +232,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7586853201029957556}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.9999999
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -263,7 +263,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3393530607711849126}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -798,9 +798,17 @@ PrefabInstance:
       value: Zwemmen
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Zwemmen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Zwemmen
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 4f4f565dd2d6cbd44a8263f9f940f41c, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -916,9 +924,17 @@ PrefabInstance:
       value: Zingen
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Zingen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Zingen
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 0005df4c119831e4f926f69553dd3d1f, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1034,9 +1050,17 @@ PrefabInstance:
       value: Met vrienden samen zijn
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Met vrienden samen zijn
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Met vrienden zijn
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: f176281a6359eff4c979aabdcebe0f1c, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1152,9 +1176,17 @@ PrefabInstance:
       value: Teamsport
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Teamsport
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Teamsport
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 6f43cd3f3c6304040b5a6489452e19d1, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1270,9 +1302,17 @@ PrefabInstance:
       value: Met planten bezig zijn
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Met planten bezig zijn
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Met planten bezig zijn
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 5201bf796021b6043a8bb35f1d84aad5, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1388,9 +1428,17 @@ PrefabInstance:
       value: Tv/series/films kijken
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Tv/series/ films kijken
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Tv/series/ films kijken
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 1e3e62993cd07924a97cb90bdbf18ed8, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1506,9 +1554,17 @@ PrefabInstance:
       value: Rennen
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Rennen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Rennen
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c660dc1fadefb545a5204d8203cd94d, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1624,9 +1680,17 @@ PrefabInstance:
       value: Fotograferen
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Fotograferen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Fotograferen
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: e3d8369983b669b469b697789c6f51d6, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1742,9 +1806,17 @@ PrefabInstance:
       value: Museum bezoeken
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Museum bezoeken
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Muzeum bezoeken
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: a380c7acccc6ca84683ec2d603f892e1, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1860,9 +1932,17 @@ PrefabInstance:
       value: Thuis chillen
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Thuis chilen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Thuis chillen
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 1b37a50435bcf71498655617592c306b, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1978,9 +2058,17 @@ PrefabInstance:
       value: Lezen
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Lezen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Lezen
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 6d222117e54e49440a2cc4baf252d68b, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2096,9 +2184,17 @@ PrefabInstance:
       value: Social media kijken
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Social media kijken
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Social media kijken
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 83b4b58fd3dbebd48b57a82d25c45b04, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2214,9 +2310,17 @@ PrefabInstance:
       value: Sportschool
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Sportschool
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Sportschool
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 0733985761a421e4495fb9f5da6d02d4, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2332,9 +2436,17 @@ PrefabInstance:
       value: Gamen
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Gamen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Gamen
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 4debece33d909f843958d78fb709f41a, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2450,9 +2562,17 @@ PrefabInstance:
       value: Fietsen
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Fietsen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Fietsen
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: af149294163616c4589e192c2cee510a, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2568,9 +2688,17 @@ PrefabInstance:
       value: (Kick)boxen
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: KickBoxen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: (Kick)boxen
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 8a776f2e60f24974bb708557656dc691, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2686,9 +2814,17 @@ PrefabInstance:
       value: Muziek maken
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Muziek maken
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Muziek maken
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 2b7cdc267af4bed469ff23833cd95ae4, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2804,9 +2940,17 @@ PrefabInstance:
       value: Iets op de computer
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Iets op de computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Iets op de computer
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 31eb50afe397fd14fac875bef2b95b6d, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2922,9 +3066,17 @@ PrefabInstance:
       value: Op straat chillen
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Op straat chillen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Op straat chilen
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: d9a20ad31ba168445a93a379c044212e, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3040,9 +3192,17 @@ PrefabInstance:
       value: Dansen
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Dansen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Dansen
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 020e21a0f366e8049885ec8beb162f24, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3264,9 +3424,17 @@ PrefabInstance:
       value: Dierentuin bezoeken
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Dierentuin bezoeken
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Dierentuin bezoeken
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 30caaf9418587f14a9c15aab2a0cad3e, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3382,9 +3550,17 @@ PrefabInstance:
       value: Theater/bioscoop
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Theater/ bioscoop bezoeken
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Theater of bioscoop
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 585abb181315225478f75c8f5b8b0c1f, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3500,9 +3676,17 @@ PrefabInstance:
       value: Pretpark bezoeken
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Pretpark bezoeken
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Pretpark bezoeken
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 557c0ba1480efba42a1f496b9a48d550, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3618,9 +3802,17 @@ PrefabInstance:
       value: Puzzelen/spellen spelen
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Puzzelen/ spellen doen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Puzzelen of spellen spelen
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 4eef954ab1be3234e9ca4a4a3c08a2bd, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3736,9 +3928,17 @@ PrefabInstance:
       value: Tekenen/schilderen
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Tekenen/ Schilderen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Tekenen of Schilderen
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 7541172440deb1247a2e963040115777, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3854,9 +4054,17 @@ PrefabInstance:
       value: Knutselen
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Iets maken
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Knutselen
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: b9c3d03ac4148c646bb5886aeaceb575, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3972,9 +4180,17 @@ PrefabInstance:
       value: Maken van Sociale media
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Maken van social media
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Maken van social media
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 83b4b58fd3dbebd48b57a82d25c45b04, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4090,9 +4306,17 @@ PrefabInstance:
       value: Muziek luisteren
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Muziek luisteren
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Muziek maken
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: b6fd26583e82f7447a3080a63dfb56ef, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4208,9 +4432,17 @@ PrefabInstance:
       value: Iets verzamelen
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Iets verzamelen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Iets verzamelen
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: e5c53e2bd9108a245928a1298e029cb7, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4326,9 +4558,17 @@ PrefabInstance:
       value: Met familie samen zijn
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Met familie samen zijn
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Met familie zijn
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: f176281a6359eff4c979aabdcebe0f1c, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4444,9 +4684,17 @@ PrefabInstance:
       value: Koken/bakken
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Koken/ bakken
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Koken/bakken
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: c6d95e722a23dad47889ea02c5b893e7, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4562,9 +4810,17 @@ PrefabInstance:
       value: Festival/concert
       objectReference: {fileID: 0}
     - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: DisplayText
+      value: Festival/ concert
+      objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: displayText
       value: Festival of concert
       objectReference: {fileID: 0}
+    - target: {fileID: 5681048084859668082, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
+      propertyPath: ExampleImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 181f506da2ec8034ca8d61b59229aa4a, type: 3}
     - target: {fileID: 6725676745525376089, guid: 90edb02f55811d54e8293dc3bbfcf0d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

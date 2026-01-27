@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour
     public void SaveGame(){ _jsonSaveSystem.SavePlayerData(_playerData); }
     public void QuitGame(){ _scenesManager.QuitGame(); }
     public void LoadScene(ScenesManager.Scenes scene){ _scenesManager.LoadScene(scene); }
+    public void LoadSchoolMap(){  _scenesManager.LoadScene(ScenesManager.Scenes.SchoolMap); }
     public void DeleteSave(){ 
         _jsonSaveSystem.DeleteSaveData();
         _playerData = new PlayerData();

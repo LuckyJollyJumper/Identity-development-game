@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 /// <summary>
@@ -10,18 +11,18 @@ public class SelectedItem : MonoBehaviour, IPointerClickHandler
     [Tooltip("Text to be displayed for this item")]
     [SerializeField] public string DisplayText;
     [Tooltip("Image to explain the activity visually")]
-    [SerializeField] public UnityEngine.UI.RawImage ExampleImage;
+    [SerializeField] public Sprite ExampleImage;
 
-    protected UnityEngine.UI.Image Background;
-    protected UnityEngine.UI.RawImage ExampleImageObject;
+    protected Image Background;
+    protected Image ExampleImageObject;
 
     public virtual void Awake(){
-        this.Background = this.transform.Find("BackgroundImage").GetComponent<UnityEngine.UI.Image>();
+        this.Background = this.transform.Find("BackgroundImage").GetComponent<Image>();
 
         gameObject.GetComponentInChildren<TMPro.TMP_Text>().text = DisplayText;
-        if(ExampleImage == null){
-            this.ExampleImageObject = this.transform.Find("ItemImage").GetComponent<UnityEngine.UI.RawImage>();
-            this.ExampleImageObject = this.ExampleImage;
+        if(ExampleImage != null){
+            this.ExampleImageObject = this.transform.Find("ItemImage").GetComponent<Image>();
+            this.ExampleImageObject.sprite = this.ExampleImage;
         }
     }
 

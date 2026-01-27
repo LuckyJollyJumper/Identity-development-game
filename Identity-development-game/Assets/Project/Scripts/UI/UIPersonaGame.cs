@@ -6,12 +6,16 @@ using System.Collections.Generic;
 /// </summary>
 public class UIPersonaGame : MonoBehaviour
 {
+    public enum PersonaType {SelectedPersonas1, SelectedPersonas2, SelectedPersonas3, SelectedPersonas4, SelectedPersonas5, SelectedPersonas6};
     [SerializeField] public GameObject Grid;
 
+    /// <summary>
+    /// Called on the submit button and will return to the main schoolmap scene
+    /// </summary>
     public void OnSubmitPersona(){
-        GameManager.Instance.SetPlayerDataField("selectedPersonas1", string.Join(", ", GetAllGridItemSelections()));
+        GameManager.Instance.SetPlayerDataField("SelectedPersonas1", string.Join(", ", GetAllGridItemSelections()));
         GameManager.Instance.SaveGame();
-        GameManager.Instance.LoadScene(ScenesManager.Scenes.SchoolMap);
+        GameManager.Instance.LoadSchoolMap();
     }
 
     public string[] GetAllGridItemSelections(){

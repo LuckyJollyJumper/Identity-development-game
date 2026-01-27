@@ -57,7 +57,7 @@ public class PuzzleManager : MonoBehaviour
     public void QuitPuzzle(){
         if (DebugMode){ Debug.Log($"{DebugID} Quitting puzzle and returning to main scene."); }
         PuzzleTimer.Stop();
-        GameManager.Instance._scenesManager.LoadScene(ScenesManager.Scenes.SchoolMap);
+        GameManager.Instance.LoadSchoolMap();
     }
 
     /// <summary>
