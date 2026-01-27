@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
 
         PrepareGameData();
 
+        _scenesManager = GetComponentInChildren<ScenesManager>();
     }
 
     public void PrepareGameData(){
@@ -52,15 +53,14 @@ public class GameManager : MonoBehaviour
         _jsonSaveSystem = new JsonSaveSystem();
     
         // Load player data if it is on disk otherwise start new character creation
-        (bool newPlayer, PlayerData data) = _jsonSaveSystem.LoadPlayerData();
-        if (newPlayer){
+        (bool playerPresent, PlayerData data) = _jsonSaveSystem.LoadPlayerData();
+        _playerData = data;
+        if (playerPresent){
             _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
         }
         else{
-            _playerData = data;
             UIPlayerInfo playerHud = FindFirstObjectByType<UIPlayerInfo>();
             playerHud.DisplayPlayerData(_playerData);
-            // uiMainMenu.DisplayServerData(_serverData);
         }
         
         // Load server data for access during play

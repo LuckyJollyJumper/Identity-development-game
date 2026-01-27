@@ -11,8 +11,9 @@ public class UIPlayerInfo : MonoBehaviour
     private TMPro.TextMeshProUGUI PlayerPointsText;
     private TMPro.TextMeshProUGUI PlayerCoinsText;
 
-    public void Start(){
+    public void Awake(){
         foreach (TMPro.TextMeshProUGUI t in GetComponentsInChildren<TMPro.TextMeshProUGUI>()){
+            Debug.Log($"-------- {t.name}");
             if (t.name == "NameText"){
                 PlayerNameText = t;
                 continue;
@@ -30,9 +31,9 @@ public class UIPlayerInfo : MonoBehaviour
     }
 
     public void DisplayPlayerData(PlayerData data){
-        PlayerNameText.text = data.playerName;
-        PlayerPointsText.text = $"Pts {data.level.ToString()}";
-        PlayerCoinsText.text = data.coins.ToString();
+        PlayerNameText.text = data.PlayerName;
+        PlayerPointsText.text = $"Pts {data.Points.ToString()}";
+        PlayerCoinsText.text = data.Coins.ToString();
     }
 
 }

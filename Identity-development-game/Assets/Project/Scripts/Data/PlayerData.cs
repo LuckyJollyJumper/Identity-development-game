@@ -8,43 +8,61 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "PlayerData", menuName = "Scriptable Objects/PlayerData")]
 public class PlayerData: ScriptableObject
 {
-    public PlayerData(){
-        playerName = "NewPlayer";
-        level = 1;
-        points = 0;
-        coins = 0;
-        progress = new List<ActivityData>();
-        inventory = new List<string>();
-        characterStyle = new List<string>();
-        selectedPersonas1 = new List<string>();
-    }
-    public string playerName;
-    public int level;
-    public int points;
-    public int coins;
-    public List<ActivityData> progress; // Stores activities the player has completed, in order
-    public List<string> inventory;
-    public List<string> characterStyle;
-    public List<string> selectedPersonas1;
+    // public PlayerData(){
+    //     PlayerName              = "NewPlayer";
+    //     Level                   = 1; // Progression in quest
+    //     Points                  = 0;
+    //     Coins                   = 0;
+    //     Progress                = new List<ActivityData>();
+    //     Inventory               = new List<ItemData>();
+    //     CharacterStyle          = new List<string>();
+    //     SelectedPersonas1       = new List<string>();
+    //     SelectedPersonas2       = new List<string>();
+    //     SelectedPersonas3       = new List<string>();
+    //     SelectedPersonas4       = new List<string>();
+    //     SelectedPersonas5       = new List<string>();
+    //     SelectedPersonas6       = new List<string>();
+    //     SelectedPersonasSchool  = new List<string>();
+    // }
+    public string PlayerName;
+    public int Level;
+    public int Points;
+    public int Coins;
+    public List<ActivityData> Progress; // Stores activities the player has completed, in order
+    public List<ItemData> Inventory;
+    public List<string> CharacterStyle;
+    public List<string> SelectedPersonas1;
+    public List<string> SelectedPersonas2;
+    public List<string> SelectedPersonas3;
+    public List<string> SelectedPersonas4;
+    public List<string> SelectedPersonas5;
+    public List<string> SelectedPersonas6;
+    public List<string> SelectedPersonasSchool;
 
     public void AddPoints(ActivityData activity){
-       progress.Add(activity);
-       points += activity.ActivityPoints;
+       Progress.Add(activity);
+       Points += activity.ActivityPoints;
     }
 }
 
 
 
+
+
+
+
+
 public class JsonSaveSystem
 {
-    [HideInInspector] public string playerSavePath;
-    [HideInInspector]public string serverSavePath;
+    [HideInInspector] public string PlayerSavePath;
+    [HideInInspector]public string ServerSavePath;
     private string DebugID = "[JsonSaveSystem]";
-    public bool debugMode = true;
+    public bool DebugMode = true;
 
     public JsonSaveSystem(){
-        playerSavePath = Path.Combine(Application.persistentDataPath, "playerSave.json");
-        serverSavePath = Path.Combine(Application.persistentDataPath, "serverSave.json");
+        Debug.Log(Application.persistentDataPath);
+        PlayerSavePath = Path.Combine(Application.persistentDataPath, "playerSave.json");
+        ServerSavePath = Path.Combine(Application.persistentDataPath, "serverSave.json");
     }
     
     //----------------------\\
@@ -53,9 +71,9 @@ public class JsonSaveSystem
     public void SavePlayerData(PlayerData player){
         try{
             string json = JsonUtility.ToJson(player, true);
-            File.WriteAllText(playerSavePath, json);
+            File.WriteAllText(PlayerSavePath, json);
             
-            if(debugMode){ Debug.Log($"{DebugID} Player data saved to {playerSavePath}"); }
+            if(DebugMode){ Debug.Log($"{DebugID} Player data saved to {PlayerSavePath}"); }
         }
         catch (System.Exception e){
             Debug.LogError($"{DebugID} Failed to save player data: {e.Message}");
@@ -64,28 +82,28 @@ public class JsonSaveSystem
 
     // returns (isExistingPlayer, PlayerData)
     public (bool, PlayerData) LoadPlayerData(){
-        if(!File.Exists(playerSavePath)){
-            if(debugMode){Debug.Log($"{DebugID} No save file found at {playerSavePath}");}
-            return (false, new PlayerData());
+        if(!File.Exists(PlayerSavePath)){
+            if(DebugMode){Debug.Log($"{DebugID} No save file found at {PlayerSavePath}");}
+            return (false, ScriptableObject.CreateInstance<PlayerData>());
         }
 
-        string json = File.ReadAllText(playerSavePath);
+        string json = File.ReadAllText(PlayerSavePath);
         PlayerData loadedPlayer = JsonUtility.FromJson<PlayerData>(json);
         
-        if(debugMode){Debug.Log($"{DebugID} Player data loaded from {playerSavePath}");}
+        if(DebugMode){Debug.Log($"{DebugID} Player data loaded from {PlayerSavePath}");}
         
         return (true, loadedPlayer);
     }
 
     public void DeleteSaveData(){
         try{
-            if(File.Exists(playerSavePath)){
-                File.Delete(playerSavePath);
+            if(File.Exists(PlayerSavePath)){
+                File.Delete(PlayerSavePath);
                 
-                if(debugMode){ Debug.Log($"{DebugID} Player save data deleted from {playerSavePath}");}
+                if(DebugMode){ Debug.Log($"{DebugID} Player save data deleted from {PlayerSavePath}");}
             }
             else 
-            if(debugMode){ Debug.Log($"{DebugID} No save file found at {playerSavePath}");}
+            if(DebugMode){ Debug.Log($"{DebugID} No save file found at {PlayerSavePath}");}
         }
         catch (System.Exception e){
             Debug.LogError($"{DebugID} Failed to delete save data: {e.Message}");
@@ -96,6 +114,6 @@ public class JsonSaveSystem
     // Server data methods
     //----------------------\\
     public ServerData LoadServerData(){
-        return new();
+        return ScriptableObject.CreateInstance<ServerData>();
     }
 }

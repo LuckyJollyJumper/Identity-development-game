@@ -7,6 +7,6 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "ServerData", menuName = "Scriptable Objects/ServerData")]
 public class ServerData : ScriptableObject
 {
-    public List<PlayerData> players;
+    public List<PlayerData> Players;
 
 }
