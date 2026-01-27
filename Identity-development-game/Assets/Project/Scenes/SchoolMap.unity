@@ -12025,25 +12025,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3364532591876138748, guid: b4c56e9d1a3b13d468123dd12b37a3c5, type: 3}
   m_PrefabInstance: {fileID: 35298678733181557}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1245146425 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4044378705681501287, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
-  m_PrefabInstance: {fileID: 8796887867263708084}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1245146429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245146425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbbe62f4a857da540bc046e08f3d6710, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TypingEffect
-  TextField: {fileID: 0}
-  TypingSpeed: 0.1
 --- !u!1001 &1249326082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19305,6 +19286,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5457666950295255748, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: DebugMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: PopUpText
       value: Hey!
@@ -20173,10 +20158,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4044378705681501287, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1245146429}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

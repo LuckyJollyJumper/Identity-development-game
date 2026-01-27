@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
         // Load player data if it is on disk otherwise start new character creation
         (bool playerPresent, PlayerData data) = _jsonSaveSystem.LoadPlayerData();
         _playerData = data;
-        if (playerPresent){
+        if (!playerPresent){
             _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
         }
         else{

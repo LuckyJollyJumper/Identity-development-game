@@ -296,11 +296,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1e532c88194d6f44b0371ccb239783c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectedItem
-  isSelected: 0
-  displayText: 
-  exampleImage: {fileID: 0}
-  background: {fileID: 5246504478888211830}
-  exampleImagePlaceHolder: {fileID: 490025766777264448}
+  IsSelected: 0
+  DisplayText: 
+  ExampleImage: {fileID: 0}
+  Background: {fileID: 5246504478888211830}
+  ExampleImagePlaceHolder: {fileID: 490025766777264448}
 --- !u!1 &7227888592350252753
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 6464104876233348291}
   - component: {fileID: 5246504478888211830}
   m_Layer: 5
-  m_Name: PanelImage
+  m_Name: BackgroundImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

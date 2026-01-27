@@ -4,19 +4,21 @@ using UnityEngine.UI;
 /// <summary>
 /// UI class that controls all the UI elements for the character creator
 /// </summary>
-public class SubmitFromButton : MonoBehaviour
+public class UICharacterCreator : MonoBehaviour
 {
-    [SerializeField] public TMPro.TMP_InputField InputField;
-    [SerializeField] public GameObject NamePanel;
-    [SerializeField] public GameObject StylePanel;
+    [SerializeField] public TMPro.TMP_InputField InputField; // Used for the nameSelectorPanel
+    private GameObject NamePanel;
+    private GameObject StylePanel;
 
     public void Start(){
-        if (this.InputField == null){
-            this.InputField = GetComponent<TMPro.TMP_InputField>();
-        }
+        this.NamePanel = this.transform.Find("NameSelectorPanel").gameObject;
+        this.StylePanel = this.transform.Find("StylePanel").gameObject;
+        // this.InputField = GetComponent<TMPro.TMP_InputField>();// Only works because there is only one instance
+
         this.NamePanel.SetActive(true);
         this.StylePanel.SetActive(false);
     }
+
     public void OnNameSubmit(){
         string text = this.InputField.text;
         this.InputField.interactable = false;
@@ -30,9 +32,6 @@ public class SubmitFromButton : MonoBehaviour
 
     public void OnStyleSubmit(){
          // TODO: Save style selection to PlayerData
-        this.StylePanel.SetActive(false);
         GameManager.Instance.LoadScene(ScenesManager.Scenes.PersonaGame);
-        GameManager.Instance.SaveGame();
-       
     }
 }

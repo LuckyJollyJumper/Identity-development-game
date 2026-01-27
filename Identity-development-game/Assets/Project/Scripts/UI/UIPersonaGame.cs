@@ -12,10 +12,10 @@ public class UIPersonaGame : MonoBehaviour
         GameManager.Instance.SetPlayerDataField("selectedPersonas1", string.Join(", ", GetAllGridItemSelections()));
         GameManager.Instance.SaveGame();
         GameManager.Instance.LoadScene(ScenesManager.Scenes.SchoolMap);
-        if (Grid == null){ Grid = GameObject.Find("VerticalLayout"); }
     }
 
     public string[] GetAllGridItemSelections(){
+        if (Grid == null){ Grid = GameObject.Find("FirstPersonaTest"); }
         SelectedItem[] items = Grid.GetComponentsInChildren<SelectedItem>();
 
         var selectedStates = new List<string>();
