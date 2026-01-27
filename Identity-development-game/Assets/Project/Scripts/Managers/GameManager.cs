@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 /// <summary>
 /// Game manager to handle Startup, Saving/Loading, and overall game state.
@@ -76,8 +77,8 @@ public class GameManager : MonoBehaviour
     public void LoadScene(ScenesManager.Scenes scene){ _scenesManager.LoadScene(scene); }
     public void LoadSchoolMap(){  _scenesManager.LoadScene(ScenesManager.Scenes.SchoolMap); }
     public void DeleteSave(){ 
-        _jsonSaveSystem.DeleteSaveData();
-        _playerData = new PlayerData();
+        _jsonSaveSystem.DeletePlayerData();
+        _playerData = ScriptableObject.CreateInstance<PlayerData>();
         _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
     }
 
@@ -85,10 +86,10 @@ public class GameManager : MonoBehaviour
 
    /// <summary>
    /// Sets a field on the PlayerData instance by name, parsing the raw string value as needed.
-   /// Supports string, int, and string[] types.
+   /// Supports string, int, string[], and List<T> types.
    /// </summary>
     public bool SetPlayerDataField(string fieldName, string rawValue){
-        _playerData ??= new PlayerData(); //If PlayerData is null, create a new one
+        _playerData ??= ScriptableObject.CreateInstance<PlayerData>(); //If PlayerData is null, create a new one
 
         var targetField = typeof(PlayerData).GetField(fieldName);
         if (targetField == null){
@@ -143,6 +144,42 @@ public class GameManager : MonoBehaviour
 
                 targetField.SetValue(_playerData, parts);
                 return true;
+            }
+
+            // Handle List<T> types
+            if (targetType.IsGenericType && targetType.GetGenericTypeDefinition() == typeof(List<>)){
+                Type elementType = targetType.GetGenericArguments()[0];
+                
+                if (elementType == typeof(string)){
+                    List<string> listValue = new List<string>();
+                    
+                    if (!string.IsNullOrEmpty(rawValue)){
+                        if (rawValue.StartsWith("[") && rawValue.EndsWith("]")){
+                            // JSON array format
+                            try{
+                                string jsonWrapped = "{\"items\":" + rawValue + "}";
+                                StringArrayWrapper wrapper = JsonUtility.FromJson<StringArrayWrapper>(jsonWrapped);
+                                listValue = wrapper.items?.ToList() ?? new List<string>();
+                            }
+                            catch (Exception parseEx){
+                                Debug.LogWarning($"{DebugID} SetPlayerDataField: JSON array parsing failed for '{rawValue}': {parseEx.Message}. Attempting fallback comma-split.");
+                                string inner = rawValue.Substring(1, rawValue.Length - 2).Trim();
+                                if (!string.IsNullOrEmpty(inner)){
+                                    listValue = inner.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                                                     .Select(s => s.Trim().Trim('"')).ToList();
+                                }
+                            }
+                        }
+                        else{
+                            // Comma-separated format
+                            listValue = rawValue.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                                               .Select(s => s.Trim()).ToList();
+                        }
+                    }
+                    
+                    targetField.SetValue(_playerData, listValue);
+                    return true;
+                }
             }
 
             // fallback for other primitive types

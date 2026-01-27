@@ -7,13 +7,12 @@ using TMPro;
 /// </summary>
 public class UIPlayerInfo : MonoBehaviour
 {
-    private TMPro.TextMeshProUGUI PlayerNameText;
-    private TMPro.TextMeshProUGUI PlayerPointsText;
-    private TMPro.TextMeshProUGUI PlayerCoinsText;
+    [SerializeField] private TMPro.TextMeshProUGUI PlayerNameText;
+    [SerializeField] private TMPro.TextMeshProUGUI PlayerPointsText;
+    [SerializeField] private TMPro.TextMeshProUGUI PlayerCoinsText;
 
     public void Awake(){
         foreach (TMPro.TextMeshProUGUI t in GetComponentsInChildren<TMPro.TextMeshProUGUI>()){
-            Debug.Log($"-------- {t.name}");
             if (t.name == "NameText"){
                 PlayerNameText = t;
                 continue;

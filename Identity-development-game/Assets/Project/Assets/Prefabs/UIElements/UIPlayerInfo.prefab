@@ -5184,6 +5184,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314c0922364c2f141b9b0f46768b20db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIMainMenu
+  PlayerNameText: {fileID: 8949455023353433884}
+  PlayerPointsText: {fileID: 7258975071434520162}
+  PlayerCoinsText: {fileID: 4809221344040973942}
 --- !u!222 &1000276000474904811
 CanvasRenderer:
   m_ObjectHideFlags: 0
