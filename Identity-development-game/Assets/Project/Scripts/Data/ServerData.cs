@@ -9,6 +9,11 @@ public class ServerData : ScriptableObject
 {
     public List<PlayerData> Players;
 
+    /// <summary>
+    /// Checks whether the player (by name) already exists and updates that one. Otherwise it just 
+    /// add it to the list
+    /// </summary>
+    /// <param name="player"></param>
     public void AddPlayerData(PlayerData player){
         int index = Players.FindIndex(p => p.PlayerName == player.PlayerName);
         if (index >= 0) {
@@ -20,4 +25,13 @@ public class ServerData : ScriptableObject
         }
     }
 
+}
+
+/// <summary>
+/// Serializable data class for JSON serialization of server data (JsonUtility cannot serialize ScriptableObjects directly).
+/// </summary>
+[System.Serializable]
+public class ServerDataSerialized
+{
+    public List<PlayerDataSerialized> Players;
 }

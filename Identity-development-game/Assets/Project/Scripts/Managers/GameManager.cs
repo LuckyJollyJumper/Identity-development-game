@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
         (bool playerPresent, PlayerData data) = _jsonSaveSystem.LoadPlayerData();
         _playerData = data;
         if (!playerPresent){
+            Debug.Log($"{DebugID} No player found on disk, creating new one");
             _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
         }
         else{
@@ -77,7 +78,7 @@ public class GameManager : MonoBehaviour
     public void LoadScene(ScenesManager.Scenes scene){ _scenesManager.LoadScene(scene); }
     public void LoadSchoolMap(){  _scenesManager.LoadScene(ScenesManager.Scenes.SchoolMap); }
     public void DeleteSave(){ 
-        _jsonSaveSystem.DeletePlayerData();
+        _jsonSaveSystem.DeletePlayerSaveData();
         _playerData = ScriptableObject.CreateInstance<PlayerData>();
         _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
     }

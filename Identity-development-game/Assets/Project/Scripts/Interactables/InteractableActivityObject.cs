@@ -11,7 +11,7 @@ public class InteractableActivityObject : InteractableObject
     public override void Start(){
         base.Start();
         this.UI.GetComponentInChildren<PopUpWindow>().OnPopUpClosed += StartActivity;
-        Debug.Log($"{base.DebugID} {this.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts.Count} pop-up texts set for activity object.");
+        if (DebugMode){Debug.Log($"{base.DebugID} {this.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts.Count} pop-up texts set for activity object.");}
     }
 
     public override void OnEndInteract(){

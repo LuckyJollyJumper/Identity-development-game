@@ -24,14 +24,6 @@ public class PlayerDataSerialized
     public List<string> SelectedPersonasSchool;
 }
 
-/// <summary>
-/// Serializable data class for JSON serialization of server data (JsonUtility cannot serialize ScriptableObjects directly).
-/// </summary>
-[System.Serializable]
-public class ServerDataSerialized
-{
-    public List<PlayerDataSerialized> Players;
-}
 
 /// <summary>
 /// Player data class to hold player-related information during runtime and for saving/loading.
@@ -67,7 +59,9 @@ public class PlayerData: ScriptableObject
 
 
 
-
+/// <summary>
+/// Used to save and load from disk the player and server data
+/// </summary>
 public class JsonSaveSystem
 {
     [HideInInspector] public string PlayerSavePath;
@@ -76,7 +70,6 @@ public class JsonSaveSystem
     public bool DebugMode = true;
 
     public JsonSaveSystem(){
-        Debug.Log(Application.persistentDataPath);
         PlayerSavePath = Path.Combine(Application.persistentDataPath, "playerSave.json");
         ServerSavePath = Path.Combine(Application.persistentDataPath, "serverSave.json");
     }
@@ -161,7 +154,7 @@ public class JsonSaveSystem
             // Convert serialized data to PlayerData ScriptableObject
            PlayerData loadedPlayer = DeSerialisePlayerData(serialisedData);
             
-            if(DebugMode){Debug.Log($"{DebugID} Player data loaded from {PlayerSavePath}");}
+            if(DebugMode){Debug.Log($"{DebugID} Player data \"{loadedPlayer.PlayerName}\" loaded from {PlayerSavePath}");}
             
             return (true, loadedPlayer);
         }
@@ -209,15 +202,15 @@ public class JsonSaveSystem
 
         try {
             string json = File.ReadAllText(ServerSavePath);
-            ServerDataSerialized serializedData = JsonUtility.FromJson<ServerDataSerialized>(json);
+            ServerDataSerialized serialisedData = JsonUtility.FromJson<ServerDataSerialized>(json);
             
             // Convert serialized data to ServerData ScriptableObject
             ServerData loadedServerData = ScriptableObject.CreateInstance<ServerData>();
             loadedServerData.Players = new List<PlayerData>();
             
-            if (serializedData.Players != null){
-                foreach (var serializedPlayer in serializedData.Players){
-                    PlayerData playerData = DeSerialisePlayerData();
+            if (serialisedData.Players != null){
+                foreach (var serialisedPlayer in serialisedData.Players){
+                    PlayerData playerData = DeSerialisePlayerData(serialisedPlayer);
                     loadedServerData.Players.Add(playerData);
                 }
             }
@@ -227,7 +220,7 @@ public class JsonSaveSystem
             return loadedServerData;
         }
         catch (System.Exception e){
-            Debug.LogError($"{DebugID} Failed to load server data: {e.Message}");
+            Debug.LogError($"{DebugID} Failed to load server data: {e.Message}. Creating new one");
             ServerData defaultServerData = ScriptableObject.CreateInstance<ServerData>();
             defaultServerData.Players = new List<PlayerData>();
             return defaultServerData;
@@ -261,8 +254,9 @@ public class JsonSaveSystem
     public void SavePlayerDataToServer(PlayerData player){
         GameManager.Instance._serverData = LoadServerData(); // Reload serverData
         GameManager.Instance._serverData.AddPlayerData(player);
-        SavePlayerData(GameManager.Instance._serverData);
-
+        Debug.Log($"{DebugID} ServerData to be saved{ GameManager.Instance._serverData.Players[0]}");
+        SaveServerData(GameManager.Instance._serverData);
+        if (DebugMode){ Debug.Log($"{DebugID} Synced player with server"); }
     }
 
     public void DeletePlayerFromServer(PlayerData player){

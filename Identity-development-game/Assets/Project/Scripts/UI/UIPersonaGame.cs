@@ -8,9 +8,13 @@ public class UIPersonaGame : MonoBehaviour
 {
     public enum PersonaType {SelectedPersonas1, SelectedPersonas2, SelectedPersonas3, SelectedPersonas4, SelectedPersonas5, SelectedPersonas6};
     [SerializeField] public GameObject Grid;
+    [Header("Debug")]
+    [SerializeField] public bool DebugMode = false;
+    private string DebugID = "[PersonaGame]";
+
 
     /// <summary>
-    /// Called on the submit button and will return to the main schoolmap scene
+    /// Called on the submit button and will return to the main schoolmap scene while saving the game
     /// </summary>
     public void OnSubmitPersona(){
         GameManager.Instance.SetPlayerDataField("SelectedPersonas1", string.Join(", ", GetAllGridItemSelections()));
@@ -28,7 +32,7 @@ public class UIPersonaGame : MonoBehaviour
                 selectedStates.Add(item.DisplayText);
             }
         }
-        Debug.Log("Selected personas: " + string.Join(", ", selectedStates));
+        if (DebugMode){Debug.Log($"{DebugID} Selected personas: " + string.Join(", ", selectedStates));}
         return selectedStates.ToArray();
     }
 }
