@@ -10,7 +10,7 @@ public class PuzzleManager : MonoBehaviour
     [Header("Settings")]
     [SerializeField] public string Puzzlename = "Art Puzzle";
     [SerializeField] public ActivityData.ActivitiesType PuzzleType;
-    [SerializeField] public int RewardCoins = 1;
+    [SerializeField] public int RewardCoins = 3;
     [HideInInspector] public List<DropLocation> DropLocations;
     [HideInInspector] public Timer PuzzleTimer;
     [HideInInspector] public TMPro.TextMeshProUGUI TimeText;
@@ -74,6 +74,8 @@ public class PuzzleManager : MonoBehaviour
         activityData.ActivityDuration = timeTaken;
         activityData.ActivityPoints = CalculatePoints(timeTaken); // Example points
         activityData.RewardCoins = this.RewardCoins;
+
+        GameManager.Instance.AddActivityData(activityData);
 
         // Create a PopUp that blocks the screen and shows the results
         if (DebugMode){ Debug.Log($"{DebugID} Creating new canvas"); }

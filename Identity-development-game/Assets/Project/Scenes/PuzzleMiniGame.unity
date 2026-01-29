@@ -1567,8 +1567,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleManager
   Puzzlename: Art Puzzle
-  PuzzleType: 0
-  RewardCoins: 1
+  PuzzleType: 1
+  RewardCoins: 3
   DropLocations: []
   PuzzleTimer: {fileID: 0}
   TimeText: {fileID: 0}

@@ -15249,6 +15249,7 @@ GameObject:
   - component: {fileID: 1698815131}
   - component: {fileID: 1698815130}
   - component: {fileID: 1698815129}
+  - component: {fileID: 1698815133}
   m_Layer: 5
   m_Name: MainCanvas
   m_TagString: Untagged
@@ -15341,6 +15342,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1698815133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698815128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b657a6bd4ce15d44c89de64fa3f40221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UISchoolMap
+  playerHud: {fileID: 2521467438595758948}
 --- !u!1001 &1699209077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17997,7 +18011,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583768970}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 0.2
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -18011,7 +18025,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -18564,6 +18578,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1550848360372295326, guid: 27e72c2d4ab9aae43a2c8fe05056b32b, type: 3}
   m_PrefabInstance: {fileID: 8584408040742870167}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2521467438595758948 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8417860469914132317, guid: 27e72c2d4ab9aae43a2c8fe05056b32b, type: 3}
+  m_PrefabInstance: {fileID: 8584408040742870167}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 314c0922364c2f141b9b0f46768b20db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIMainMenu
 --- !u!1001 &2533965956410716497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20025,7 +20050,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3281402246733979566, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -575.08
       objectReference: {fileID: 0}
     - target: {fileID: 3533442814958169562, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_Pivot.x
@@ -20109,31 +20134,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3587110054846153556, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_Name
-      value: PopUpPanel
+      value: PopUpPanel(Old)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587110054846153556, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 308.3
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 42.419983
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 174.15
       objectReference: {fileID: 0}
     - target: {fileID: 3931476494924759764, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -41.20999
       objectReference: {fileID: 0}
     - target: {fileID: 7347740304762721852, guid: 5d106a5a3fa267f41a65eed5e3f92276, type: 3}
       propertyPath: PopUpTexts.Array.size

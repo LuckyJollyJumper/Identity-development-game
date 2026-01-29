@@ -28,13 +28,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public PlayerData _playerData;
     [HideInInspector] public ServerData _serverData;
     private JsonSaveSystem _jsonSaveSystem;
-    public enum GameProgressStage{
-       FirstVisitIntroduction,
-       InteractedWithLeaderBoard,
-       InteractedWithFirstNPC,
-       CompletedFirstActivity,
-
-    }
+    private UISchoolMap _SchoolMapCanvas;
+    
     private string DebugID = "[GameManager]";
    
     public void Awake(){
@@ -45,13 +40,13 @@ public class GameManager : MonoBehaviour
         else if (instance != this){ Destroy(this.gameObject); }
 
         PrepareGameData();
-
-        _scenesManager = GetComponentInChildren<ScenesManager>();
+        Debug.Log($"{DebugID} Game Started");
     }
 
     public void PrepareGameData(){
-        Debug.Log($"{DebugID} Game Started");
         _jsonSaveSystem = new JsonSaveSystem();
+        _scenesManager = GetComponentInChildren<ScenesManager>();
+        _SchoolMapCanvas = FindFirstObjectByType<UISchoolMap>();
     
         // Load player data if it is on disk otherwise start new character creation
         (bool playerPresent, PlayerData data) = _jsonSaveSystem.LoadPlayerData();
@@ -61,14 +56,17 @@ public class GameManager : MonoBehaviour
             _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
         }
         else{
-            UIPlayerInfo playerHud = FindFirstObjectByType<UIPlayerInfo>();
-            playerHud.DisplayPlayerData(_playerData);
+            _SchoolMapCanvas.GetComponent<UISchoolMap>().DisplayPlayerData(_playerData);
+            if (_playerData.Level == 0){
+                _SchoolMapCanvas.StartLvl0Tutorial();
+                _playerData.LevelUp();
+                _jsonSaveSystem.SavePlayerData(_playerData);
+            }
         }
         
         // Load server data for access during play
         _serverData = _jsonSaveSystem.LoadServerData();
     }
-
 
     //--------------------------------------------------//
     // Functions to be called by UI or other managers
@@ -83,6 +81,11 @@ public class GameManager : MonoBehaviour
         _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
     }
 
+
+    public void AddActivityData(ActivityData data){
+        this._playerData.AddActivityData(data);
+        SaveGame();
+    }
 
 
    /// <summary>

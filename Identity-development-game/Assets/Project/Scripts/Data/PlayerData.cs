@@ -32,7 +32,7 @@ public class PlayerDataSerialized
 public class PlayerData: ScriptableObject
 {
     public string PlayerName;
-    public int Level;
+    public int Level; // Corresponds to where you are in the games progression
     public int Points;
     public int Coins;
     public List<ActivityData> Progress; // Stores activities the player has completed, in order
@@ -46,9 +46,14 @@ public class PlayerData: ScriptableObject
     public List<string> SelectedPersonas6;
     public List<string> SelectedPersonasSchool;
 
-    public void AddPoints(ActivityData activity){
-       Progress.Add(activity);
-       Points += activity.ActivityPoints;
+    public void AddActivityData(ActivityData activity){
+       this.Progress.Add(activity);
+       this.Points += activity.ActivityPoints;
+       this.Coins += activity.RewardCoins;
+    }
+
+    public void LevelUp(){
+        this.Level += 1;
     }
 
 }
@@ -175,7 +180,7 @@ public class JsonSaveSystem
             if(File.Exists(PlayerSavePath)){
                 File.Delete(PlayerSavePath);
                 
-                if(DebugMode){ Debug.Log($"{DebugID} Player save data deleted from {PlayerSavePath}");}
+                if(DebugMode){ Debug.Log($"{DebugID} Local player save data deleted from {PlayerSavePath}");}
             }
         }
         catch (System.Exception e){
@@ -236,7 +241,7 @@ public class JsonSaveSystem
             
             if (serverData.Players != null){
                 foreach (var player in serverData.Players){
-                    PlayerDataSerialized serializedPlayer = SerialisePlayerData(ScriptableObject.CreateInstance<PlayerData>());
+                    PlayerDataSerialized serializedPlayer = SerialisePlayerData(player);
                     serializedData.Players.Add(serializedPlayer);
                 }
             }
@@ -254,7 +259,7 @@ public class JsonSaveSystem
     public void SavePlayerDataToServer(PlayerData player){
         GameManager.Instance._serverData = LoadServerData(); // Reload serverData
         GameManager.Instance._serverData.AddPlayerData(player);
-        Debug.Log($"{DebugID} ServerData to be saved{ GameManager.Instance._serverData.Players[0]}");
+        Debug.Log($"{DebugID} ServerData to be saved{ GameManager.Instance._serverData.Players[0].PlayerName}");
         SaveServerData(GameManager.Instance._serverData);
         if (DebugMode){ Debug.Log($"{DebugID} Synced player with server"); }
     }
