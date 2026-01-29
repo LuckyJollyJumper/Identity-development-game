@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 /// <summary>
 /// Game manager to handle Startup, Saving/Loading, and overall game state.
+/// It has access to the serverdata and playerdata
 /// </summary>     
 public class GameManager : MonoBehaviour
 {
@@ -77,7 +78,7 @@ public class GameManager : MonoBehaviour
     public void LoadSchoolMap(){  _scenesManager.LoadScene(ScenesManager.Scenes.SchoolMap); }
     public void DeleteSave(){ 
         _jsonSaveSystem.DeletePlayerSaveData();
-        _playerData = ScriptableObject.CreateInstance<PlayerData>();
+        _playerData = new();
         _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
     }
 
@@ -93,7 +94,7 @@ public class GameManager : MonoBehaviour
    /// Supports string, int, string[], and List<T> types.
    /// </summary>
     public bool SetPlayerDataField(string fieldName, string rawValue){
-        _playerData ??= ScriptableObject.CreateInstance<PlayerData>(); //If PlayerData is null, create a new one
+        _playerData ??= new(); //If PlayerData is null, create a new one
 
         var targetField = typeof(PlayerData).GetField(fieldName);
         if (targetField == null){

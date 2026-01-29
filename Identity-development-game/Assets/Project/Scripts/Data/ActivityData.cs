@@ -3,7 +3,8 @@ using UnityEngine;
 /// <summary>
 /// Data class used for storing results after completing activities
 /// </summary>
-public class ActivityData : ScriptableObject
+[System.Serializable]
+public class ActivityData
 {
     public ActivityData(){
         this.ActivityName = "";

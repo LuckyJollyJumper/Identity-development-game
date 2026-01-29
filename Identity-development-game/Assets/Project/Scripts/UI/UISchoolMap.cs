@@ -12,6 +12,10 @@ public class UISchoolMap : MonoBehaviour
         this.playerHud = FindFirstObjectByType<UIPlayerInfo>();
     }
 
+    /// <summary>
+    /// Used to display the welcome message and initiates the tutorial.
+    /// Only used on first visit of the game.
+    /// </summary>
     public void StartLvl0Tutorial(){
         GameObject PopupWindowPrefab = Resources.Load<GameObject>("PopUpPanel");
         PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpTexts = new List<string>{
@@ -19,6 +23,7 @@ public class UISchoolMap : MonoBehaviour
             $"Je kan rondlopen door de witte cirkel beneden op het scherm te verplaatsen\n\nVeel Plezier met spelen!"
         };
         GameObject popupInstance = Instantiate(PopupWindowPrefab, this.transform);
+        //TODO: add first tutorial to all objects
     }
 
     public void DisplayPlayerData(PlayerData player){

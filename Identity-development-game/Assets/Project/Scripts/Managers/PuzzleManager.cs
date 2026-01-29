@@ -68,12 +68,13 @@ public class PuzzleManager : MonoBehaviour
         PuzzleTimer.Stop();
         float timeTaken = PuzzleTimer.GetElapsedTime();
         // TODO: Needs to be done from a database
-        ActivityData activityData = ScriptableObject.CreateInstance<ActivityData>();
-        activityData.ActivityName = this.Puzzlename;
-        activityData.ActivityType = this.PuzzleType;
-        activityData.ActivityDuration = timeTaken;
-        activityData.ActivityPoints = CalculatePoints(timeTaken); // Example points
-        activityData.RewardCoins = this.RewardCoins;
+        ActivityData activityData = new(){
+            ActivityName = this.Puzzlename,
+            ActivityType = this.PuzzleType,
+            ActivityDuration = timeTaken,
+            ActivityPoints = CalculatePoints(timeTaken), // Example points
+            RewardCoins = this.RewardCoins
+        };
 
         GameManager.Instance.AddActivityData(activityData);
 

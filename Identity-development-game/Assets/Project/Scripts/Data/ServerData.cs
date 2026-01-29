@@ -4,8 +4,8 @@ using System.Collections.Generic;
 /// <summary>
 /// Data class to simulate the server and having all the data of all the players
 /// </summary>
-[CreateAssetMenu(fileName = "ServerData", menuName = "Scriptable Objects/ServerData")]
-public class ServerData : ScriptableObject
+[System.Serializable]
+public class ServerData
 {
     public List<PlayerData> Players;
 
@@ -25,13 +25,4 @@ public class ServerData : ScriptableObject
         }
     }
 
-}
-
-/// <summary>
-/// Serializable data class for JSON serialization of server data (JsonUtility cannot serialize ScriptableObjects directly).
-/// </summary>
-[System.Serializable]
-public class ServerDataSerialized
-{
-    public List<PlayerDataSerialized> Players;
 }
