@@ -82,6 +82,10 @@ public class GameManager : MonoBehaviour
         _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
     }
 
+    public ServerData GetServerData(){
+        _jsonSaveSystem.LoadServerData();
+        return this._serverData;
+    }
 
     public void AddActivityData(ActivityData data){
         this._playerData.AddActivityData(data);
