@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using System.IO;
 using System.Collections.Generic;
 
@@ -31,6 +32,19 @@ public class PlayerData
 
     public void LevelUp(){
         this.Level += 1;
+    }
+
+    /// <summary>
+    /// Returns all recent activity
+    /// </summary>
+    /// <returns></returns>
+    public int GetRecentActivities(){
+        return Progress.Count;
+        foreach(ActivityData activity in Progress){
+            if (activity.CompletionDate.y == DateTime.Now.Month){
+
+            }
+        }
     }
 
 }
