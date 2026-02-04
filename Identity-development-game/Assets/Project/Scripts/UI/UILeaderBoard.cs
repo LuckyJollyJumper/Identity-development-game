@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class UILeaderBoard : MonoBehaviour
 {
-    private GameObject grid;
-    public GameObject Parent;
+    [SerializeField] public GameObject Parent;
+    private GameObject Grid;
     
     void Start(){
-        this.grid = transform.Find("Content").gameObject;
+        this.Grid = transform.Find("BackgroundImage/Content").gameObject;
         UpdateLeaderBoard();
     }
 
@@ -25,7 +25,7 @@ public class UILeaderBoard : MonoBehaviour
             if (p.PlayerName == GameManager.Instance._playerData.PlayerName){
                 leaderboardPrefab.GetComponent<Image>().color = new Color(0.3551846f, 1f, 0f);
             }
-            Instantiate(leaderboardPrefab, grid.transform);
+            Instantiate(leaderboardPrefab, Grid.transform);
             index++;
         }
        

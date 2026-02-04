@@ -11,7 +11,8 @@ public class PlayerData
 {
     public string PlayerName;
     public int Level; // Corresponds to where you are in the games progression
-    public int Points;
+    public int Points; // Points for current month
+    public int TotalPoints; // Points for all months together
     public int Coins;
     public List<ActivityData> Progress; // Stores activities the player has completed, in order
     public List<ItemData> Inventory;
@@ -27,6 +28,7 @@ public class PlayerData
     public void AddActivityData(ActivityData activity){
        this.Progress.Add(activity);
        this.Points += activity.ActivityPoints;
+       this.TotalPoints += activity.ActivityPoints;
        this.Coins += activity.RewardCoins;
     }
 
@@ -39,12 +41,13 @@ public class PlayerData
     /// </summary>
     /// <returns></returns>
     public int GetRecentActivities(){
-        return Progress.Count;
+        int recentActivities = 0;
         foreach(ActivityData activity in Progress){
-            if (activity.CompletionDate.y == DateTime.Now.Month){
-
+            if (activity.CompletionDate.Month == DateTime.Now.Month){
+                recentActivities++;
             }
         }
+        return recentActivities;
     }
 
 }

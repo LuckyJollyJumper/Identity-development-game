@@ -74,7 +74,7 @@ public class PuzzleManager : MonoBehaviour
             ActivityDuration = timeTaken,
             ActivityPoints = CalculatePoints(timeTaken), // Example points
             RewardCoins = this.RewardCoins,
-            CompletionDate = new Vector3((float)DateTime.Now.Day, (float)DateTime.Now.Month, (float)DateTime.Now.Year),
+            CompletionDate = new Date(),
         };
 
         GameManager.Instance.AddActivityData(activityData);

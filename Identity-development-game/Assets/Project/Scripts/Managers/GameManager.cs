@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] public ScenesManager _scenesManager;
     [HideInInspector] public PlayerData _playerData;
+    [HideInInspector] public readonly float MaxPlayerLevel = 20f;
     [HideInInspector] public ServerData _serverData;
     private JsonSaveSystem _jsonSaveSystem;
     private UISchoolMap _SchoolMapCanvas;
