@@ -7,13 +7,11 @@ using UnityEngine.UI;
 public class Progressbar : MonoBehaviour
 {
     private float ProgressSize;
-    private RectTransform ProgressBar; // The bar that will increase or shrink in size
+    [Header("References")]
+    [SerializeField] private RectTransform ProgressBar; // The bar that will increase or shrink in size
     private RectTransform ProgressBack; // The size of the full progressbar
     void Start(){
         this.ProgressBack = GetComponent<RectTransform>();
-        this.ProgressBar = transform.Find("Progressbar").GetComponent<RectTransform>();
-        // Get the width of the full progressbar (100%)
-        ProgressSize = ProgressBack.sizeDelta.x;
     }
 
     /// <summary>
@@ -21,7 +19,8 @@ public class Progressbar : MonoBehaviour
     /// </summary>
     /// <param name="percentage"></param>
     public void SetProgress(float percentage){
-        ProgressBar.sizeDelta.x = ProgressSize * percentage;
+        // Calculate the width based on percentage (0 at 0%, full width at 100%)
+        ProgressBar.localScale = new Vector3(percentage, ProgressBar.localScale.y, ProgressBar.localScale.z);
     }
 
 }

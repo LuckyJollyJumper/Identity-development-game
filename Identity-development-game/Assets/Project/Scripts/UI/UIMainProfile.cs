@@ -7,7 +7,6 @@ using System;
 /// </summary>
 public class UIMainProfile : MonoBehaviour
 {
-    
     [SerializeField] public GameObject Locker;
     [SerializeField] private TMPro.TextMeshProUGUI PlayerLvlText;
     [SerializeField] private Progressbar LevelProgressbar;
@@ -15,7 +14,7 @@ public class UIMainProfile : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI RecentActivitiesText;
 
     public void Start(){
-        
+        FillContent(GameManager.Instance._playerData);
     }
     /// <summary>
     /// Function used by the Quitbutton in the UI
@@ -24,6 +23,10 @@ public class UIMainProfile : MonoBehaviour
         Locker.GetComponent<InteractableObject>().OnEndInteract();
     }
 
+    /// <summary>
+    /// Used to fill the UI with the data of the player
+    /// </summary>
+    /// <param name="player"></param>
     public void FillContent(PlayerData player){
         this.PlayerLvlText.text = $"Level {player.Level}";
         this.LevelProgressbar.SetProgress((float)player.Level / 10f);
