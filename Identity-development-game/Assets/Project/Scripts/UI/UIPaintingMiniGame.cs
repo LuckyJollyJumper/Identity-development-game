@@ -9,10 +9,10 @@ public class UIPaintingMiniGame : MonoBehaviour
     [HideInInspector] public TMPro.TextMeshProUGUI TimeText;
     public List<DropLocation> DropLocations;
     public List<PuzzlePieceItem> PuzzlePieces;
-    public PuzzleManager PuzzleManager;
+    public PuzzleActivityManager PuzzleManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start(){
-        PuzzleManager = GameObject.Find("PuzzleManager").GetComponent<PuzzleManager>();
+        PuzzleManager = GameObject.Find("PuzzleManager").GetComponent<PuzzleActivityManager>();
         if (PuzzleManager == null)
         {
             Debug.Log($"[UIPaintingMiniGame] No PuzzleManager found");
