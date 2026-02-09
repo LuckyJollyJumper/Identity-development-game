@@ -5,9 +5,14 @@ using System.Linq;
 
 public class UIShop : MonoBehaviour
 {
+    [Header("References")]
     [HideInInspector] private InteractableObject Parent;
     [SerializeField] private GameObject Grid;
     public List<ItemData> ShopInventory; // The data for all the shopItems
+    [Header("Debug")]
+    [SerializeField ]public bool DebugMode = false;
+    private string DebugID = "[Shop UI]";
+
     void Start(){
         this.Parent = transform.parent.GetComponent<InteractableObject>();
 
@@ -38,7 +43,6 @@ public class UIShop : MonoBehaviour
     public void ReloadShop(){
         foreach (Transform child in Grid.transform){
             Destroy(child.gameObject);
-            Debug.Log($"Destroyed {child.name}");
         }
         
         List<ItemData> inv = GameManager.Instance._playerData.Inventory;
@@ -59,7 +63,7 @@ public class UIShop : MonoBehaviour
     /// <param name="shopItem"></param>
     public void CanBuyItem(ItemData shopItem){
         if (shopItem.CoinCost <= GameManager.Instance._playerData.Coins){
-            Debug.Log($"Buying {shopItem} for {shopItem.CoinCost}");
+            if(DebugMode){ Debug.Log($"{DebugID} Buying {shopItem} for {shopItem.CoinCost}"); }
             GameManager.Instance.AddInventoryItem(shopItem);
             ReloadShop();
         }
