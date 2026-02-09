@@ -10,6 +10,7 @@ public class UIPlayerInfo : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI PlayerNameText;
     [SerializeField] private TMPro.TextMeshProUGUI PlayerPointsText;
     [SerializeField] private TMPro.TextMeshProUGUI PlayerCoinsText;
+    [SerializeField] private GameObject Inventory;
 
     public void Awake(){
         foreach (TMPro.TextMeshProUGUI t in GetComponentsInChildren<TMPro.TextMeshProUGUI>()){
@@ -33,6 +34,15 @@ public class UIPlayerInfo : MonoBehaviour
         PlayerNameText.text = data.PlayerName;
         PlayerPointsText.text = $"Pts {data.Points.ToString()}";
         PlayerCoinsText.text = data.Coins.ToString();
+    }
+
+    public void OpenCloseInventory(){
+        if (Inventory.activeSelf){
+            Inventory.SetActive(false);
+        }
+        else{
+            Inventory.SetActive(true);
+        }
     }
 
 }
