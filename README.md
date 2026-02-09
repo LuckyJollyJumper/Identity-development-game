@@ -21,22 +21,21 @@ The GameManager:
 ## TODO
 
 #### Needed
-- Make serverdata and access it everytime an update is needed
-    - Make the leaderboard
 - Make the gamemenager and its questprogressions
-- Make the gamemanager handle updates in data by the player
 - Make the charactercreation
 - Create the homequests interactableobject
 - Create the shop with items
-- UIMainMenu script should be included into the playerHUD prefab and thus deleted
 - More of the Persona games
     - Make the prediction of these personas
+- Create sound for speaking the text
 
 #### Optimisations
-- Make puzzle mini-game such that you input an image and a size and the game handles 
+- Make puzzle mini-game such that you input an image and a size and the game handles the rest
 
 
 #### Aesthetics
+- Update all UI
+- Animations to UI (lean tween)?
 - Create the outside world with border
     - Create sportfields
     - Create roads and neighbouring buildings
@@ -44,6 +43,7 @@ The GameManager:
     - Create a carpark and bikestall
     - Hide a special activity or items to find
 - Add typing effect for popups and the NPC's
+- Player animations
 
 
 
