@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
             _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
         }
         else{
-            _SchoolMapCanvas.GetComponent<UISchoolMap>().DisplayPlayerData(_playerData);
+            UpdatePlayerHUD();
             if (_playerData.Level == 0){
                 _SchoolMapCanvas.StartLvl0Tutorial();
                 _playerData.LevelUp();
@@ -82,6 +82,9 @@ public class GameManager : MonoBehaviour
         _playerData = new();
         _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
     }
+    public void UpdatePlayerHUD(){
+        _SchoolMapCanvas.GetComponent<UISchoolMap>().UpdatePlayerHUD(_playerData);
+    }
 
     public ServerData GetServerData(){
         _jsonSaveSystem.LoadServerData();
@@ -90,6 +93,12 @@ public class GameManager : MonoBehaviour
 
     public void AddActivityData(ActivityData data){
         this._playerData.AddActivityData(data);
+        SaveGame();
+    }
+
+    public void AddInventoryItem(ItemData item){
+        this._playerData.AddInventoryItem(item);
+        UpdatePlayerHUD();
         SaveGame();
     }
 

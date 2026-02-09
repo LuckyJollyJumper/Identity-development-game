@@ -26,7 +26,12 @@ public class UISchoolMap : MonoBehaviour
         //TODO: add first tutorial to all objects
     }
 
-    public void DisplayPlayerData(PlayerData player){
+    /// <summary>
+    /// Reloads the inventory and all the players data in the HUD at the top of the screen.
+    /// </summary>
+    /// <param name="player"></param>
+    public void UpdatePlayerHUD(PlayerData player){
         playerHud.DisplayPlayerData(player);
+        playerHud.UpdateInventory();
     }
 }

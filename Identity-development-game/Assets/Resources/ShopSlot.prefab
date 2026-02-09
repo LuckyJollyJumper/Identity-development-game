@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2020802299283284492
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -5.6999817}
-  m_SizeDelta: {x: -20, y: -31.4}
+  m_AnchoredPosition: {x: 0, y: 2.0550003}
+  m_SizeDelta: {x: -20, y: -12.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6313903907465020388
 CanvasRenderer:
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 3
 --- !u!114 &458270036378751579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,8 +196,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -332,8 +332,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -412,10 +412,10 @@ RectTransform:
   - {fileID: 2020802299283284492}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6528548473738074962
 CanvasRenderer:
@@ -492,6 +492,7 @@ MonoBehaviour:
   NameText: {fileID: 6964746227577886951}
   ItemImage: {fileID: 270326846472572429}
   ConfirmationPopUp: {fileID: 358921714884779543}
+  ConfirmationPopUpText: {fileID: 8831688306922174272}
 --- !u!1 &2941051222559653680
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,8 +585,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -662,10 +663,10 @@ RectTransform:
   - {fileID: 6943690830857175275}
   m_Father: {fileID: 4246144001932996023}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 57, y: -8.684999}
-  m_SizeDelta: {x: 38, y: 17.369999}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2883915282330477306
 CanvasRenderer:
@@ -748,7 +749,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7754263378280029318}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 559931225323673206}
+        m_TargetAssemblyTypeName: ShopItemSlot, Assembly-CSharp
+        m_MethodName: CloseConfirmationPopUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3665178757789790002
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,7 +871,7 @@ GameObject:
   - component: {fileID: 3747216662195151488}
   - component: {fileID: 8831688306922174272}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MessageText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -878,10 +891,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2020802299283284492}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 40, y: -25.615}
-  m_SizeDelta: {x: 76, y: 47.23}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3747216662195151488
 CanvasRenderer:
@@ -946,7 +959,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1016,10 +1029,10 @@ RectTransform:
   - {fileID: 4653511440035513402}
   m_Father: {fileID: 4246144001932996023}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 19, y: -8.684999}
-  m_SizeDelta: {x: 38, y: 17.369999}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6853501454352566400
 CanvasRenderer:
@@ -1102,7 +1115,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6675551709489061419}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 559931225323673206}
+        m_TargetAssemblyTypeName: ShopItemSlot, Assembly-CSharp
+        m_MethodName: CanBuyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6813553088374019790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1209,10 +1234,10 @@ RectTransform:
   - {fileID: 4987842428447833365}
   m_Father: {fileID: 2020802299283284492}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 40, y: -57.915}
-  m_SizeDelta: {x: 76, y: 17.369999}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4918635622010406494
 MonoBehaviour:
@@ -1406,7 +1431,7 @@ GameObject:
   - component: {fileID: 6322720860859536899}
   - component: {fileID: 6964746227577886951}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: NameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

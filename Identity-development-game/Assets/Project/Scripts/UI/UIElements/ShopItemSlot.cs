@@ -8,33 +8,34 @@ public class ShopItemSlot : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI NameText;
     [SerializeField] private Image ItemImage;
     [SerializeField] private GameObject ConfirmationPopUp;
-    private ItemData ShopItem;
+    [SerializeField] private TMPro.TextMeshProUGUI ConfirmationPopUpText;
+    public ItemData ShopItem;
 
     void Start(){
         ConfirmationPopUp.SetActive(false);
     }
 
     public void SetShopItemSlot(UIShop parent, ItemData shopItem){
+        Debug.Log($"New item set with: {shopItem.ItemName}");
         this.Parent = parent;
         this.ShopItem = shopItem;
 
         this.CostText.text = $"{ShopItem.CoinCost}<Sprite index=0>";
         this.ItemImage.sprite = ShopItem.Sprite;
         this.NameText.text = ShopItem.ItemName;
+
+        //GameObject.Find($"{ConfirmationPopUp.name}/MessageText").GetComponent<TMPro.TextMeshProUGUI>().text = $"Weet je zeker dat je {this.ShopItem.CoinCost}<Sprite index=0> wilt betalen?";
+        ConfirmationPopUpText.text =$"Weet je zeker dat je {this.ShopItem.CoinCost}<Sprite index=0> wilt betalen?";
     }
 
     /// <summary>
     /// Called by this item to start the buying process higher in the hirarchy from the Confirmation popup
     /// </summary>
     public void CanBuyItem(){
+        Debug.Log($"Checking if item {ShopItem.ItemName} can be purchased");
         Parent.CanBuyItem(ShopItem);
         CloseConfirmationPopUp();
     }
     public void CloseConfirmationPopUp(){ ConfirmationPopUp.SetActive(false); }
     public void OpenConfirmationPopUp(){ ConfirmationPopUp.SetActive(true); }
-
-    public void DestroyObject(){
-        this.gameObject.SetActive(false);
-        Destroy(this);
-    }
 }

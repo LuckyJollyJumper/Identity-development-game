@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System.Linq;
 
 public class UIShop : MonoBehaviour
 {
@@ -8,18 +9,23 @@ public class UIShop : MonoBehaviour
     [SerializeField] private GameObject Grid;
     public List<ItemData> ShopInventory; // The data for all the shopItems
     void Start(){
+        this.Parent = transform.parent.GetComponent<InteractableObject>();
+
         ShopInventory = new(){
             new ItemData(){
                 ItemName = "Item1",
                 CoinCost = 10,
+                Description = "Item1"
             },
             new ItemData(){
-                ItemName = "Item1",
+                ItemName = "Item2",
                 CoinCost = 5,
+                Description = "Item2"
             },
             new ItemData(){
-                ItemName = "Item1",
+                ItemName = "Item3",
                 CoinCost = 3,
+                Description = "Item3"
             },
         };
 
@@ -30,8 +36,14 @@ public class UIShop : MonoBehaviour
     /// Reloads the shop contents by looking at the players inventory and loading in the rest of the ShopInventory List
     /// </summary>
     public void ReloadShop(){
+        foreach (Transform child in Grid.transform){
+            Destroy(child.gameObject);
+            Debug.Log($"Destroyed {child.name}");
+        }
+        
         List<ItemData> inv = GameManager.Instance._playerData.Inventory;
-        ShopInventory.RemoveAll(item => inv.Contains(item));
+        // Use of Any because Contains does not use the overriden Equals in ItemData
+        ShopInventory.RemoveAll(item => inv.Any(i => i.Equals(item)));
 
         foreach (ItemData shopItem in ShopInventory){
             GameObject shopItemPrefab = Resources.Load<GameObject>("ShopSlot");
@@ -46,10 +58,9 @@ public class UIShop : MonoBehaviour
     /// </summary>
     /// <param name="shopItem"></param>
     public void CanBuyItem(ItemData shopItem){
-        if (shopItem.CoinCost >= GameManager.Instance._playerData.Coins){
-            GameManager.Instance._playerData.Inventory.Add(shopItem);
-            GameManager.Instance._playerData.Coins -= shopItem.CoinCost;
-
+        if (shopItem.CoinCost <= GameManager.Instance._playerData.Coins){
+            Debug.Log($"Buying {shopItem} for {shopItem.CoinCost}");
+            GameManager.Instance.AddInventoryItem(shopItem);
             ReloadShop();
         }
     }
@@ -58,6 +69,7 @@ public class UIShop : MonoBehaviour
     /// Used by the QuitButton to close the UI again. Calls InteractableObject method
     /// </summary>
     public void CloseUI(){
+        ReloadShop(); // Just for testing purposes, can be removed.
         Parent.OnEndInteract();
     }
 }

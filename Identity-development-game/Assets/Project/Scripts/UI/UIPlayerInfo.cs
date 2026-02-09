@@ -33,7 +33,11 @@ public class UIPlayerInfo : MonoBehaviour
     public void DisplayPlayerData(PlayerData data){
         PlayerNameText.text = data.PlayerName;
         PlayerPointsText.text = $"Pts {data.Points.ToString()}";
-        PlayerCoinsText.text = data.Coins.ToString();
+        PlayerCoinsText.text = $"{data.Coins}<Sprite index=0>";
+    }
+
+    public void UpdateInventory(){
+        Inventory.GetComponent<UIInventory>().ReloadInventory();
     }
 
     public void OpenCloseInventory(){

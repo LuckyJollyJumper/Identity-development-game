@@ -32,6 +32,11 @@ public class PlayerData
        this.Coins += activity.RewardCoins;
     }
 
+    public void AddInventoryItem(ItemData item){
+        this.Inventory.Add(item);
+        this.Coins -= item.CoinCost;
+    }
+
     public void LevelUp(){
         this.Level += 1;
     }
@@ -187,7 +192,7 @@ public class JsonSaveSystem
     public void SavePlayerDataToServer(PlayerData player){
         GameManager.Instance._serverData = LoadServerData(); // Reload serverData
         GameManager.Instance._serverData.AddPlayerData(player);
-        Debug.Log($"{DebugID} ServerData to be saved{ GameManager.Instance._serverData.Players[0].PlayerName}");
+        Debug.Log($"{DebugID} ServerData to be saved {player.PlayerName}");
         SaveServerData(GameManager.Instance._serverData);
         if (DebugMode){ Debug.Log($"{DebugID} Synced player with server"); }
     }
