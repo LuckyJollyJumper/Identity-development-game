@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Class used to store items that the player can buy.
+/// </summary>
 [System.Serializable]
 public class ItemData
 {
@@ -13,8 +16,7 @@ public class ItemData
     /// </summary>
     /// <param name="obj"></param>
     /// <returns></returns>
-    public override bool Equals(object obj)
-    {
+    public override bool Equals(object obj){
         if (obj == null || GetType() != obj.GetType())
             return false;
 
@@ -22,11 +24,6 @@ public class ItemData
         return ItemName == other.ItemName 
                 && Description == other.Description  
                 && CoinCost == other.CoinCost;
-    }
-
-    public override int GetHashCode()
-    {
-        return (ItemName, CoinCost).GetHashCode();
-    }
+    }public override int GetHashCode(){ return (ItemName, CoinCost).GetHashCode(); }
 
 }

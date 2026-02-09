@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Linq;
 
+/// <summary>
+/// Class that controls all the UI elements in the shop such as buying of items and filling the shops
+/// </summary>
 public class UIShop : MonoBehaviour
 {
+    [HideInInspector] private InteractableObject Parent; // Used to close the UI via the interactableObject
     [Header("References")]
-    [HideInInspector] private InteractableObject Parent;
-    [SerializeField] private GameObject Grid;
-    public List<ItemData> ShopInventory; // The data for all the shopItems
+    [SerializeField] private GameObject Grid; // UI grid that holds the items in the shop
+    private List<ItemData> ShopInventory; // The data for all the shopItems
+
     [Header("Debug")]
-    [SerializeField ]public bool DebugMode = false;
+    [SerializeField ] public bool DebugMode = false;
     private string DebugID = "[Shop UI]";
 
     void Start(){

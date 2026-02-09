@@ -27,7 +27,6 @@ public class UIPlayerInfo : MonoBehaviour
                 continue;
             }
         }
-
     }
 
     public void DisplayPlayerData(PlayerData data){
@@ -36,17 +35,8 @@ public class UIPlayerInfo : MonoBehaviour
         PlayerCoinsText.text = $"{data.Coins}<Sprite index=0>";
     }
 
-    public void UpdateInventory(){
-        Inventory.GetComponent<UIInventory>().ReloadInventory();
-    }
+    public void UpdateInventory(){ Inventory.GetComponent<UIInventory>().ReloadInventory(); }
 
-    public void OpenCloseInventory(){
-        if (Inventory.activeSelf){
-            Inventory.SetActive(false);
-        }
-        else{
-            Inventory.SetActive(true);
-        }
-    }
+    public void OpenCloseInventory(){ Inventory.SetActive(!Inventory.activeSelf); }
 
 }

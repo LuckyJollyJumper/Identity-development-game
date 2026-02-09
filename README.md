@@ -24,7 +24,6 @@ The GameManager:
 - Make the gamemenager and its questprogressions
 - Make the charactercreation
 - Create the homequests interactableobject
-- Create the shop with items
 - More of the Persona games
     - Make the prediction of these personas
 - Create sound for speaking the text

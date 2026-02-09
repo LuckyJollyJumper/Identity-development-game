@@ -1,17 +1,20 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+/// <summary>
+/// Class that handles the UI of the inventory
+/// </summary>
 public class UIInventory : MonoBehaviour
 {
-    [SerializeField] private GameObject ContentGrid;
-    private List<ItemData> InventoryList;
+    [SerializeField] private GameObject ContentGrid; //Inventory item grid
+    private List<ItemData> InventoryList; // Reference to all items in the players inventory
     void Start(){
         InventoryList = GameManager.Instance._playerData.Inventory;
         ReloadInventory();
     }
 
     /// <summary>
-    /// Reloads the inventory contents by looking at the players inventory
+    /// Reloads the inventory contents by looking at the players inventory in GameManager
     /// </summary>
     public void ReloadInventory(){
         this.InventoryList = GameManager.Instance._playerData.Inventory;
@@ -22,6 +25,4 @@ public class UIInventory : MonoBehaviour
             Instantiate(shopItemPrefab, ContentGrid.transform);
         }
     }
-
-
 }

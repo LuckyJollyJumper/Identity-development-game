@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Class that handles a single item in the shop and can be interacted with.
+/// </summary>
 public class ShopItemSlot : MonoBehaviour
 {
     [Header("References")]
@@ -16,6 +19,11 @@ public class ShopItemSlot : MonoBehaviour
         ConfirmationPopUp.SetActive(false);
     }
 
+    /// <summary>
+    /// Should be called when creating a new ShopItemSlot Instance to fill all its variables
+    /// </summary>
+    /// <param name="parent"></param>
+    /// <param name="shopItem"></param>
     public void SetShopItemSlot(UIShop parent, ItemData shopItem){
         this.Parent = parent;
         this.ShopItem = shopItem;
