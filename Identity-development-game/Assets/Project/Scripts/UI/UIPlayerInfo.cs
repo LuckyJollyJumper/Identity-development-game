@@ -10,29 +10,25 @@ public class UIPlayerInfo : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI PlayerNameText;
     [SerializeField] private TMPro.TextMeshProUGUI PlayerPointsText;
     [SerializeField] private TMPro.TextMeshProUGUI PlayerCoinsText;
+    [SerializeField] private TMPro.TextMeshProUGUI LvlText;
     [SerializeField] private GameObject Inventory;
 
     public void Awake(){
         foreach (TMPro.TextMeshProUGUI t in GetComponentsInChildren<TMPro.TextMeshProUGUI>()){
-            if (t.name == "NameText"){
-                PlayerNameText = t;
-                continue;
-            }
-            if (t.name == "LvlText"){
-                PlayerPointsText = t;
-                continue;
-            }
-            if (t.name == "CoinText"){
-                PlayerCoinsText = t;
-                continue;
+            switch (t.name){
+                case "NameText": PlayerNameText = t; break;
+                case "LvlText": PlayerPointsText = t; break;
+                case "CoinText": PlayerCoinsText = t; break;
+                case "LevelText": LvlText = t; break;
             }
         }
     }
 
     public void DisplayPlayerData(PlayerData data){
         PlayerNameText.text = data.PlayerName;
-        PlayerPointsText.text = $"Pts {data.Points.ToString()}";
+        PlayerPointsText.text = $"{data.Points.ToString()} pts";
         PlayerCoinsText.text = $"{data.Coins}<Sprite index=0>";
+        LvlText.text = $"{data.Level}";
     }
 
     public void UpdateInventory(){ Inventory.GetComponent<UIInventory>().ReloadInventory(); }
