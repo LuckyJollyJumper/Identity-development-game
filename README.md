@@ -21,16 +21,15 @@ The GameManager:
 ## TODO
 
 #### Needed
-- Make the gamemenager and its questprogressions
+- Make the gamemenager and its questprogressions until the first mini-game
+- Make player move with physics instead of transform
 - Make the charactercreation
-- Create the homequests interactableobject
 - More of the Persona games
     - Make the prediction of these personas
 - Create sound for speaking the text
 
 #### Optimisations
 - Make puzzle mini-game such that you input an image and a size and the game handles the rest
-
 
 #### Aesthetics
 - Update all UI
@@ -43,6 +42,9 @@ The GameManager:
     - Hide a special activity or items to find
 - Add typing effect for popups and the NPC's
 - Player animations
+
+#### Optional
+- Create the homequests interactableobject
 
 
 

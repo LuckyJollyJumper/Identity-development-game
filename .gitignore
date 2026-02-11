@@ -17,6 +17,8 @@ Library/
 VirtualJoyStick/
 JMOVFX/
 LocalUnityAssets/
+IdyllicFantasyNature/
+Low_Poly_Road_Pack/
 
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
 *.blend1

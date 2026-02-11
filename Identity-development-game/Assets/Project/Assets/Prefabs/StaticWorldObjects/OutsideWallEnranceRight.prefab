@@ -70,11 +70,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 82cead14871ca7f46b901b1f422ef471, type: 2}
     - target: {fileID: 919132149155446097, guid: 1df5f8b3f9d2d8246930c7fad60f08d5, type: 3}
       propertyPath: m_Name
-      value: WallWBricksMainEntrance
+      value: OutsideWallEnranceRight
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1df5f8b3f9d2d8246930c7fad60f08d5, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

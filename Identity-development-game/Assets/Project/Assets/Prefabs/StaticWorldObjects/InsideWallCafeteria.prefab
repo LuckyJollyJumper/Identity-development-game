@@ -58,11 +58,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebd746878a6da1e43b102d0b46149d41, type: 3}
       propertyPath: m_Name
-      value: WallCafeteria
+      value: InsideWallCafeteria
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ebd746878a6da1e43b102d0b46149d41, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
