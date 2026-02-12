@@ -102,12 +102,19 @@ public class GameManager : MonoBehaviour
         SaveGame();
     }
 
-
+    /// <summary>
+    /// Used as the public function to set a value in the PlayerData and automatically saves the game
+    /// to reduce function calls with GameManager Instance
+    /// </summary>
+    public void SetPlayerData(string fieldName, string rawValue){
+        SetPlayerDataField(fieldName, rawValue);
+        SaveGame();
+    }
    /// <summary>
    /// Sets a field on the PlayerData instance by name, parsing the raw string value as needed.
    /// Supports string, int, string[], and List<T> types.
    /// </summary>
-    public bool SetPlayerDataField(string fieldName, string rawValue){
+    private bool SetPlayerDataField(string fieldName, string rawValue){
         _playerData ??= new(); //If PlayerData is null, create a new one
 
         var targetField = typeof(PlayerData).GetField(fieldName);

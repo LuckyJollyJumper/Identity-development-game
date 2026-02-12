@@ -24,7 +24,7 @@ public class UICharacterCreator : MonoBehaviour
         this.InputField.interactable = false;
         this.NamePanel.SetActive(false);
 
-        GameManager.Instance.SetPlayerDataField("PlayerName", text);
+        GameManager.Instance.SetPlayerData("PlayerName", text);
 
         this.StylePanel.GetComponentInChildren<TMPro.TMP_Text>().text = "Welkom " + text;
         this.StylePanel.SetActive(true);

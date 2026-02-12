@@ -6,22 +6,36 @@ using System.Collections.Generic;
 /// </summary>
 public class UIPersonaGame : MonoBehaviour
 {
-    public enum PersonaType {SelectedPersonas1, SelectedPersonas2, SelectedPersonas3, SelectedPersonas4, SelectedPersonas5, SelectedPersonas6};
+    [Header("Settings")]
+    // {SelectedPersonas1, SelectedPersonas2, SelectedPersonas3, SelectedPersonas4, SelectedPersonas5, SelectedPersonas6}
+    [SerializeField] private string PersonaType = "SelectedPersonas1";
+    [TextArea][SerializeField] private string QuestionText = "";
+    [Header("References")]
+    [SerializeField] private TMPro.TextMeshProUGUI QuestionTextObject;
     [SerializeField] public GameObject Grid;
+
     [Header("Debug")]
     [SerializeField] public bool DebugMode = false;
-    private string DebugID = "[PersonaGame]";
+    private string DebugID;
+
+    void Start(){
+        this.DebugID = $"[UI{PersonaType}]";
+        this.QuestionTextObject.text = QuestionText;
+    }
 
 
     /// <summary>
     /// Called on the submit button and will return to the main schoolmap scene while saving the game
     /// </summary>
     public void OnSubmitPersona(){
-        GameManager.Instance.SetPlayerDataField("SelectedPersonas1", string.Join(", ", GetAllGridItemSelections()));
-        GameManager.Instance.SaveGame();
+        GameManager.Instance.SetPlayerData(PersonaType, string.Join(", ", GetAllGridItemSelections()));
         GameManager.Instance.LoadSchoolMap();
     }
 
+    /// <summary>
+    /// Returns all the Items that were selected by the player in Grid.
+    /// </summary>
+    /// <returns></returns>
     public string[] GetAllGridItemSelections(){
         if (Grid == null){ Grid = GameObject.Find("FirstPersonaTest"); }
         SelectedItem[] items = Grid.GetComponentsInChildren<SelectedItem>();

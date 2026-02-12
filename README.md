@@ -45,6 +45,8 @@ The GameManager:
 
 #### Optional
 - Create the homequests interactableobject
+- Create github issues instead of this file
+- Instantiate from serializefield all prefabs instead of Resources folder
 
 
 
