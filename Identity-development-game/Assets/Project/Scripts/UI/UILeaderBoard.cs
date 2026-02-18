@@ -13,6 +13,11 @@ public class UILeaderBoard : MonoBehaviour
         UpdateLeaderBoard();
     }
 
+    /// <summary>
+    /// Updates the leaderboard by looking at the server data and sorting the players by points. 
+    /// Also highlights the player on this device. Called on start of the leaderboard and can be 
+    /// called from other scripts to update the leaderboard after changes to player data.
+    /// </summary>
     public void UpdateLeaderBoard(){
         List<PlayerData> players = GameManager.Instance.GetServerData().Players;
         players = players.OrderByDescending(p=>p.Points).ToList();
@@ -21,7 +26,7 @@ public class UILeaderBoard : MonoBehaviour
             GameObject leaderboardPrefab = Resources.Load<GameObject>("LeaderBoardItem");
             leaderboardPrefab.GetComponent<LeaderBoardItem>().SetValues(index, "", p.PlayerName, p.Points);
             // Highlight the player on this device
-            if (p.PlayerName == GameManager.Instance._playerData.PlayerName){
+            if (p.PlayerID == GameManager.Instance._playerData.PlayerID){
                 Debug.Log($"{p.PlayerName} == {GameManager.Instance._playerData.PlayerName}");
                 leaderboardPrefab.GetComponent<Image>().color = new Color(0.129f, 0.623f, 1f);
             }

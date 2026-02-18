@@ -9,6 +9,7 @@ using System.Collections.Generic;
 [System.Serializable]
 public class PlayerData
 {
+    public int PlayerID; // Unique identifier for the player, only used by server
     public string PlayerName;
     public int Level; // Corresponds to where you are in the games progression
     public int Points; // Points for current month
@@ -192,7 +193,7 @@ public class JsonSaveSystem
     public void SavePlayerDataToServer(PlayerData player){
         GameManager.Instance._serverData = LoadServerData(); // Reload serverData
         GameManager.Instance._serverData.AddPlayerData(player);
-        Debug.Log($"{DebugID} ServerData to be saved {player.PlayerName}");
+        Debug.Log($"{DebugID} ServerData to be saved {player.PlayerID}");
         SaveServerData(GameManager.Instance._serverData);
         if (DebugMode){ Debug.Log($"{DebugID} Synced player with server"); }
     }
