@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
         _playerData = data;
         if (!playerPresent){
             Debug.Log($"{DebugID} No player found on disk, creating new one");
+            SetPlayerID(); // Assign a unique playerID from the server
             _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
         }
         else{
@@ -89,6 +90,15 @@ public class GameManager : MonoBehaviour
     public ServerData GetServerData(){
         _jsonSaveSystem.LoadServerData();
         return this._serverData;
+    }
+
+    public void SetPlayerID(){
+        GetServerData(); // Make sure we have the latest server data to assign a unique playerID
+        int id = this._serverData.NextPlayerID;
+        this._playerData.PlayerID = id;
+        this._serverData.NextPlayerID += 1;
+        _jsonSaveSystem.SaveServerData(this._serverData);
+        SaveGame();
     }
 
     public void AddActivityData(ActivityData data){

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 [System.Serializable]
 public class ServerData
 {
+    public int NextPlayerID; // Used to assign unique playerIDs to new players
     public List<PlayerData> Players;
 
     /// <summary>

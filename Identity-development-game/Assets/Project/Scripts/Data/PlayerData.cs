@@ -26,6 +26,12 @@ public class PlayerData
     public List<string> SelectedPersonas6;
     public List<string> SelectedPersonasSchool;
 
+    // Used by the server
+    // public int LeaderboardGroupID; // Reference to the leaderboard group the player is in or link to the database, set by the teachers
+    // public List<int> ChatRestrictions; // PlayerID's the player cannot chat with, set by the teachers
+    // public List<int> MiniGameRestrictions; // MiniGameID's of the minigames the player cannot play, set by the teachers, 
+    
+
     public void AddActivityData(ActivityData activity){
        this.Progress.Add(activity);
        this.Points += activity.ActivityPoints;

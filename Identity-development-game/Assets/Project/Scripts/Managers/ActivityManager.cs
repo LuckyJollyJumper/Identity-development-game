@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public class ActivityManager : MonoBehaviour
 {
     [Header("Settings")]
+    [SerializeField] public int ActivityID; // Unique identifier for the activity
     [SerializeField] public string ActivityName;
     [SerializeField] public ActivityData.ActivitiesType ActivityType;
     [SerializeField] public int RewardCoins;
@@ -43,8 +44,8 @@ public class ActivityManager : MonoBehaviour
             if (DebugMode){ Debug.Log($"{DebugID} showing popup."); }
             return popupInstance;
         }
-        catch{ 
-            Debug.LogError("PuzzleManager: Could not load PopUpPanel prefab from Resources."); 
+        catch(System.Exception e){ 
+            Debug.LogError($"{DebugID}: Could not load PopUpPanel prefab from Resources. Exception: {e.Message}"); 
             return null;
         }
     }
@@ -53,6 +54,7 @@ public class ActivityManager : MonoBehaviour
          float timeTaken = ActivityTimer.GetElapsedTime();
         // TODO: Needs to be done from a database
         ActivityData activityData = new(){
+            ActivityID = this.ActivityID,
             ActivityName = this.ActivityName,
             ActivityType = this.ActivityType,
             ActivityDuration = timeTaken,

@@ -17,6 +17,7 @@ public class ActivityData
     }
     public enum ActivitiesType { Unconnected, Art, Sports, Woodworking }
     
+    public int ActivityID; // Unique identifier for the activity
     public string ActivityName;
     public ActivitiesType ActivityType;
     public int ActivityPoints; // Points awarded for completing the activity
