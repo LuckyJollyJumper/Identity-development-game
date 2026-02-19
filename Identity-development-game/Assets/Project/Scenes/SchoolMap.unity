@@ -26322,6 +26322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   _scenesManager: {fileID: 1947006165}
   _playerData:
+    PlayerID: 0
     PlayerName: 
     Level: 0
     Points: 0
@@ -26338,6 +26339,7 @@ MonoBehaviour:
     SelectedPersonas6: []
     SelectedPersonasSchool: []
   _serverData:
+    NextPlayerID: 0
     Players: []
 --- !u!4 &1298471688
 Transform:
@@ -28091,7 +28093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6769691430286951708, guid: c053c054fc5d4ee42a02877ce265b03a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.02999878
+      value: 0.099
       objectReference: {fileID: 0}
     - target: {fileID: -6769691430286951708, guid: c053c054fc5d4ee42a02877ce265b03a, type: 3}
       propertyPath: m_LocalPosition.z

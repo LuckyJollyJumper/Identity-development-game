@@ -24,18 +24,24 @@ public class Playercontroller : MonoBehaviour
     private string DebugID = "[PlayerController]";
 
     void Start(){
-        this.body = player.GetComponent<Rigidbody>();
+        if (player != null) this.body = player.GetComponent<Rigidbody>();
         this.playerState = InteractionState.Moving;
     }
 
     void Update(){
-        if (playerState != InteractionState.Moving) return;
-        // Move in world space using speed and delta time
-        MovePlayer();
-        // Check for object in proximity and activate them
-        ActivateSurroundingObjects();
+        // keep non-physics checks and input polling here
+        if (playerState == InteractionState.Moving){
+            // Check for object in proximity and activate them
+            ActivateSurroundingObjects();
+        }
 
         MouseInteract();
+    }
+
+    void FixedUpdate(){
+        if (playerState != InteractionState.Moving) return;
+        // Apply physics-based movement
+        MovePlayer();
     }
 
     public void MovePlayer(){
@@ -44,17 +50,45 @@ public class Playercontroller : MonoBehaviour
         float h = VirtualJoystick.GetAxis("Horizontal", JID);
         float v = VirtualJoystick.GetAxis("Vertical", JID);
 
-        Vector3 delta = new Vector3(h * speed * Time.deltaTime, 0f, v * speed * Time.deltaTime);//x, y, z
-        if (player != null){
-            Vector3 deltaP = player.transform.position + delta;
-            player.transform.position = deltaP;
+        Vector3 input = new Vector3(h, 0f, v);
+        if (player == null) return;
+
+        if (body == null) {
+            // fallback: try to grab Rigidbody if it wasn't assigned
+            body = player.GetComponent<Rigidbody>();
         }
 
-        // Move player rotation to face movement direction
-        Vector3 direction = new Vector3(h, 0f, v);
-        if (direction.magnitude > 0.1f){
-            Quaternion targetRotation = Quaternion.LookRotation(direction);
-            player.transform.rotation = Quaternion.Slerp(player.transform.rotation, targetRotation, Time.deltaTime * 10f);
+        // Apply movement via Rigidbody velocity for deterministic physics
+        if (body != null){
+            Vector3 currentVel = body.linearVelocity;
+            Vector3 desiredVel = input.normalized * speed;
+            // preserve vertical velocity (gravity/jumps)
+            desiredVel.y = currentVel.y;
+
+            // If there's negligible input, stop horizontal movement
+            if (input.magnitude <= 0.01f){
+                desiredVel.x = 0f;
+                desiredVel.z = 0f;
+            }
+
+            body.linearVelocity = desiredVel;
+
+            // Rotate to face movement direction using MoveRotation
+            Vector3 direction = new Vector3(h, 0f, v);
+            if (direction.magnitude > 0.1f){
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+                Quaternion newRot = Quaternion.Slerp(player.transform.rotation, targetRotation, Time.fixedDeltaTime * 10f);
+                body.MoveRotation(newRot);
+            }
+        }else{
+            // If no Rigidbody, fallback to transform movement (legacy)
+            Vector3 delta = input * speed * Time.deltaTime;
+            player.transform.position += delta;
+            Vector3 direction = input;
+            if (direction.magnitude > 0.1f){
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+                player.transform.rotation = Quaternion.Slerp(player.transform.rotation, targetRotation, Time.deltaTime * 10f);
+            }
         }
     }
 
@@ -148,7 +182,8 @@ public class Playercontroller : MonoBehaviour
 
     public void StartInteraction(){
         JoystickObject.SetActive(false); 
-        this.player.GetComponent<Rigidbody>().linearVelocity = Vector3.zero;
+        if (body == null && player != null) body = player.GetComponent<Rigidbody>();
+        if (body != null) body.linearVelocity = Vector3.zero;
         SetPlayerState(InteractionState.Interacting);
     }
 
