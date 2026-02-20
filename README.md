@@ -27,6 +27,8 @@ The GameManager:
 - More of the Persona games
     - Make the prediction of these personas
 - Create sound for speaking the text
+- Do not raycast on interactionobject only the cloud
+- Cannot buy item (sometimes it works)
 
 #### Optimisations
 - Make puzzle mini-game such that you input an image and a size and the game handles the rest

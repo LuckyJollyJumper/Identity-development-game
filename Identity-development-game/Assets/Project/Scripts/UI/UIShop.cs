@@ -36,6 +36,12 @@ public class UIShop : MonoBehaviour
                 CoinCost = 3,
                 Description = "Item3"
             },
+            new ItemData(){
+                ItemName = "Item4",
+                CoinCost = 0,
+                Description = "Item4"
+            },
+
         };
 
         ReloadShop();

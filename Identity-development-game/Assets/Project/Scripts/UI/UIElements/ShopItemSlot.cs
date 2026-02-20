@@ -13,7 +13,7 @@ public class ShopItemSlot : MonoBehaviour
     [SerializeField] private Image ItemImage;
     [SerializeField] private GameObject ConfirmationPopUp;
     [SerializeField] private TMPro.TextMeshProUGUI ConfirmationPopUpText;
-    private ItemData ShopItem;
+    [SerializeField] private ItemData ShopItem;
 
     void Start(){
         ConfirmationPopUp.SetActive(false);
@@ -32,6 +32,8 @@ public class ShopItemSlot : MonoBehaviour
         this.ItemImage.sprite = ShopItem.Sprite;
         this.NameText.text = ShopItem.ItemName;
 
+        Debug.Log(this.ShopItem.ItemName);
+
         //GameObject.Find($"{ConfirmationPopUp.name}/MessageText").GetComponent<TMPro.TextMeshProUGUI>().text = $"Weet je zeker dat je {this.ShopItem.CoinCost}<Sprite index=0> wilt betalen?";
         ConfirmationPopUpText.text =$"Weet je zeker dat je {this.ShopItem.CoinCost}<Sprite index=0> wilt betalen?";
     }
@@ -40,7 +42,7 @@ public class ShopItemSlot : MonoBehaviour
     /// Called by this item to start the buying process higher in the hirarchy from the Confirmation popup
     /// </summary>
     public void CanBuyItem(){
-        Parent.CanBuyItem(ShopItem);
+        Parent.CanBuyItem(this.ShopItem);
         CloseConfirmationPopUp();
     }
     public void CloseConfirmationPopUp(){ ConfirmationPopUp.SetActive(false); }
