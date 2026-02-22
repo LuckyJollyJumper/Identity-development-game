@@ -153,6 +153,12 @@ public class Playercontroller : MonoBehaviour
         Debug.DrawRay(ray.origin, ray.direction * 10);
         if (Physics.Raycast(ray, out RaycastHit hit)){
             if (hit.collider != null){
+                // Check if UIWindow layer is blocking interaction with 3D objects below
+                int uiWindowLayer = LayerMask.NameToLayer("UIWindow");
+                if (hit.collider.gameObject.layer == uiWindowLayer){
+                    // UIWindow blocks further interaction - don't activate 3D objects beneath it
+                    return;
+                }
                 ActivateObject(hit.collider.gameObject);
             }
         }
