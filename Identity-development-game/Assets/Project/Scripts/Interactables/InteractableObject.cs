@@ -64,8 +64,7 @@ public class InteractableObject : MonoBehaviour
     }
 
 
-    // NOT USED AT THE MOMENT
-
+    // ------------NOT USED AT THE MOMENT------------//
     /// <summary>
     /// State machine for the InteractableObjects
     /// </summary>

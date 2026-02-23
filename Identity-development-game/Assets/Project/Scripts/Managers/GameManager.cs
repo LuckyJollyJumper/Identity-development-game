@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 /// <summary>
 /// Game manager to handle Startup, Saving/Loading, and overall game state.
-/// It has access to the serverdata and playerdata
+/// It has access to the serverdata and playerdata and all other managers.
 /// </summary>     
 public class GameManager : MonoBehaviour
 {
@@ -25,7 +25,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [Header("Managers")]
     [SerializeField] public ScenesManager _scenesManager;
+    // Public singleton data
     [HideInInspector] public PlayerData _playerData;
     [HideInInspector] public readonly float MaxPlayerLevel = 20f;
     [HideInInspector] public ServerData _serverData;
@@ -45,6 +47,11 @@ public class GameManager : MonoBehaviour
         Debug.Log($"{DebugID} Game Started");
     }
 
+    /// <summary>
+    /// Prepares the game data by initializing the JsonSaveSystem, loading player data from disk 
+    /// (or starting character creation if no data is found), and loading server data. Also gets 
+    /// references to ScenesManager and UISchoolMap for later use by other gameObjects.
+    /// </summary>
     public void PrepareGameData(){
         _jsonSaveSystem = new JsonSaveSystem();
         _scenesManager = GetComponentInChildren<ScenesManager>();
@@ -60,16 +67,15 @@ public class GameManager : MonoBehaviour
         }
         else{
             UpdatePlayerHUD();
-            if (_playerData.Level == 0){
-                _SchoolMapCanvas.StartLvl0Tutorial();
-                _playerData.LevelUp();
-                _jsonSaveSystem.SavePlayerData(_playerData);
-            }
+            // Start the current level quest, or tutorial if level 0
+            QuestManager.Instance.StartLevelQuest(_playerData.Level);
         }
         
         // Load server data for access during play
         _serverData = _jsonSaveSystem.LoadServerData();
     }
+
+
 
     //--------------------------------------------------//
     // Functions to be called by UI or other managers
@@ -92,6 +98,12 @@ public class GameManager : MonoBehaviour
         return this._serverData;
     }
 
+
+
+
+    //-----------------------------------------------------------------//
+    // Functions to be called by UI or other managers to change player
+    //-----------------------------------------------------------------//
     public void SetPlayerID(){
         GetServerData(); // Make sure we have the latest server data to assign a unique playerID
         int id = this._serverData.NextPlayerID;
@@ -107,6 +119,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void AddQuestData(QuestData data){
+        QuestManager.Instance.AvailableQuests.Add((data, null)); // Add to QuestManager list so it can be accessed by quest objects
         this._playerData.AddQuestData(data);
         SaveGame();
     }
