@@ -1,15 +1,15 @@
 # Server requirement document
-This document details how the game works and how it needs to communicate with a database. It is structured to have 2 goals. One for the current scope of the prototype (Prototype goal) and the future ideas and working of the system as desribed in the text below. All the communication can be done via `JSON` with data shown at the Users header.
+This document details how the game works and how it needs to communicate with a database. It is structured to have 2 goals. One for the current scope of the prototype (Prototype goal) and the future ideas and working of the system as desribed in all the text below. All the communication is done using `JSON` structure with data as shown at the Users header.
 
 Any questions regarding this document can be directed to: l.f.c.schrauwen@students.uu.nl
 
-Firstly, the game will be explained followed by the users of the system and how the network should work.
+Firstly, the game will be explained followed by the users of the system and finally how the network should work.
 
 ## Mobile Game
-The mobile game is made for Adolescents in practical schools to help with identity development. The game is set around a single 3D school world where the player does minigames, collects points, and quests given by NPC's while being able to also roam around the school grounds freely. The game will have a leaderboard every X amount of time where the adolescents will be competing against each other and trying to get the most points. The players will be able to text with other players and see them in the world.
+The mobile game is made for Adolescents in practical schools to help with identity development. The game is set around a single 3D school world where the player does minigames, collects points, and quests given by NPC's while being able to also roam around the school grounds freely. The game will have a leaderboard every X amount of time where the adolescents will be competing against each other and trying to get the most points. The players will be able to text with other players and see them in the world. The points can be used to buy items to help in the minigames and to upgrade the look of the player character.
 
 ## Users
-The system has different users because the game is deployed from school. This allows the teachers to have moderate control over how the players experience the game and they can nudge players to do things that the teacher deem better for the student. The users that interact with the system are the following:
+The system has different users because the game is deployed from school and needing supervision. This allows the teachers to have moderate control over how the players experience the game and they can nudge players to do things that the teacher deem better for the student. The users that interact with the system are the following:
 - `Admin`
 - `Teacher`
 - `Player`
@@ -22,7 +22,7 @@ The `Teacher` has control but also can just use the default values and never int
     - `Default`: All `Player`s under the `Teacher` are in one leaderboard.
 - Decide the leaderboard running time. For example, every week or month.
     - `Default`: Every month the leaderboard resets and rewards are handed out in the game.
-- Control what kind of minigames the `Player`s get by setting restrictions to some minigames to not occur anymore or reduced occurrence.
+- Control what kind of minigames the `Player`s get by setting restrictions to some minigames to not occur anymore or reduced occurrence. They can see activity of the `Player`s
     - `Default`: There are no restrictions, every minigame is handled equally.
 - Have an insight into the texts the `Player`s send to each other and can block texts between `Player`s.
     - `Default`: Every player can contact/text every other player in the same leaderboard.
@@ -31,7 +31,7 @@ The `Teacher` has limited access to the data of every `Player` only seeing what 
 
 - `List<Player> AssignedPlayers`
 - `List<Leaderboard> CreatedLeaderboards`
-    - Every leaderboard has `int LeaderBoardReset` and `List<PlayerID> Players`
+    - Every leaderboard has `Date LeaderBoardReset` and `List<PlayerID> Players`
 
 ### Admin
 The `Admin` has the most rights of all users and will setup the system for all `Player`s and `Teacher`s by creating them and assigning the `Player`s to `Teacher`s and providing them all with the details to login (a unique code or something to create the account link). The `Admin` has also insight in all `Player`s and can also block texts or move `Player`s to other leaderboards. The `Admin` will access the system via the same way as the `Teacher`s.
@@ -61,6 +61,8 @@ Set by the `Teacher`:
 - `List<PlayerID> ChatRestrictions; `
 - `List<ActivityID> MiniGameRestrictions;`
 
+<div style="page-break-after: always;"></div>
+
 ## System structure
 The system consists of the following components:
 - The mobile game for the `Player`
@@ -69,7 +71,7 @@ The system consists of the following components:
 
 ![alt text](ServerStructureFinal.svg "Server structure")
 
-Arrows indicate the flow of what information a user can see if the direction of the arrows can be followed.
+Arrows indicate the links that could exist in the database to prevent duplicate data.
 
 The `Teacher` will be able to access its own data from the `Teacher` table which includes all the teachers with their data as described earlier.
 
@@ -78,14 +80,15 @@ The `Player` will be able to access its data from the `Player` table and accesse
 - Write own data to server
 - Send text to other players
 
-The `Admin` can access all data.
+The `Admin` can access/write all data.
 
+<div style="page-break-after: always;"></div>
 
 ## Goals
 ### Prototype goal
 This is the goal of what needs to be done for the prototype that is in the making and will be finished at the end of April.
 
 The `Teacher` and `Admin` users do not exist yet for the prototype. 
-- The mobile game should read and write from the `Player` its own data. 
-- The mobile game should be able to read all data (no restrictions yet) from all other `Player`s. (For the prototype we assume all players are in the same leaderboard)
+- The mobile game should read and write to the database the `Player`s own data. 
+- The mobile game should be able to read all data (no restrictions yet) from all other `Player`s in the same leaderboard. (For the prototype we assume all players are in the same leaderboard)
 - The mobile game should read the reset value of the leaderboard which will be set to one month statically for now
