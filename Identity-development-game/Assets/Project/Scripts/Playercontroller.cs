@@ -21,6 +21,9 @@ public class Playercontroller : MonoBehaviour
     private Rigidbody body;
     public enum InteractionState{Moving, Interacting}; // Moving = Can move and interact, Interacting = Only interacting with UI
     private InteractionState playerState;
+
+    [Header("Debug")]
+    [SerializeField] public bool DebugMode = true;
     private string DebugID = "[PlayerController]";
 
     void Start(){
@@ -151,11 +154,12 @@ public class Playercontroller : MonoBehaviour
     public void RayCastFromTouch(Vector2 touchPos){
         Ray ray = Camera.main.ScreenPointToRay(touchPos);
         Debug.DrawRay(ray.origin, ray.direction * 10);
+        int uiWindowLayer = LayerMask.NameToLayer("UIWindow");
         if (Physics.Raycast(ray, out RaycastHit hit)){
             if (hit.collider != null){
                 // Check if UIWindow layer is blocking interaction with 3D objects below
-                int uiWindowLayer = LayerMask.NameToLayer("UIWindow");
                 if (hit.collider.gameObject.layer == uiWindowLayer){
+                    if (DebugMode){ Debug.Log($"{DebugID} We hit a UIWindow"); }
                     // UIWindow blocks further interaction - don't activate 3D objects beneath it
                     return;
                 }
@@ -165,8 +169,8 @@ public class Playercontroller : MonoBehaviour
     }
 
     /// <summary>
-    /// Activates the given GameObject if it has an InteractableObject component (or in parent) and sets the
-    /// player state to Interacting.
+    /// Activates the given GameObject to interacting if it has an InteractableObject component (or in parent) 
+    /// and sets the player state to Interacting.
     /// </summary>
     public void ActivateObject(GameObject obj){
         if (obj.TryGetComponent<InteractableObject>(out InteractableObject interactable)){
@@ -181,11 +185,19 @@ public class Playercontroller : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Ends interaction with the current InteractableObject and sets player state back to Moving. 
+    /// Should be called from InteractableObjects when ending interaction.
+    /// </summary>
     public void EndInteraction(){
         JoystickObject.SetActive(true); 
         SetPlayerState(InteractionState.Moving);
     }
 
+    /// <summary>
+    /// Starts interaction with an InteractableObject and sets player state to Interacting. Should be called 
+    /// from InteractableObjects when starting interaction.
+    /// </summary>
     public void StartInteraction(){
         JoystickObject.SetActive(false); 
         if (body == null && player != null) body = player.GetComponent<Rigidbody>();
@@ -193,14 +205,19 @@ public class Playercontroller : MonoBehaviour
         SetPlayerState(InteractionState.Interacting);
     }
 
+    /// <summary>
+    /// State machine for the player interactions. Should be set to Interacting when activating an 
+    /// InteractableObject and set back to Moving when ending interaction.
+    /// </summary>
+    /// <param name="newState"></param>
     public void SetPlayerState(InteractionState newState){
         // Assumes only 2 states for now
         if (newState == this.playerState) return;
         if (newState == InteractionState.Interacting){
-            Debug.Log($"{DebugID} Setting state to Interacting");
+            if (DebugMode){ Debug.Log($"{DebugID} Setting state to Interacting"); }
         }
         else if (newState == InteractionState.Moving){ 
-            Debug.Log($"{DebugID} Setting state to Moving");
+            if (DebugMode){ Debug.Log($"{DebugID} Setting state to Moving"); }
         }
         this.playerState = newState;
     }
