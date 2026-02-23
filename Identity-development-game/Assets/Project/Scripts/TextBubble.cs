@@ -35,12 +35,13 @@ public class TextBubble : MonoBehaviour
         }
     }
 
-    public void SetBubbleText(string newText){
+    public void SetBubbleText(string newText, int fontSize = 9){
         if (DebugMode){ Debug.Log($"{DebugID} Setting bubble text to: {newText}, {bubbleText}"); }
         if (bubbleText == null){
             this.bubbleText = GetComponentInChildren<TMPro.TextMeshProUGUI>();
         }
         this.bubbleText.text = newText;
+        this.bubbleText.fontSize = fontSize;
     }
     // LateUpdate is called after all Update methods — for camera-facing logic
     void LateUpdate(){
