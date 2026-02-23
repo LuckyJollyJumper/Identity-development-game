@@ -27,7 +27,6 @@ public class UILeaderBoard : MonoBehaviour
             leaderboardPrefab.GetComponent<LeaderBoardItem>().SetValues(index, "", p.PlayerName, p.Points);
             // Highlight the player on this device
             if (p.PlayerID == GameManager.Instance._playerData.PlayerID){
-                Debug.Log($"{p.PlayerName} == {GameManager.Instance._playerData.PlayerName}");
                 leaderboardPrefab.GetComponent<Image>().color = new Color(0.129f, 0.623f, 1f);
             }
             Instantiate(leaderboardPrefab, Grid.transform);

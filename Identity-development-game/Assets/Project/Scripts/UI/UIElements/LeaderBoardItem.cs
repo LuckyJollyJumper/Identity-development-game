@@ -13,7 +13,7 @@ public class LeaderBoardItem : MonoBehaviour
     
     void Start(){
         this.PositionText   = transform.Find("PositionText").GetComponent<TMPro.TextMeshProUGUI>();
-        this.AvatarSlot     = transform.Find("AvatarImage").gameObject;
+        //this.AvatarSlot     = transform.Find("AvatarImage").gameObject;
         this.NameText       = transform.Find("NameText").GetComponent<TMPro.TextMeshProUGUI>();
         this.PointsText     = transform.Find("PointsText").GetComponent<TMPro.TextMeshProUGUI>();
     }
