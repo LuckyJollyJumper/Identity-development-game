@@ -28,26 +28,48 @@ public class InteractableObject : MonoBehaviour
         this.DebugID = $"[InteractableObject/{this.gameObject.name}]";
     }
 
+    /// <summary>
+    /// Gets called when the player walks into proximity of this object.
+    /// Default: turns the interactionObjects visible.
+    /// </summary>
     public virtual void OnReadyForInteraction(){
        this.InteractionObject.SetActive(true);
     }
 
-    // Pass player for closing and for interactions that concern the player
+    /// <summary>
+    /// Gets called when the player clicks on the object in the world 
+    /// </summary>
+    /// <param name="player">Pass player for closing and for interactions that concern the player</param>
     public virtual void OnInteract(Playercontroller player){
         this.UI.SetActive(true);
         this.InteractingPlayer = player;
     }
 
+    /// <summary>
+    /// Gets called when the player stops interacting with the object.
+    /// Default: closing the UI that is connected to this object.
+    /// </summary>
     public virtual void OnEndInteract(){
         this.UI.SetActive(false);
         if (DebugMode){ Debug.Log($"{DebugID} Ending interaction with player"); }
         this.InteractingPlayer.EndInteraction();
     } 
 
+    /// <summary>
+    /// Gets called when the player moves out of proximity.
+    /// Default: set the objects to invisible again. 
+    /// </summary>
     public virtual void OnEndReadyForInteraction(){
         this.InteractionObject.SetActive(false);
     }
 
+
+    // NOT USED AT THE MOMENT
+
+    /// <summary>
+    /// State machine for the InteractableObjects
+    /// </summary>
+    /// <param name="newState"></param>
     public void SetInteractionState(ObjectState newState){
         if (newState == this.CurrentState) return;
         if (newState == ObjectState.ReadyForInteraction){  // Player walks into proximity

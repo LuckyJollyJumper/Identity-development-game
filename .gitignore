@@ -14,11 +14,15 @@ Temp/
 Packages/
 Library/
 *.log
+
+# Unity asset packs that should not be commited to version control
 VirtualJoyStick/
 JMOVFX/
 LocalUnityAssets/
 IdyllicFantasyNature/
 Low_Poly_Road_Pack/
+Pandazole_Ultimate_Pack/
+Washing Machines/
 
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
 *.blend1

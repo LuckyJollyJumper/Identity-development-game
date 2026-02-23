@@ -17,6 +17,7 @@ public class PlayerData
     public int Coins;
     public List<ActivityData> Progress; // Stores activities the player has completed, in order
     public List<ItemData> Inventory;
+    public List<QuestData> Quests;
     public List<string> CharacterStyle;
     public List<string> SelectedPersonas1;
     public List<string> SelectedPersonas2;
@@ -37,6 +38,10 @@ public class PlayerData
        this.Points += activity.ActivityPoints;
        this.TotalPoints += activity.ActivityPoints;
        this.Coins += activity.RewardCoins;
+    }
+
+    public void AddQuestData(QuestData quest){
+        this.Quests.Add(quest);
     }
 
     public void AddInventoryItem(ItemData item){

@@ -106,6 +106,11 @@ public class GameManager : MonoBehaviour
         SaveGame();
     }
 
+    public void AddQuestData(QuestData data){
+        this._playerData.AddQuestData(data);
+        SaveGame();
+    }
+
     public void AddInventoryItem(ItemData item){
         this._playerData.AddInventoryItem(item);
         UpdatePlayerHUD();
