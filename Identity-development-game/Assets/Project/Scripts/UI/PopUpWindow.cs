@@ -43,7 +43,13 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
         }
         this.CurrentTextIndex++;
     }
-    public virtual void SetPopUpText(string text){ this.PopUpText.text = text; }
+    public virtual void SetPopUpText(string text){ 
+        if (PopUpText == null){ 
+            if (DebugMode){Debug.Log($"{DebugID} PopUpText is apparently empty");}
+            this.PopUpText = GameObject.Find("PopUpText").GetComponent<TMPro.TextMeshProUGUI>(); 
+        }
+        this.PopUpText.text = text; 
+    }
 
 
     /// <summary>

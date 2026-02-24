@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 /// <summary>
 /// Class for interactbale objects that are conected to a quest.
@@ -11,7 +12,7 @@ public class InteractableHiddenObject: InteractableObject
 
     public override void Start(){
         this.InteractionObject.GetComponentInChildren<TextBubble>().SetBubbleText(PopUpText, 20);
-        base.UI.GetComponent<PopUpWindow>().OnPopUpClosed += () => Destroy(this.gameObject);
+        base.UI.GetComponentInChildren<PopUpWindow>().OnPopUpClosed += () => Destroy(this.gameObject);
         this.InteractionObject.SetActive(false);
         this.UI.SetActive(false);
         this.DebugID = $"[InteractableObject/{this.gameObject.name}]";
@@ -28,19 +29,18 @@ public class InteractableHiddenObject: InteractableObject
         if (currentObjectQuest.IsActive){
              
             if (currentObjectQuest.IsCompleted()){
-                base.UI.GetComponent<PopUpWindow>().SetPopUpText($"Je hebt alle boeken gevonden!\nBreng ze terug naar {PlayerName}!");
+                base.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts = new List<string> { $"Je hebt alle boeken gevonden!\nBreng ze terug naar {PlayerName}!" };
             }
             else{
-                base.UI.GetComponent<PopUpWindow>().SetPopUpText($"Je hebt een boek gevonden!\nNog {currentObjectQuest.Goal - currentObjectQuest.CurrentProgress} te gaan!");
+                base.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts = new List<string> { $"Je hebt een boek gevonden!\nNog {currentObjectQuest.Goal - currentObjectQuest.CurrentProgress} te gaan!" };
             }
         }
         else if (currentObjectQuest.CurrentProgress == 0){
-            base.UI.GetComponent<PopUpWindow>().SetPopUpText($"Je hebt een boek gevonden!\nWie zou deze verloren hebben?");
+            base.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts = new List<string> { $"Je hebt een boek gevonden!\nWie zou deze verloren hebben?" };
         } else{
-            base.UI.GetComponent<PopUpWindow>().SetPopUpText($"Je hebt nog een boek gevonden!\nJe hebt er al {currentObjectQuest.CurrentProgress} van de {currentObjectQuest.Goal} boeken gevonden!\nMaar wie zou er nou zoveel boeken verloren hebben?");
+            base.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts = new List<string> { $"Je hebt nog een boek gevonden!\nJe hebt er al {currentObjectQuest.CurrentProgress} van de {currentObjectQuest.Goal} boeken gevonden!\nMaar wie zou er nou zoveel boeken verloren hebben?" };
         }
 
         base.OnInteract(player);
-        
     }
 }

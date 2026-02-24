@@ -28,16 +28,11 @@ public class QuestManager : MonoBehaviour
 
     [Header("Variables")]
     [Tooltip("List of all current quests and corresponding NPC's if they exist, synced with PlayerData")]
-    [SerializeField] public List<(QuestData,InteractableQuestCharacter)> AvailableQuests; 
+    [SerializeField] public List<(QuestData,InteractableQuestCharacter)> AvailableQuests = new(); 
 
     [Header("Debug")]
     [SerializeField] private bool DebugMode = false;
     [SerializeField] private readonly string DebugID = "[QuestManager]";
-
-    public void Start(){
-        this.AvailableQuests = new List<(QuestData,InteractableQuestCharacter)>();
-    }
-
 
     /// <summary>
     /// Used to start the quest for the current level of the player. For example it starts the tutorial for level 0.
@@ -70,7 +65,7 @@ public class QuestManager : MonoBehaviour
                 return;
             }
         }
-        if (DebugMode){ Debug.Log($"{DebugID} Quest {questName} not found to be updated"); }
+        if (DebugMode){ Debug.Log($"{DebugID} Quest \"{questName}\" not found to be updated"); }
     }
 
     /// <summary>

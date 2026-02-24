@@ -166,8 +166,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 550495044229050062}
   - {fileID: 6151997306591789846}
+  - {fileID: 550495044229050062}
   - {fileID: 2640866235033230501}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -189,6 +189,8 @@ MonoBehaviour:
   PopUpText: '!'
   DebugMode: 0
   DebugID: '[InteractableObject]'
+  QuestName: Verloren boeken
+  PlayerName: Axel
 --- !u!65 &740062930766279009
 BoxCollider:
   m_ObjectHideFlags: 0
