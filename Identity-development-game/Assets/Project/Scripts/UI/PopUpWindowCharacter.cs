@@ -32,14 +32,6 @@ public class PopUpWindowCharacter: PopUpWindow
         // this.TypingEffect.StartEffect();
     }
 
-    /// <summary>
-    /// Used by the character to start the quest by setting it as active in the questmanager when the pop-up is closed, so the quest can be tracked and completed.
-    /// </summary>
-    /// <param name="quest"></param>
-    public void StartQuestOnClose(string questName){
-        OnPopUpClosed += () => QuestManager.Instance.SetQuestAsActive(questName, NPC.gameObject);
-    }
-
     public void SetCharacterPopUpText(List<string> texts, string name){
         base.PopUpTexts = texts;
         this.NameText.text = name;

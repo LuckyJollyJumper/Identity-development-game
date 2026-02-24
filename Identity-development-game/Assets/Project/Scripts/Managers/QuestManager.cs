@@ -29,7 +29,10 @@ public class QuestManager : MonoBehaviour
     [Header("Variables")]
     [Tooltip("List of all current quests and corresponding NPC's if they exist, synced with PlayerData")]
     [SerializeField] public List<(QuestData,GameObject)> AvailableQuests; 
-    [HideInInspector] public event System.Action OnProgressCompleted;
+
+    [Header("Debug")]
+    [SerializeField] private bool DebugMode = false;
+    [SerializeField] private readonly string DebugID = "[QuestManager]";
 
     public void Start(){
         SchoolMapCanvas ??= FindFirstObjectByType<UISchoolMap>();
@@ -41,8 +44,8 @@ public class QuestManager : MonoBehaviour
                 Description = "Vind alle boeken voor Axel die verspreid liggen in de school",
                 Goal = 8,
                 CurrentProgress = 0,
-                RewardCoins = 2,
-                RewardPoints = 300,
+                RewardCoins = 1,
+                RewardPoints = 400,
                 IsActive = false
             },
             null)
@@ -58,10 +61,10 @@ public class QuestManager : MonoBehaviour
     public void StartLevelQuest(int level){
         if (level == 0){
             SchoolMapCanvas.StartLvl0Tutorial();
-            GameManager.Instance._playerData.LevelUp();
-            GameManager.Instance.SaveGame();
+            GameManager.Instance.LevelUpPlayer();
         }
     }
+
     /// <summary>
     /// Used to update the progress of a quest. Returns the updated quest to the object that called it, so it can use the updated values for things like the pop-up text.
     /// </summary>
@@ -77,33 +80,44 @@ public class QuestManager : MonoBehaviour
         return null;
     }
 
-    public QuestData GetQuestData(string questName){
-        foreach (var (quest, _) in AvailableQuests){
-            if (quest.QuestName == questName){
-                return quest;
-            }
-        }
-        return null;
-    }
-
+    /// <summary>
+    /// Updates the progress of a quest by amount. If the progress reaches the goal, it will invoke the signal
+    /// in the quest that should be linked to the NPC as set in SetQuestAsActive()
+    /// </summary>
+    /// <param name="amount"></param>
+    /// <param name="quest"></param>
     public void UpdateProgress(int amount, QuestData quest){
         quest.CurrentProgress += amount;
         if (quest.CurrentProgress >= quest.Goal){
-            this.OnProgressCompleted?.Invoke(); // Invoke the event to notify the character that the quest has been completed
+            quest.CompleteQuest();
         }
     }
 
     /// <summary>
-    /// Used by the NPC's to activate their quests
+    /// Used by the NPC's to activate their quests. Sets
     /// </summary>
     /// <param name="questName"></param>
     public void SetQuestAsActive(string questName, GameObject NPC){
-        foreach (var (quest, npc) in AvailableQuests){
+        for (int i = 0; i < AvailableQuests.Count; i++){
+            QuestData quest = AvailableQuests[i].Item1;
             if (quest.QuestName == questName){
                 quest.IsActive = true;
-                npc = NPC;
+                quest.OnQuestCompleted += () => {
+                    // This is the callback that will be called when the quest is completed. It can be used to give rewards or update the NPC's dialogue.
+                    if (DebugMode) Debug.Log($"{DebugID} Quest {quest.QuestName} completed!");
+                    NPC.GetComponent<InteractableQuestCharacter>().QuestCompleted(quest);
+                };
+                AvailableQuests[i] = (quest, NPC);
+                if (DebugMode) Debug.Log($"{DebugID} Quest {quest.QuestName} set as active by NPC:{NPC.name}");
                 return;
             }
         }
+    }
+    public QuestData GetQuestData(string questName){
+        var (quest, _) = AvailableQuests.Find(q => q.Item1.QuestName == questName);
+        return quest;
+    }
+    public (QuestData, GameObject) GetQuest(string questName){
+        return AvailableQuests.Find(q => q.Item1.QuestName == questName);
     }
 }

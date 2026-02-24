@@ -113,15 +113,27 @@ public class GameManager : MonoBehaviour
         SaveGame();
     }
 
+    public void LevelUpPlayer(){
+        _playerData.LevelUp();
+        SaveGame();
+    }
+
     public void AddActivityData(ActivityData data){
         this._playerData.AddActivityData(data);
         SaveGame();
     }
 
     public void AddQuestData(QuestData data){
-        QuestManager.Instance.AvailableQuests.Add((data, null)); // Add to QuestManager list so it can be accessed by quest objects
         this._playerData.AddQuestData(data);
         SaveGame();
+    }
+
+    public void AddQuestRewards(int coins, int points){
+        this._playerData.Coins += coins;
+        this._playerData.Points += points;
+        UpdatePlayerHUD();
+        SaveGame();
+        
     }
 
     public void AddInventoryItem(ItemData item){

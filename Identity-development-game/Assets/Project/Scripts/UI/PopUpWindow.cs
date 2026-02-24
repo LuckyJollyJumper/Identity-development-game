@@ -69,4 +69,9 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
         if (DebugMode){ Debug.Log($"{DebugID} PopUpWindow clicked"); }
     }
 
+    public virtual void ClearActions(){
+        OnPopUpClosed = null;
+        if (DebugMode){ Debug.Log($"{DebugID} OnPopUpClosed event cleared"); }
+    }
+
 }
