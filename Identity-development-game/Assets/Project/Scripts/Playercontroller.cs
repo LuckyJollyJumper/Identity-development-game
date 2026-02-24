@@ -53,7 +53,7 @@ public class Playercontroller : MonoBehaviour
         float h = VirtualJoystick.GetAxis("Horizontal", JID);
         float v = VirtualJoystick.GetAxis("Vertical", JID);
 
-        Vector3 input = new Vector3(h, 0f, v);
+        Vector3 input = new Vector3(h, 0.05f, v);
         if (player == null) return;
 
         if (body == null) {

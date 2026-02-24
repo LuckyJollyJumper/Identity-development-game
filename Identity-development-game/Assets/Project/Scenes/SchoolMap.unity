@@ -6918,6 +6918,11 @@ Transform:
   - {fileID: 1496952847}
   m_Father: {fileID: 539292742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &292617359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5531265197361975040, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+  m_PrefabInstance: {fileID: 1035612952}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &294348969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15539,6 +15544,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7441440908871300343, guid: 052f0d9a551166b458c44593c6566808, type: 3}
   m_PrefabInstance: {fileID: 2142979658}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &586059013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5138346307764991280, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+  m_PrefabInstance: {fileID: 1035612952}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &586882701
 GameObject:
@@ -26518,7 +26528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2943460827006015804, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: m_Name
-      value: NPC (4)
+      value: NPCQuest
       objectReference: {fileID: 0}
     - target: {fileID: 3781973384669048782, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: m_Layer
@@ -26700,10 +26710,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2943460827006015804, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1201720579}
     - targetCorrespondingSourceObject: {fileID: 9025101729989394554, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 0}
@@ -30612,6 +30626,42 @@ PrefabInstance:
       addedObject: {fileID: 462291375}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8d5560c582ec574997c788d329999a9, type: 3}
+--- !u!1 &1201720577 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2943460827006015804, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+  m_PrefabInstance: {fileID: 1035612952}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1201720579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201720577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dca489b6171288498dc6abeaabc0195, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractableQuestCharacter
+  InteractionObject: {fileID: 292617359}
+  UI: {fileID: 586059013}
+  CurrentState: 0
+  PopUpText: Help!
+  DebugMode: 1
+  DebugID: '[InteractableObject]'
+  CharacterName: Axel
+  DialogueTexts:
+  - Ik vind boeken lezen heel leuk. Ik kan me altijd helemaal inleven in de boeken.
+  - Ik word er altijd heel ontspannen van. Helaas ben ik al mijn boeken kwijtgeraakt.
+  - Kan jij me helpen deze te zoeken?
+  - Ik zal je er een beloning voor geven
+  NPCQuestName: '"Verloren boeken"'
+  QuestCompletedTexts:
+  - Je hebt al mijn boeken gevonden!
+  - Heel erg bedankt!
+  - Hier heb je  1<Sprite index=0> en 300 punten
+  PostQuestTexts:
+  - Nogmaals bedankt voor het vinden van mijn boeken
 --- !u!1001 &1201969751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30705,7 +30755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::QuestManager
   SchoolMapCanvas: {fileID: 1698815133}
   GuidancePointer: {fileID: 1853949671}
-  AvailableQuests: []
+  DebugMode: 1
 --- !u!4 &1212495551
 Transform:
   m_ObjectHideFlags: 0
@@ -34611,7 +34661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6769691430286951708, guid: c053c054fc5d4ee42a02877ce265b03a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.055
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: -6769691430286951708, guid: c053c054fc5d4ee42a02877ce265b03a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -48631,7 +48681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: PopUpText
-      value: "H\xE9 jij!"
+      value: He jij!
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: debugMode
