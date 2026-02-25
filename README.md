@@ -22,13 +22,13 @@ The GameManager:
 
 #### Needed
 - Make the gamemenager and its questprogressions until the first mini-game
-- Make player move with physics instead of transform
 - Make the charactercreation
 - More of the Persona games
     - Make the prediction of these personas
 - Create sound for speaking the text
 - Do not raycast on interactionobject only the cloud
 - Cannot buy item (sometimes it works)
+- NPC's cannot be ineracted with for the second time
 
 #### Optimisations
 - Make puzzle mini-game such that you input an image and a size and the game handles the rest

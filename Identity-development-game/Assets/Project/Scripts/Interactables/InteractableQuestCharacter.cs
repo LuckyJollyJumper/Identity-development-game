@@ -19,7 +19,7 @@ public class InteractableQuestCharacter : InteractableCharacter
         this.NPCQuest = new(){
             QuestName = "Verloren boeken",
             Description = "Vind alle boeken voor Axel die verspreid liggen in de school",
-            Goal = 7,
+            Goal = 8,
             CurrentProgress = 0,
             RewardCoins = 1,
             RewardPoints = 400,

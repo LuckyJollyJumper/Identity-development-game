@@ -38,7 +38,7 @@ public class InteractableHiddenObject: InteractableObject
         else if (currentObjectQuest.CurrentProgress == 0){
             base.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts = new List<string> { $"Je hebt een boek gevonden!\n\nWie zou deze verloren hebben?" };
         } else{
-            base.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts = new List<string> { $"Je hebt al {currentObjectQuest.CurrentProgress} van de {currentObjectQuest.Goal} boeken gevonden!\n\nMaar wie zou er nou zoveel boeken verloren hebben?" };
+            base.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts = new List<string> { $"Je hebt nu al {currentObjectQuest.CurrentProgress} boeken gevonden!\n\nMaar wie zou er nou zoveel boeken verloren hebben?" };
         }
 
         base.OnInteract(player);
