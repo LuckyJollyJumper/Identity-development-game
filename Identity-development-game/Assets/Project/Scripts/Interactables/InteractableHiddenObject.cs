@@ -29,16 +29,16 @@ public class InteractableHiddenObject: InteractableObject
         if (currentObjectQuest.IsActive){
              
             if (currentObjectQuest.IsCompleted()){
-                base.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts = new List<string> { $"Je hebt alle boeken gevonden!\nBreng ze terug naar {PlayerName}!" };
+                base.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts = new List<string> { $"Je hebt alle boeken gevonden!\n\nBreng ze terug naar {PlayerName}!" };
             }
             else{
-                base.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts = new List<string> { $"Je hebt een boek gevonden!\nNog {currentObjectQuest.Goal - currentObjectQuest.CurrentProgress} te gaan!" };
+                base.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts = new List<string> { $"Je hebt een boek gevonden!\n\nNog {currentObjectQuest.Goal - currentObjectQuest.CurrentProgress} te gaan!" };
             }
         }
         else if (currentObjectQuest.CurrentProgress == 0){
-            base.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts = new List<string> { $"Je hebt een boek gevonden!\nWie zou deze verloren hebben?" };
+            base.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts = new List<string> { $"Je hebt een boek gevonden!\n\nWie zou deze verloren hebben?" };
         } else{
-            base.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts = new List<string> { $"Je hebt nog een boek gevonden!\nJe hebt er al {currentObjectQuest.CurrentProgress} van de {currentObjectQuest.Goal} boeken gevonden!\nMaar wie zou er nou zoveel boeken verloren hebben?" };
+            base.UI.GetComponentInChildren<PopUpWindow>().PopUpTexts = new List<string> { $"Je hebt al {currentObjectQuest.CurrentProgress} van de {currentObjectQuest.Goal} boeken gevonden!\n\nMaar wie zou er nou zoveel boeken verloren hebben?" };
         }
 
         base.OnInteract(player);

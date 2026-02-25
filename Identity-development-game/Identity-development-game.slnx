@@ -1,6 +1,6 @@
 ﻿<Solution>
-  <Project Path="ReadyPlayerMe.Samples.AvatarCreatorElements.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="ReadyPlayerMe.Samples.AvatarCreatorElements.csproj" />
   <Project Path="ReadyPlayerMe.Samples.AvatarLoading.csproj" />
   <Project Path="ReadyPlayerMe.Samples.AvatarCreatorWizard.csproj" />
   <Project Path="ReadyPlayerMe.Core.WebGLSample.Editor.csproj" />
