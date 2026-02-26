@@ -13,6 +13,7 @@ public class InteractableCharacter : InteractableObject
     
     public override void Start(){
         base.UI.GetComponent<PopUpWindowCharacter>().SetCharacterPopUpText(DialogueTexts, CharacterName);
+        base.UI.GetComponent<PopUpWindowCharacter>().DeleteOnClose = false; // keep to interact with it more than once
         base.Start();
     }
     

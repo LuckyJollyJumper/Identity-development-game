@@ -12,6 +12,8 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
 {
     [Tooltip("List of texts to display in the pop-up window, in order")]
     [TextArea][SerializeField] public List<string> PopUpTexts;
+    [Tooltip("If true, the pop-up delete itself after all texts are displayed.")]
+    [SerializeField] public bool DeleteOnClose = true; // If true, the pop-up GameObject will be destroyed when the interaction ends. Otherwise, it will just be deactivated.
     [Header("Debug")]
     [SerializeField] public bool DebugMode = false;
     protected string DebugID = "[PopUpWindow]";
@@ -26,7 +28,6 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
         if (this.Player != null) {
             this.Player.StartInteraction();
         }
-       
         NextPopUpText();
     }
 
@@ -65,7 +66,7 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
         this.gameObject.SetActive(false);
         
         if (DebugMode){ Debug.Log($"{DebugID} Pop-up interaction ended and window closed"); }
-        Destroy(this.gameObject);
+        if (DeleteOnClose) { Destroy(this.gameObject); }
        
     }
 

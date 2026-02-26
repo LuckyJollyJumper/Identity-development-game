@@ -23,15 +23,6 @@ public class PopUpWindowCharacter: PopUpWindow
         }
     }
 
-    /// <summary>
-    /// Can be removed, was used to test a typing effect for the text
-    /// </summary>
-    /// <param name="text"></param>
-    public override void SetPopUpText(string text){
-        this.PopUpText.text = text; 
-        // this.TypingEffect.StartEffect();
-    }
-
     public void SetCharacterPopUpText(List<string> texts, string name){
         base.PopUpTexts = texts;
         this.NameText.text = name;
