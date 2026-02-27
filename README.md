@@ -28,7 +28,6 @@ The GameManager:
 - Create sound for speaking the text
 - Do not raycast on interactionobject only the cloud
 - Cannot buy item (sometimes it works)
-- NPC's cannot be ineracted with for the second time
 
 #### Optimisations
 - Make puzzle mini-game such that you input an image and a size and the game handles the rest

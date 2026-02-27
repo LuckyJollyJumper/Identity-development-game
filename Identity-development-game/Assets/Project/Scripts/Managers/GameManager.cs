@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
         else{
             UpdatePlayerHUD();
             // Start the current level quest, or tutorial if level 0
-            QuestManager.Instance.StartLevelQuest(_playerData.Level);
+            // Now done by the tutorialManager itself
         }
         
         // Load server data for access during play

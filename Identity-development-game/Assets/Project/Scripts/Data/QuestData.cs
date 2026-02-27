@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/// <summary>
+/// Data class that holds all relevant information for a quest, including progress tracking and completion events.
+/// Make sure to link the OnQuestCompleted event to the quest giver to trigger the completion of the quest.
+/// </summary>
 [System.Serializable]
 public class QuestData
 {
@@ -20,7 +24,7 @@ public class QuestData
 
     /// <summary>
     /// Invokes the OnQuestCompleted event to signal that the quest has been completed.
-    /// Needs to be called inside its own class
+    /// Included here because it needs to be called inside its own class.
     /// </summary>
     public void CompleteQuest(){
         OnQuestCompleted?.Invoke();

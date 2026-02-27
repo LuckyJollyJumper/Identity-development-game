@@ -27,7 +27,7 @@ public class InteractableQuestCharacter : InteractableCharacter
         };
         // This is the callback that will be called when the quest is completed.
         NPCQuest.OnQuestCompleted += () => { QuestCompleted(NPCQuest); };
-        QuestManager.Instance.AddQuestData(NPCQuest, this);
+        QuestManager.Instance.AddQuestData(NPCQuest, this.gameObject);
 
         // Prime the event to start the quest at the end of the NPC interaction
         base.UI.GetComponent<PopUpWindowCharacter>().OnPopUpClosed += () => {

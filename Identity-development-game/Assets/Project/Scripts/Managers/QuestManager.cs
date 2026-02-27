@@ -23,31 +23,20 @@ public class QuestManager : MonoBehaviour
         }
     }
     [Header("References")]
-    [SerializeField] public UISchoolMap SchoolMapCanvas;
     [SerializeField] public GuidancePointer GuidancePointer;
 
     [Header("Variables")]
-    [Tooltip("List of all current quests and corresponding NPC's if they exist, synced with PlayerData")]
-    [SerializeField] public List<(QuestData,InteractableQuestCharacter)> AvailableQuests = new(); 
+    [Tooltip("List of all current quests and corresponding Objects that start them if they exist, synced with PlayerData")]
+    [SerializeField] public List<(QuestData,GameObject)> AvailableQuests = new(); //GameObject is used for future interactions
 
     [Header("Debug")]
     [SerializeField] private bool DebugMode = false;
     [SerializeField] private readonly string DebugID = "[QuestManager]";
 
     /// <summary>
-    /// Used to start the quest for the current level of the player. For example it starts the tutorial for level 0.
-    /// </summary>
-    public void StartLevelQuest(int level){
-        if (level == 0){
-            SchoolMapCanvas.StartLvl0Tutorial();
-            GameManager.Instance.LevelUpPlayer();
-        }
-    }
-
-    /// <summary>
     /// Used by an object n the world to add a quest to the list of quests. Preferably done at the start of the game
     /// </summary>
-    public void AddQuestData(QuestData quest, InteractableQuestCharacter NPC){
+    public void AddQuestData(QuestData quest, GameObject NPC){
         AvailableQuests.Add((quest,NPC));
     }
 
