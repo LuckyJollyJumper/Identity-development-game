@@ -11,6 +11,12 @@ public class InteractableQuestCharacter : InteractableCharacter
     [SerializeField] QuestData NPCQuest; // The quest that the NPC gives, used to signal the questmanager
     [TextArea][SerializeField] List<string> QuestCompletedTexts; // The text that the NPC will say when interacting with it after you completed the quest, can be empty
     [TextArea][SerializeField] List<string> PostQuestTexts; // The text that the NPC will say when interacting with it after you already completed the quest, can be empty
+    [Tooltip("List of audio clips for the character, should be in the same order as QuestCompletedTexts")]
+    [SerializeField] public List<AudioClip> QuestCompletedAudioClips;
+    [Tooltip("List of audio clips for the character, should be in the same order as PostQuestTexts")]
+    [SerializeField] public List<AudioClip> PostCompletedAudioClips;
+
+    
    
     /// <summary>
     /// Sets the quest as active in the questmanager when the pop-up is closed on first interaction with the NPC.

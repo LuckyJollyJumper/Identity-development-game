@@ -16639,6 +16639,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8715262926995364744, guid: 9c87bd1d3769ecb49a633db6afb46dfe, type: 3}
   m_PrefabInstance: {fileID: 592384490}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &595005150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1800973700303551779, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+  m_PrefabInstance: {fileID: 7441260467523652042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &595168547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18947,6 +18952,7 @@ MonoBehaviour:
   player: {fileID: 250393416}
   JoystickObject: {fileID: 1887409142}
   DebugMode: 1
+  footstepDelay: 0.5
 --- !u!1001 &680283690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25925,6 +25931,87 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 17.095198, y: 63.060352, z: 15.53348}
   m_Center: {x: -3.0370824, y: -0.3930065, z: 7.3627195}
+--- !u!1001 &930459929
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 250393417}
+    m_Modifications:
+    - target: {fileID: 1800973700303551779, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_Name
+      value: BackgroundAudioSource
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6666666
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6666666
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6666666
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.41666666
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.083333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.7000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306539609824799341, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306539609824799341, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 6635dd4b76c871745b5b4364ea5112ce, type: 3}
+    - target: {fileID: 8306539609824799341, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6fd213b62935139448be93e1ba262544, type: 3}
 --- !u!1001 &932363001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33021,10 +33108,18 @@ MonoBehaviour:
   DebugID: '[InteractableObject]'
   CharacterName: Axel
   DialogueTexts:
-  - Ik vind boeken lezen heel leuk. Ik kan me altijd helemaal inleven in de boeken.
-  - Ik word er altijd heel ontspannen van. Helaas ben ik al mijn boeken kwijtgeraakt.
-  - Kan jij me helpen deze te zoeken?
-  - Ik zal je er een beloning voor geven
+  - Ik vind boeken lezen heel leuk omdat ik me helemaal inleef in het verhaal.
+  - 'Ik word er altijd heel ontspannen van. '
+  - Lees jij soms boeken?
+  - 'Helaas ben ik al mijn boeken kwijtgeraakt.
+
+    Kan jij me helpen deze te zoeken?'
+  - Ik zal je er een beloning voor geven als je ze allemaal vind.
+  CharacterAudioClips:
+  - {fileID: 8300000, guid: 8ab99a17efd3987489379ababf0397dc, type: 3}
+  - {fileID: 8300000, guid: 0f91b98564f72174894a9f9821372759, type: 3}
+  - {fileID: 8300000, guid: 1e1e59e91b4c9f24cb16d9e7887f63c1, type: 3}
+  - {fileID: 8300000, guid: 20f08ddb2a04e524e8592df168ed10fe, type: 3}
   NPCQuest:
     IsActive: 0
     QuestName: 
@@ -33809,6 +33904,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2069730942669504983, guid: 2a6d561cbaf69f14d92dd9db7720e060, type: 3}
   m_PrefabInstance: {fileID: 673089592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1256585933 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+  m_PrefabInstance: {fileID: 930459929}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1256837893
 PrefabInstance:
@@ -37895,7 +37995,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -6769691430286951708, guid: c053c054fc5d4ee42a02877ce265b03a, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 7441260467523652043}
+    - targetCorrespondingSourceObject: {fileID: -6769691430286951708, guid: c053c054fc5d4ee42a02877ce265b03a, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 1256585933}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6635245195314443262, guid: c053c054fc5d4ee42a02877ce265b03a, type: 3}
       insertIndex: -1
@@ -38844,7 +38950,6 @@ Transform:
   - {fileID: 1853949670}
   - {fileID: 686508455}
   - {fileID: 937532679}
-  - {fileID: 7441260467523652043}
   m_Father: {fileID: 265845066}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1435907748
@@ -47032,6 +47137,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5e2d79fae5738c47867425ac0ac61ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  BookFlip: {fileID: 8300000, guid: 376c6af8b9926ad408970b6ee136275f, type: 3}
+  Footsteps:
+  - {fileID: 8300000, guid: 0edcb1bb5457eda45be0c71fa8750d8b, type: 3}
+  - {fileID: 8300000, guid: 86030b37e0e95ec479784ec5509be528, type: 3}
+  - {fileID: 8300000, guid: bdcefd22fc3e16c4c9deed493544278d, type: 3}
+  - {fileID: 8300000, guid: 16716c5b33048a144aa203983bec1bd1, type: 3}
+  - {fileID: 8300000, guid: cb17e9a26047aae44b2e8a3c6a8b8161, type: 3}
+  - {fileID: 8300000, guid: 7ea0c964d86882741b510fcd35cb2750, type: 3}
+  - {fileID: 8300000, guid: f3e89e05c44ff5a4ca9805e4e6f4a76c, type: 3}
+  - {fileID: 8300000, guid: 2e87580e21ab88649828a5e87d88777d, type: 3}
+  - {fileID: 8300000, guid: a8a3c1a0d32a97745b6766ece330bc6a, type: 3}
+  SoundObject: {fileID: 595005150}
 --- !u!4 &1796845705 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 76a97bf703ce4cc4989cd1107a8621fb, type: 3}
@@ -59596,23 +59713,35 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1435818152}
+    m_TransformParent: {fileID: 250393417}
     m_Modifications:
     - target: {fileID: 1800973700303551779, guid: 6fd213b62935139448be93e1ba262544, type: 3}
       propertyPath: m_Name
       value: AudioSource
       objectReference: {fileID: 0}
     - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6666666
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6666666
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6666666
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.91167
+      value: -0.41666666
       objectReference: {fileID: 0}
     - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.083333336
       objectReference: {fileID: 0}
     - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.2480497
+      value: 0.7000001
       objectReference: {fileID: 0}
     - target: {fileID: 1925464470924225784, guid: 6fd213b62935139448be93e1ba262544, type: 3}
       propertyPath: m_LocalRotation.w
@@ -59914,6 +60043,34 @@ PrefabInstance:
     - target: {fileID: 4694688970766111000, guid: 27e72c2d4ab9aae43a2c8fe05056b32b, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348866074930940553, guid: 27e72c2d4ab9aae43a2c8fe05056b32b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348866074930940553, guid: 27e72c2d4ab9aae43a2c8fe05056b32b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348866074930940553, guid: 27e72c2d4ab9aae43a2c8fe05056b32b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1794909464}
+    - target: {fileID: 5348866074930940553, guid: 27e72c2d4ab9aae43a2c8fe05056b32b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348866074930940553, guid: 27e72c2d4ab9aae43a2c8fe05056b32b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayBookFlipSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348866074930940553, guid: 27e72c2d4ab9aae43a2c8fe05056b32b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SoundManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348866074930940553, guid: 27e72c2d4ab9aae43a2c8fe05056b32b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8260106068972315796, guid: 27e72c2d4ab9aae43a2c8fe05056b32b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

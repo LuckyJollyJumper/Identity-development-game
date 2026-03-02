@@ -12,6 +12,7 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
 {
     [Tooltip("List of texts to display in the pop-up window, in order")]
     [TextArea][SerializeField] public List<string> PopUpTexts;
+    [SerializeField] public List<AudioClip> PopUpAudioClips; // Optional audio clips for each pop-up text
     [Tooltip("If true, the pop-up delete itself after all texts are displayed.")]
     [SerializeField] public bool DeleteOnClose = true; // If true, the pop-up GameObject will be destroyed when the interaction ends. Otherwise, it will just be deactivated.
     [Header("Debug")]
@@ -38,6 +39,9 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
     public virtual void NextPopUpText(){
         if (this.CurrentTextIndex < this.PopUpTexts.Count){
             SetPopUpText(PopUpTexts[this.CurrentTextIndex]);
+            if (PopUpAudioClips.Count >= this.CurrentTextIndex && PopUpAudioClips[this.CurrentTextIndex] != null){
+                SoundManager.Instance.PlaySound(PopUpAudioClips[this.CurrentTextIndex]); // Play corresponding audio clip if available
+            }
         }else{
             if (DebugMode){ Debug.Log($"{DebugID} No more pop-up texts to display"); }
             EndInteraction();
