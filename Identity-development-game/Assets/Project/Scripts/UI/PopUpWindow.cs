@@ -39,9 +39,7 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
     public virtual void NextPopUpText(){
         if (this.CurrentTextIndex < this.PopUpTexts.Count){
             SetPopUpText(PopUpTexts[this.CurrentTextIndex]);
-            if (PopUpAudioClips.Count >= this.CurrentTextIndex && PopUpAudioClips[this.CurrentTextIndex] != null){
-                SoundManager.Instance.PlaySound(PopUpAudioClips[this.CurrentTextIndex]); // Play corresponding audio clip if available
-            }
+            PlayCurrenAudioClip();
         }else{
             if (DebugMode){ Debug.Log($"{DebugID} No more pop-up texts to display"); }
             EndInteraction();
@@ -54,6 +52,14 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
             this.PopUpText = GameObject.Find("PopUpText").GetComponent<TMPro.TextMeshProUGUI>(); 
         }
         this.PopUpText.text = text; 
+    }
+    private void PlayCurrenAudioClip(){
+        if (PopUpAudioClips.Count > this.CurrentTextIndex){
+            if(PopUpAudioClips[this.CurrentTextIndex] != null){
+                if (DebugMode){ Debug.Log($"{DebugID} Playing audio clip for pop-up text index {this.CurrentTextIndex}"); }
+                SoundManager.Instance.PlaySound(PopUpAudioClips[this.CurrentTextIndex]);
+            }
+        }
     }
 
 

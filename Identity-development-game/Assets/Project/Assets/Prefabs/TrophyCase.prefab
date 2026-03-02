@@ -130,6 +130,7 @@ MonoBehaviour:
   UI: {fileID: 8604074040487155271}
   CurrentState: 0
   PopUpText: Scorebord
+  InteractionSound: {fileID: 8300000, guid: c17f73fda93c21348845bb8268207cd9, type: 3}
   DebugMode: 0
   DebugID: '[InteractableObject]'
 --- !u!65 &209425875273120394
@@ -422,6 +423,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -747,6 +749,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

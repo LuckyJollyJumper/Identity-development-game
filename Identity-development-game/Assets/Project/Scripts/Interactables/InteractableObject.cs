@@ -14,7 +14,10 @@ public class InteractableObject : MonoBehaviour
     [Tooltip("UI that appears when player interacts with the object")]
     [SerializeField] public GameObject UI;
     [SerializeField] public ObjectState CurrentState = ObjectState.Idle;
+    [Header("Interaction")]
     [SerializeField] public string PopUpText;
+    [Tooltip("Sound that plays when the player interacts with the object, can be empty")]
+    [SerializeField] private AudioClip InteractionSound;
     
     [Header("Debug")]
     [SerializeField] public bool DebugMode = false;
@@ -43,6 +46,7 @@ public class InteractableObject : MonoBehaviour
     public virtual void OnInteract(Playercontroller player){
         this.UI.SetActive(true);
         this.InteractingPlayer = player;
+        PlayInteractionSound();
     }
 
     /// <summary>
@@ -61,6 +65,16 @@ public class InteractableObject : MonoBehaviour
     /// </summary>
     public virtual void OnEndReadyForInteraction(){
         this.InteractionObject.SetActive(false);
+    }
+
+    /// <summary>
+    /// Plays the interaction sound if it exists.
+    /// </summary>
+    private void PlayInteractionSound(){
+        if (InteractionSound != null){
+            if (DebugMode){ Debug.Log($"{DebugID} Playing interaction sound"); }
+            SoundManager.Instance.PlaySound(InteractionSound, this.transform);
+        }
     }
 
 

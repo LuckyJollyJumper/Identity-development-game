@@ -820,6 +820,7 @@ MonoBehaviour:
   UI: {fileID: 2434414757895544677}
   CurrentState: 0
   PopUpText: Winkel
+  InteractionSound: {fileID: 8300000, guid: 82bef21217f82bd49b599b0fb75fc479, type: 3}
   DebugMode: 0
   DebugID: '[InteractableObject]'
 --- !u!65 &860797293912284186
