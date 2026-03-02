@@ -26,6 +26,12 @@ public class Playercontroller : MonoBehaviour
     [SerializeField] public bool DebugMode = true;
     private string DebugID = "[PlayerController]";
 
+    // Footstep sound support
+    [Header("Audio")]
+    [Tooltip("Minimum time in seconds between consecutive footstep sounds while moving")]
+    [SerializeField] private float footstepDelay = 0.5f;
+    private float footstepTimer = 0f;
+
     void Start(){
         if (player != null) this.body = player.GetComponent<Rigidbody>();
         this.playerState = InteractionState.Moving;
@@ -43,8 +49,9 @@ public class Playercontroller : MonoBehaviour
 
     void FixedUpdate(){
         if (playerState != InteractionState.Moving) return;
-        // Apply physics-based movement
+
         MovePlayer();
+        HandleFootsteps();
     }
 
     public void MovePlayer(){
@@ -55,11 +62,7 @@ public class Playercontroller : MonoBehaviour
 
         Vector3 input = new Vector3(h, 0.05f, v);
         if (player == null) return;
-
-        if (body == null) {
-            // fallback: try to grab Rigidbody if it wasn't assigned
-            body = player.GetComponent<Rigidbody>();
-        }
+        if (body == null) {body = player.GetComponent<Rigidbody>();}
 
         // Apply movement via Rigidbody velocity for deterministic physics
         if (body != null){
@@ -95,6 +98,29 @@ public class Playercontroller : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Plays footstep sounds at intervals when the player is moving.
+    /// A timer is used to prevent the sound from being played every physics frame.
+    /// </summary>
+    private void HandleFootsteps(){
+        // only play when there's substantial horizontal movement
+        Vector3 horizontalVel = Vector3.zero;
+        if (body != null)
+            horizontalVel = new Vector3(body.linearVelocity.x, 0f, body.linearVelocity.z);
+        
+        if (horizontalVel.magnitude > 0.1f){
+            footstepTimer += Time.fixedDeltaTime;
+            if (footstepTimer >= footstepDelay){
+                if (SoundManager.Instance != null)
+                    SoundManager.Instance.PlayFootstepSound();
+                footstepTimer = 0f;
+            }
+        }
+        else{
+            // reset timer when not moving so sound plays immediately after next movement
+            footstepTimer = 0f;
+        }
+    }
 
     /// <summary>
     /// Activates nearby InteractableObjects within interactionRadius. Calls ActivateSurroundingObjects with higher radius to
