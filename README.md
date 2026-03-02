@@ -49,7 +49,10 @@ The GameManager:
 - Create github issues instead of this file
 - Instantiate from serializefield all prefabs instead of Resources folder
 
-
+## Assets
+### Sounds
+- Background birds audience: https://pixabay.com/sound-effects/search/ambience%20birds/
+- 
 
 ## Questions
 
