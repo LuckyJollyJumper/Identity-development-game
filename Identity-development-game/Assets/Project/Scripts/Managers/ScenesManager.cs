@@ -1,6 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Manager for handling scene transitions in the game. Provides methods to load specific scenes, reload the current scene, and quit the game. 
+/// Scenes are defined in an enum in the order as they are set in the File>Build profiles in the unity editor.
+/// Is accessed from the GameManager to also enable saving
+/// </summary>
 public class ScenesManager : MonoBehaviour{
     [HideInInspector] public static ScenesManager Instance;
 
@@ -10,18 +15,12 @@ public class ScenesManager : MonoBehaviour{
         PersonaGame, // Minigame to find out the persona
         PuzzleMiniGame, // Minigame to solve puzzles
         ClothingMiniGame, // Minigame to sort clothing pieces
+        SportMiniGame,
     }
 
-    public void Awake(){
-        Instance = this;
-    }
-
+    public void Awake(){ Instance = this; }
     public void LoadScene(Scenes scene){
         SceneManager.LoadScene(scene.ToString());
-    }
-    public void ReloadCurrentScene(){
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
     }
     public void QuitGame(){
         Application.Quit();
