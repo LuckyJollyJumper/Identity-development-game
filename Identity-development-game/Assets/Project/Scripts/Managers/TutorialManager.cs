@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 /// <summary>
 /// The base of calling and starting the tutorial sequence.
@@ -6,6 +7,8 @@ using UnityEngine;
 public class TutorialManager : MonoBehaviour
 {
     [SerializeField] public UISchoolMap SchoolMapCanvas;
+    [Header("Audio Clips")]
+    [SerializeField] public List<AudioClip> WelcomeAudios1;
     [Header("Debug")]
     [SerializeField] private bool DebugMode = true;
     private string DebugID = "[TutorialManager]";
@@ -23,7 +26,7 @@ public class TutorialManager : MonoBehaviour
         if (GameManager.Instance._playerData.Level == 0){
             TutorialQuest.IsActive = true;
             QuestManager.Instance.AddQuestData(TutorialQuest, this.gameObject);
-            SchoolMapCanvas.StartLvl0Tutorial();
+            SchoolMapCanvas.StartLvl0Tutorial(WelcomeAudios1);
             TutorialQuest.OnQuestCompleted += () => {
                 GameManager.Instance.LevelUpPlayer();
                 if (DebugMode){ Debug.Log($"{DebugID} Tutorial Quest completed!"); }

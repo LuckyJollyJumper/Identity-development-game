@@ -16,12 +16,13 @@ public class UISchoolMap : MonoBehaviour
     /// Used to display the welcome message and initiates the tutorial.
     /// Only used on first visit of the game.
     /// </summary>
-    public void StartLvl0Tutorial(){
+    public void StartLvl0Tutorial(List<AudioClip> audioClips){
         GameObject PopupWindowPrefab = Resources.Load<GameObject>("PopUpPanel");
         PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpTexts = new List<string>{
             $"Welkom op je nieuwe school!\n\nRaak ergens het scherm aan om door te gaan.",
-            $"Je kan rondlopen door de witte cirkel beneden op het scherm te verplaatsen\n\nVeel Plezier met spelen!"
+            $"Je kan rondlopen door de witte cirkel beneden op het scherm te verplaatsen"
         };
+        PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpAudioClips = audioClips;
         GameObject popupInstance = Instantiate(PopupWindowPrefab, this.transform);
         //TODO: add first tutorial to all objects
     }
