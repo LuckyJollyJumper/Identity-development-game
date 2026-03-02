@@ -52,6 +52,9 @@ The GameManager:
 ## Assets
 ### Sounds
 - Background birds audience: https://pixabay.com/sound-effects/search/ambience%20birds/
+- Kenney.nl for all audio clips
+
+### Models
 - 
 
 ## Questions
