@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/PuzzleMiniGame.unity
     guid: 345b75710a01dc647b62f38adf16fd22
+  - enabled: 1
+    path: Assets/Project/Scenes/ClothingMiniGame.unity
+    guid: 3e3cdddbf7434524cbad0cda73cb221a
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 05072ce03f428c14d9008879b7712f21, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 3f2ec4ef5a69ba24eb8ba863834cd65f, type: 2}

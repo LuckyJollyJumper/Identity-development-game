@@ -9,6 +9,7 @@ public class ScenesManager : MonoBehaviour{
         CharacterCreator, // Sets name and character
         PersonaGame, // Minigame to find out the persona
         PuzzleMiniGame, // Minigame to solve puzzles
+        ClothingMiniGame, // Minigame to sort clothing pieces
     }
 
     public void Awake(){

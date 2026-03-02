@@ -50,6 +50,9 @@ public class ActivityManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Saves the activity data to the player via the Gamemanager. Should be called when the activity is completed.
+    /// </summary>
     public virtual void SaveActivityData(){
          float timeTaken = ActivityTimer.GetElapsedTime();
         // TODO: Needs to be done from a database

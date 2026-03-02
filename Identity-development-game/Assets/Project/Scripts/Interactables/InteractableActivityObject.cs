@@ -20,9 +20,7 @@ public class InteractableActivityObject : InteractableObject
     }
 
     public void StartActivity(){
-        if (DebugMode) {
-            Debug.Log($"[DebugMode] Starting activity: {ActivityScene}");
-        }
+        if (DebugMode) { Debug.Log($"[DebugMode] Starting activity: {ActivityScene}"); }
         GameManager.Instance._scenesManager.LoadScene(ActivityScene);
     }
 
