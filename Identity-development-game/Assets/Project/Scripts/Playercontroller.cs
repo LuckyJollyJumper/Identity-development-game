@@ -35,6 +35,9 @@ public class Playercontroller : MonoBehaviour
     void Start(){
         if (player != null) this.body = player.GetComponent<Rigidbody>();
         this.playerState = InteractionState.Moving;
+
+        // ensure enhanced touch is enabled so we can read Touch.activeTouches
+        EnhancedTouchSupport.Enable();
     }
 
     void Update(){
@@ -44,7 +47,18 @@ public class Playercontroller : MonoBehaviour
             ActivateSurroundingObjects();
         }
 
-        MouseInteract();
+        // switch between input methods depending on environment
+        bool useTouch = Application.isMobilePlatform ||
+                        (Touchscreen.current != null && Touchscreen.current.enabled);
+        if (useTouch){
+            TouchInteract();
+        } else {
+            MouseInteract();
+        }
+    }
+
+    void OnDisable(){
+        EnhancedTouchSupport.Disable();
     }
 
     void FixedUpdate(){
@@ -174,7 +188,14 @@ public class Playercontroller : MonoBehaviour
     }
 
     public void TouchInteract(){
-        // TODO
+        // use EnhancedTouch to support multiple fingers / touches
+        if (Touchscreen.current == null) return;
+
+        foreach (var touch in UnityEngine.InputSystem.EnhancedTouch.Touch.activeTouches){
+            if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began){
+                RayCastFromTouch(touch.screenPosition);
+            }
+        }
     }
 
     public void RayCastFromTouch(Vector2 touchPos){
