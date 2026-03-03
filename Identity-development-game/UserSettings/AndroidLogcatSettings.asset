@@ -1,13 +1,32 @@
 {
-    "m_SelectedDeviceId": "",
+    "m_SelectedDeviceId": "R5CX60HV53B",
     "m_SelectedProcess": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "R5CX60HV53B",
+        "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
+        "processId": 26478,
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownProcessesForSerialization": [],
+    "m_KnownProcessesForSerialization": [
+        {
+            "deviceId": "R5CX60HV53B",
+            "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
+            "processId": 17508,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CX60HV53B",
+            "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
+            "processId": 21063,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CX60HV53B",
+            "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
+            "processId": 26478,
+            "exited": false
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
@@ -45,8 +64,19 @@
         "Height": 0.0
     },
     "m_MemoryViewerState": {
-        "MemoryWindowWidth": 0.0,
-        "MemoryTypeEnabled": [],
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
         "MemoryGroup": 2,
         "AutoCapture": true
     },
