@@ -861,6 +861,10 @@ PrefabInstance:
       propertyPath: gridPosition.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6768319921364542564, guid: 1d87b83f81bbde04d830b10664538bc9, type: 3}
+      propertyPath: m_fontSize
+      value: 26.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1456,6 +1460,10 @@ PrefabInstance:
       propertyPath: gridPosition.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6768319921364542564, guid: 1d87b83f81bbde04d830b10664538bc9, type: 3}
+      propertyPath: m_fontSize
+      value: 26.75
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1477,6 +1485,7 @@ GameObject:
   - component: {fileID: 565666525}
   - component: {fileID: 565666526}
   - component: {fileID: 565666528}
+  - component: {fileID: 565666529}
   m_Layer: 5
   m_Name: DropGrid
   m_TagString: Untagged
@@ -1507,7 +1516,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 7.500004, y: 46.664993}
-  m_SizeDelta: {x: -58.999996, y: -347.07}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &565666526
 MonoBehaviour:
@@ -1541,6 +1550,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 565666524}
   m_CullTransparentMesh: 1
+--- !u!114 &565666529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565666524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
+  m_HorizontalFit: 2
+  m_VerticalFit: 2
 --- !u!1 &714937347
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,7 +2078,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1818868210180868303, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6407264624871929356, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
@@ -2241,6 +2265,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6768319921364542564, guid: 1d87b83f81bbde04d830b10664538bc9, type: 3}
+      propertyPath: m_fontSize
+      value: 26.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768319921364542564, guid: 1d87b83f81bbde04d830b10664538bc9, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -2370,6 +2398,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6768319921364542564, guid: 1d87b83f81bbde04d830b10664538bc9, type: 3}
+      propertyPath: m_fontSize
+      value: 26.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768319921364542564, guid: 1d87b83f81bbde04d830b10664538bc9, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
@@ -2417,7 +2449,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 217.8}
+  m_AnchoredPosition: {x: 0, y: 210.25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1077875059
@@ -2809,11 +2841,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
+  m_fontSize: 16.3
   m_fontSizeBase: 15
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 6
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -2985,6 +3017,10 @@ PrefabInstance:
     - target: {fileID: 2989819245244457105, guid: 1d87b83f81bbde04d830b10664538bc9, type: 3}
       propertyPath: gridPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768319921364542564, guid: 1d87b83f81bbde04d830b10664538bc9, type: 3}
+      propertyPath: m_fontSize
+      value: 26.75
       objectReference: {fileID: 0}
     - target: {fileID: 6768319921364542564, guid: 1d87b83f81bbde04d830b10664538bc9, type: 3}
       propertyPath: m_RaycastTarget
@@ -3289,6 +3325,10 @@ PrefabInstance:
     - target: {fileID: 2276146448827032455, guid: 1d87b83f81bbde04d830b10664538bc9, type: 3}
       propertyPath: m_Name
       value: PuzzleItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768319921364542564, guid: 1d87b83f81bbde04d830b10664538bc9, type: 3}
+      propertyPath: m_fontSize
+      value: 26.75
       objectReference: {fileID: 0}
     - target: {fileID: 6768319921364542564, guid: 1d87b83f81bbde04d830b10664538bc9, type: 3}
       propertyPath: m_RaycastTarget
