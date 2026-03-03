@@ -44,7 +44,7 @@ public class QuestManager : MonoBehaviour
     /// Updates the progress of a quest by amount. If the progress reaches the goal, it will invoke the signal
     /// in the quest that should be linked to the NPC as set in SetQuestAsActive()
     /// </summary>
-    public void UpdateProgress(int amount, string questName){
+    public void UpdateQuestProgress(int amount, string questName){
         for (int i = 0; i < AvailableQuests.Count; i++){
             QuestData quest = AvailableQuests[i].Item1;
             if (quest.QuestName == questName){

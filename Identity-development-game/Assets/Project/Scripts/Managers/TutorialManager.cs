@@ -6,11 +6,16 @@ using System.Collections.Generic;
 /// </summary>
 public class TutorialManager : MonoBehaviour
 {
+    [Header("References")]
     [Tooltip("The objects that are to be excluded when the tutorial starts, e.g. the main UI, so that the player can only interact with the tutorial pop-ups and not the rest of the UI")]
-    [SerializeField ] private GameObject TutorialObjects;
-    [SerializeField] public UISchoolMap SchoolMapCanvas;
+    [SerializeField] private GameObject TutorialObjects;
+    [SerializeField] private Transform NPC;
+    [SerializeField] private UISchoolMap SchoolMapCanvas;
+    [SerializeField] private GuidancePointer PointerObject;
+
     [Header("Audio Clips")]
     [SerializeField] public List<AudioClip> WelcomeAudios1;
+
     [Header("Debug")]
     [SerializeField] private bool DebugMode = true;
     [SerializeField] private bool AlwaysStartTutorial = false;
@@ -18,7 +23,7 @@ public class TutorialManager : MonoBehaviour
     public QuestData TutorialQuest = new(){
         QuestName = "Tutorial",
         Description = "Called from TutorialManager, if IsActive, the ",
-        Goal = 8,
+        Goal = 3,
         CurrentProgress = 0,
         RewardCoins = 0,
         RewardPoints = 0,
@@ -30,12 +35,13 @@ public class TutorialManager : MonoBehaviour
             TutorialObjects.SetActive(false);
             TutorialQuest.IsActive = true;
             QuestManager.Instance.AddQuestData(TutorialQuest, this.gameObject);
-            SchoolMapCanvas.StartStep1();
+            StartStep1();
             // Subscribe to set the onCompleted event of the whole tutorial
             TutorialQuest.OnQuestCompleted += () => {
                 GameManager.Instance.LevelUpPlayer();
                 TutorialObjects.SetActive(true);
                 if (DebugMode){ Debug.Log($"{DebugID} Tutorial Quest completed!"); }
+                Destroy(this.gameObject);
             };
         }
         else{
@@ -55,50 +61,41 @@ public class TutorialManager : MonoBehaviour
         PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpTexts = new List<string>{
             $"Welkom op je nieuwe school!\n\nRaak ergens het scherm aan om door te gaan.",
             $"Je kan rondlopen door de witte cirkel beneden op het scherm te verplaatsen",
-            $"Volg de pijl naast je karakter om verder te gaan!"
+            $"Volg de pijl bij je karakter om verder te gaan"
         };
         PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpAudioClips = WelcomeAudios1;
         PopupWindowPrefab.GetComponent<PopUpWindow>().OnPopUpClosed += () => {
-            QuestManager.Instance.UpdateQuestProgress(1, QuestName);
-            StartStep2();
+            QuestManager.Instance.UpdateQuestProgress(1, TutorialQuest.QuestName);
+            if (DebugMode){ Debug.Log($"{DebugID} Completed step 1"); }
         };
         GameObject popupInstance = Instantiate(PopupWindowPrefab, SchoolMapCanvas.transform);
     }
 
     public void StartStep2(){
-        // wait four seconds before showing the next popup; Timer.Delay is a static
-        // coroutine provided by the Timer utility.
-        StartCoroutine(Step2Coroutine());
-    }
-
-    private System.Collections.IEnumerator Step2Coroutine(){
-        yield return Timer.Delay(4f);   // pause here for four seconds
-
         if (DebugMode){ Debug.Log($"{DebugID} Starting tutorial step 2: Movement tutorial"); }
         GameObject PopupWindowPrefab = Resources.Load<GameObject>("PopUpPanel");
         PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpTexts = new List<string>{
-            $"Goed zo!"
+            $"Goed zo! Objecten in de wereld met een witte wolk erboven zijn interactief",
+            $"Dus elke wolk die je tegen komt kan je verder helpen in het spel",
+            $"Probeer maar eens op de wolk met de tekst scorebord te klikken!"
         };
-        PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpAudioClips = WelcomeAudios1;
+        // PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpAudioClips = WelcomeAudios1;
         PopupWindowPrefab.GetComponent<PopUpWindow>().OnPopUpClosed += () => {
-            QuestManager.Instance.UpdateQuestProgress(1, QuestName);
-            StartStep2();
+            QuestManager.Instance.UpdateQuestProgress(1, TutorialQuest.QuestName);
+            if (DebugMode){ Debug.Log($"{DebugID} Completed step 2"); }
+            PointerObject.target = NPC;
         };
         GameObject popupInstance = Instantiate(PopupWindowPrefab, SchoolMapCanvas.transform);
     }
 
-    private void StartStep3(){
-        if (DebugMode){ Debug.Log($"{DebugID} Starting tutorial step 3: Interaction tutorial"); }
-        GameObject PopupWindowPrefab = Resources.Load<GameObject>("PopUpPanel");
-        PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpTexts = new List<string>{
-            $"Goed zo! Objecten in de wereld met een witte wolk erboven zijn interactief.",
-            $"Volg de pijl naast je karakter om met je eerste object te interacteren."
-
+    /// <summary>
+    /// Used to trigger the second step of the tutorial when the player enters the collider.
+    /// </summary>
     private void OnTriggerEnter(Collider collision) {
-        if (DebugMode){ Debug.Log($"{DebugID} Collision detected in TutorialManager"); }
         if (collision.gameObject.CompareTag("Player")){
-            // Trigger the tutorial pop-up or sequence here
             if (DebugMode){ Debug.Log($"{DebugID} Player has entered the tutorial area!"); }
+            StartStep2();
+            this.GetComponent<BoxCollider>().enabled = false; // Disable the collider so that the tutorial doesn't get triggered again
         }
     }
    

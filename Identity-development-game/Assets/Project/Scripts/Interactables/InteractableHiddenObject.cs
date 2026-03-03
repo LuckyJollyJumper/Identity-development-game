@@ -24,7 +24,7 @@ public class InteractableHiddenObject: InteractableObject
     /// <param name="player"></param>
     public override void OnInteract(Playercontroller player){
         QuestData currentObjectQuest = QuestManager.Instance.GetQuestData(QuestName);
-        QuestManager.Instance.UpdateProgress(1, QuestName);
+        QuestManager.Instance.UpdateQuestProgress(1, QuestName);
 
         if (currentObjectQuest.IsActive){
              
