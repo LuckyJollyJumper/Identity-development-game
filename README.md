@@ -52,6 +52,9 @@ The GameManager:
 ## Assets
 ### Sounds
 - Background birds audience: https://pixabay.com/sound-effects/search/ambience%20birds/
+- Background chatter: https://pixabay.com/sound-effects/people-kids-chatter-primary-school-birmingham-uk-31663/
+- Car passing: https://pixabay.com/sound-effects/city-car-passing-and-birds-chirping-in-the-background-94401/
+- Bust street: https://pixabay.com/sound-effects/city-nearby-city-street-ambience-192219/
 - Kenney.nl for all audio clips
 
 ### Models

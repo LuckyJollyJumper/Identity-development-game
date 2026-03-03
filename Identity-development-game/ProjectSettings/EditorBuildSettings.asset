@@ -20,7 +20,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/ClothingMiniGame.unity
     guid: 3e3cdddbf7434524cbad0cda73cb221a
+  - enabled: 1
+    path: Assets/Project/Scenes/SportMinigame.unity
+    guid: c942ae67b351e8343bd8c2161f52bad9
   m_configObjects:
+    com.unity.adaptivePerformance.basic.provider_settings: {fileID: 11400000, guid: 6a2624d0f5ef95d48bf61e5ff0583f57, type: 2}
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 05072ce03f428c14d9008879b7712f21, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 3f2ec4ef5a69ba24eb8ba863834cd65f, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: c9f55b96c69a23e4e95c8bbe5b320384, type: 2}

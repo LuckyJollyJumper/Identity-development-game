@@ -185,7 +185,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -411,6 +411,14 @@ PrefabInstance:
     - target: {fileID: 1248143990430081527, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Name
       value: DropLocation
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
+      propertyPath: m_CellSize.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
+      propertyPath: m_CellSize.y
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6407264624871929356, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Pivot.x
@@ -727,7 +735,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 160.5}
+  m_SizeDelta: {x: 0, y: 185.58}
   m_Pivot: {x: 0.5, y: -0.000000007450581}
 --- !u!1001 &271562689
 PrefabInstance:
@@ -874,6 +882,14 @@ PrefabInstance:
     - target: {fileID: 1248143990430081527, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Name
       value: DropLocation (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
+      propertyPath: m_CellSize.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
+      propertyPath: m_CellSize.y
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6407264624871929356, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Pivot.x
@@ -1051,6 +1067,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DropLocation (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
+      propertyPath: m_CellSize.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
+      propertyPath: m_CellSize.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 6407264624871929356, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1152,6 +1176,14 @@ PrefabInstance:
     - target: {fileID: 1248143990430081527, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Name
       value: DropLocation (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
+      propertyPath: m_CellSize.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
+      propertyPath: m_CellSize.y
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6407264624871929356, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Pivot.x
@@ -1497,7 +1529,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 80, y: 80}
+  m_CellSize: {x: 90, y: 90}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 3
@@ -1566,16 +1598,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3505a3c3e179c894eb24ed4d75fabf9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleManager
-  Puzzlename: Art Puzzle
-  PuzzleType: 1
+  ActivityID: 0
+  ActivityName: 
+  ActivityType: 0
   RewardCoins: 3
-  DropLocations: []
-  PuzzleTimer: {fileID: 0}
+  ActivityTimer: {fileID: 0}
   TimeText: {fileID: 0}
   PopupWindowPrefab: {fileID: 0}
+  ActivityCanvas: {fileID: 0}
   DebugID: '[PuzzleManager]'
   DebugMode: 1
-  MinigameCanvas: {fileID: 0}
 --- !u!1 &736381928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,14 +1634,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736381928}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
@@ -1717,7 +1749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 479307432274141558, guid: 1204a70e1758e194a8d5da81fee29052, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.2
+      value: 3.9
       objectReference: {fileID: 0}
     - target: {fileID: 479307432274141558, guid: 1204a70e1758e194a8d5da81fee29052, type: 3}
       propertyPath: m_LocalScale.z
@@ -1725,11 +1757,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 479307432274141558, guid: 1204a70e1758e194a8d5da81fee29052, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.51344
+      value: -3.57
       objectReference: {fileID: 0}
     - target: {fileID: 479307432274141558, guid: 1204a70e1758e194a8d5da81fee29052, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.14
+      value: 1.94
       objectReference: {fileID: 0}
     - target: {fileID: 479307432274141558, guid: 1204a70e1758e194a8d5da81fee29052, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1788,6 +1820,14 @@ PrefabInstance:
     - target: {fileID: 1248143990430081527, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Name
       value: DropLocation (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
+      propertyPath: m_CellSize.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
+      propertyPath: m_CellSize.y
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6407264624871929356, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Pivot.x
@@ -1916,20 +1956,24 @@ PrefabInstance:
       value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_ChildAlignment
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Padding.m_Left
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Padding.m_Right
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Padding.m_Bottom
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6407264624871929356, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Pivot.x
@@ -2373,7 +2417,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 201.55096}
+  m_AnchoredPosition: {x: 0, y: 217.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1077875059
@@ -2434,6 +2478,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2570,6 +2615,14 @@ PrefabInstance:
     - target: {fileID: 1248143990430081527, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Name
       value: DropLocation (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
+      propertyPath: m_CellSize.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
+      propertyPath: m_CellSize.y
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6407264624871929356, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Pivot.x
@@ -2767,6 +2820,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

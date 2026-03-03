@@ -7,6 +7,8 @@ using System.Collections.Generic;
 
 /// <summary>
 /// A pop-up window that displays text and can cycle through multiple texts. It will pause player interaction while active.
+/// Subscribing to OnPopUpClosed allows other scripts to trigger actions when the pop-up is closed. Make sure to set the PopUpTexts
+/// before it gets the Start method is called.
 /// </summary>
 public class PopUpWindow : MonoBehaviour, IPointerClickHandler
 {
@@ -16,7 +18,7 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
     [Tooltip("If true, the pop-up delete itself after all texts are displayed.")]
     [SerializeField] public bool DeleteOnClose = true; // If true, the pop-up GameObject will be destroyed when the interaction ends. Otherwise, it will just be deactivated.
     [Header("Debug")]
-    [SerializeField] public bool DebugMode = false;
+    [SerializeField] protected bool DebugMode = false;
     protected string DebugID = "[PopUpWindow]";
     protected Playercontroller Player;
     protected TextMeshProUGUI PopUpText;
@@ -46,14 +48,17 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
         }
         this.CurrentTextIndex++;
     }
-    public virtual void SetPopUpText(string text){ 
+    protected virtual void SetPopUpText(string text){ 
         if (PopUpText == null){ 
             if (DebugMode){Debug.Log($"{DebugID} PopUpText is apparently empty");}
             this.PopUpText = GameObject.Find("PopUpText").GetComponent<TMPro.TextMeshProUGUI>(); 
         }
         this.PopUpText.text = text; 
     }
-    private void PlayCurrenAudioClip(){
+    /// <summary>
+    /// Syncs the audio clips from the PopUpAudioClips list with the current text index and plays the corresponding audio clip if it exists.
+    /// </summary>
+    protected void PlayCurrenAudioClip(){
         if (PopUpAudioClips.Count > this.CurrentTextIndex){
             if(PopUpAudioClips[this.CurrentTextIndex] != null){
                 if (DebugMode){ Debug.Log($"{DebugID} Playing audio clip for pop-up text index {this.CurrentTextIndex}"); }
@@ -77,15 +82,23 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
         
         if (DebugMode){ Debug.Log($"{DebugID} Pop-up interaction ended and window closed"); }
         if (DeleteOnClose) { Destroy(this.gameObject); }
-       
     }
 
 
+    /// <summary>
+    /// Used to detect clicks on the pop-up window. When the pop-up is clicked, it will call NextPopUpText() to 
+    /// either show the next text or close the pop-up if there are no more texts.
+    /// </summary>
+    /// <param name="eventData"></param>
     public virtual void OnPointerClick(PointerEventData eventData){
         NextPopUpText();
         if (DebugMode){ Debug.Log($"{DebugID} PopUpWindow clicked"); }
     }
 
+    /// <summary>
+    /// Used by other scripts to clear all subscribed actions to the OnPopUpClosed event.
+    /// Used to fully reset the PopUpWindow. Used by the quests characters.
+    /// </summary>
     public virtual void ClearActions(){
         OnPopUpClosed = null;
         if (DebugMode){ Debug.Log($"{DebugID} OnPopUpClosed event cleared"); }

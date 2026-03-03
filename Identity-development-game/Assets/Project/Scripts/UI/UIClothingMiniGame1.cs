@@ -4,33 +4,14 @@ using System.Collections.Generic;
 /// <summary>
 /// UI class that controls all the UI elements for the puzzle minigame.
 /// </summary>
-public class UIPaintingMiniGame : MonoBehaviour
+public class UIClothingMiniGame : MonoBehaviour
 {
-    [HideInInspector] public TMPro.TextMeshProUGUI TimeText;
     public List<DropLocation> DropLocations;
-    public List<PuzzlePieceItem> PuzzlePieces;
+    public List<ClothingPieceItem> ClothingPieces;
     public PuzzleActivityManager PuzzleManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start(){
-        PuzzleManager = GameObject.Find("PuzzleManager").GetComponent<PuzzleActivityManager>();
-        if (PuzzleManager == null)
-        {
-            Debug.Log($"[UIPaintingMiniGame] No PuzzleManager found");
-        }
-        
-        DropLocations = new List<DropLocation>(FindObjectsByType<DropLocation>(FindObjectsSortMode.None));
-        DropLocation startDropLocation = DropLocations.Find(dl => dl.gameObject.name == "StartDropLocation");
-        if (startDropLocation != null){
-            DropLocations.Remove(startDropLocation);
-        }
 
-        PuzzlePieces = new List<PuzzlePieceItem>(FindObjectsByType<PuzzlePieceItem>(FindObjectsSortMode.None));
-        foreach (PuzzlePieceItem piece in PuzzlePieces){
-            piece.OnItemPlaced += CheckPuzzleCompletion;
-        }
-
-        TimeText = transform.Find("TimerText").GetComponent<TMPro.TextMeshProUGUI>();
-        TimeText.text = "Tijd: 0 s";
     }
 
     public void CheckPuzzleCompletion(){
@@ -63,7 +44,4 @@ public class UIPaintingMiniGame : MonoBehaviour
         return isCorrect;
     }
 
-    public void SetTimeText(float elapsed){
-        TimeText.text = $"Tijd: {elapsed:F0} s";
-    }
 }
