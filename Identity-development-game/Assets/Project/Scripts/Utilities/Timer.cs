@@ -7,6 +7,53 @@ public class Timer : MonoBehaviour
     private float Duration = 0f;
     private bool UsesDuration = false;
 
+    // ------------------------------------------------------------------
+    // Convenience helpers for yielding
+    // ------------------------------------------------------------------
+
+    /// <summary>
+    /// Static coroutine that simply waits for <paramref name="seconds"/> before returning.
+    /// This allows other scripts to do <c>StartCoroutine(Timer.Delay(2f));</c> without
+    /// needing a Timer component instance.
+    /// </summary>
+    public static System.Collections.IEnumerator Delay(float seconds)
+    {
+        float t = 0f;
+        while (t < seconds)
+        {
+            t += Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    /// <summary>
+    /// Instance coroutine: starts a duration timer and yields until it finishes.
+    /// Useful when you already have a Timer component and want to block further
+    /// execution in a coroutine until <paramref name="seconds"/> have passed.
+    /// </summary>
+    public System.Collections.IEnumerator WaitForDuration(float seconds)
+    {
+        StartTimerWithDuration(seconds);
+        while (!IsFinished())
+        {
+            yield return null;
+        }
+    }
+
+    /// <summary>
+    /// Waits for the remaining time on a previously configured duration timer.
+    /// Call <c>StartTimerWithDuration</c> beforehand.
+    /// </summary>
+    public System.Collections.IEnumerator WaitRemaining()
+    {
+        while (UsesDuration && !IsFinished())
+        {
+            yield return null;
+        }
+    }
+
+    // ------------------------------------------------------------------
+
     /// <summary>
     /// Starts the timer.
     /// </summary>

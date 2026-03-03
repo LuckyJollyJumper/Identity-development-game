@@ -22953,9 +22953,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b464b9e4c0fa8f642b05a98545d22016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  SchoolMapCanvas: {fileID: 0}
-  WelcomeAudios1: []
+  TutorialObjects: {fileID: 1769227436}
+  SchoolMapCanvas: {fileID: 1698815133}
+  WelcomeAudios1:
+  - {fileID: 8300000, guid: 614f00fb809b97c479c016fc50d50a17, type: 3}
+  - {fileID: 8300000, guid: d13d2e5a64d66d241b9af9cd9af96ba3, type: 3}
   DebugMode: 1
+  AlwaysStartTutorial: 1
   TutorialQuest:
     IsActive: 0
     QuestName: Verloren boeken

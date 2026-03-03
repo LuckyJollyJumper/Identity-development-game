@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "R5CX60HV53B",
         "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
-        "processId": 26478,
+        "processId": 8884,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -24,6 +24,12 @@
             "deviceId": "R5CX60HV53B",
             "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
             "processId": 26478,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CX60HV53B",
+            "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
+            "processId": 8884,
             "exited": false
         }
     ],
