@@ -59,7 +59,7 @@ public class GuidancePointer : MonoBehaviour
         }
     }
 
-    void SetVisible(bool visible){
+    public void SetVisible(bool visible){
         if (gameObject.activeSelf != visible)
             gameObject.SetActive(visible);
     }

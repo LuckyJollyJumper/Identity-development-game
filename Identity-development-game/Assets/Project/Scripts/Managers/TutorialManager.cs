@@ -65,8 +65,8 @@ public class TutorialManager : MonoBehaviour
         };
         PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpAudioClips = WelcomeAudios1;
         PopupWindowPrefab.GetComponent<PopUpWindow>().OnPopUpClosed += () => {
-            QuestManager.Instance.UpdateQuestProgress(1, TutorialQuest.QuestName);
             if (DebugMode){ Debug.Log($"{DebugID} Completed step 1"); }
+            QuestManager.Instance.UpdateQuestProgress(1, TutorialQuest.QuestName);
         };
         GameObject popupInstance = Instantiate(PopupWindowPrefab, SchoolMapCanvas.transform);
     }
@@ -81,9 +81,11 @@ public class TutorialManager : MonoBehaviour
         };
         // PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpAudioClips = WelcomeAudios1;
         PopupWindowPrefab.GetComponent<PopUpWindow>().OnPopUpClosed += () => {
-            QuestManager.Instance.UpdateQuestProgress(1, TutorialQuest.QuestName);
             if (DebugMode){ Debug.Log($"{DebugID} Completed step 2"); }
+            PointerObject.SetVisible(true);
             PointerObject.target = NPC;
+            QuestManager.Instance.UpdateQuestProgress(1, TutorialQuest.QuestName);
+            Destroy(this.gameObject);
         };
         GameObject popupInstance = Instantiate(PopupWindowPrefab, SchoolMapCanvas.transform);
     }
