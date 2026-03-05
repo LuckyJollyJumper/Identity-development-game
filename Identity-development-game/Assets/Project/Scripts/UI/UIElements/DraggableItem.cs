@@ -11,8 +11,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public event Action OnItemPlaced; // Event triggered when the item is placed on a new empty drop location
     [Tooltip("Parent transform to return to after dragging. Displayed for Debug purposes")]
     public Transform ParentAfterDrag;
-    private Image ItemImage;
-    private Transform CanvasObject;
+    protected Image ItemImage;
+    protected Transform CanvasObject;
     
     [Header("Debug")]
     [SerializeField] public bool DebugMode = false;
