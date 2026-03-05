@@ -38,7 +38,7 @@ public class QuestManager : MonoBehaviour
     /// </summary>
     public void AddQuestData(QuestData quest, GameObject NPC){
         AvailableQuests.Add((quest,NPC));
-        if (DebugMode){ Debug.Log($"{DebugID} Added quest \'{quest.QuestName}\'"); }
+        if (DebugMode){ Debug.Log($"{DebugID} Added quest \'{quest.QuestName}\' from {NPC.name}"); }
     }
 
     /// <summary>

@@ -31,6 +31,10 @@ public class UIPlayerInfo : MonoBehaviour
         LvlText.text = $"{data.Level}";
     }
 
+    public void ResetGameFromButton(){
+        GameManager.Instance.DeleteSave();
+    }
+
     public void UpdateInventory(){ Inventory.GetComponent<UIInventory>().ReloadInventory(); }
 
     public void OpenCloseInventory(){ Inventory.SetActive(!Inventory.activeSelf); }

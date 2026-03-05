@@ -23,6 +23,9 @@ public class ScenesManager : MonoBehaviour{
     public void LoadScene(Scenes scene){
         SceneManager.LoadScene(scene.ToString());
     }
+    public string GetActiveScene(){
+        return SceneManager.GetActiveScene().name;
+    }
     public void QuitGame(){
         Application.Quit();
         //UnityEditor.EditorApplication.isPlaying = false;// TODO: Remove this line for build!!!!!!!!!!!

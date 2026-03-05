@@ -7,6 +7,6 @@ public class UIStartScreen : MonoBehaviour
     /// Called from the start button on the start screen.
     /// </summary>
     public void StartGame(){
-        GameManager.Instance.PrepareGameData();
+        GameManager.Instance.LoadPlayerData();
     }
 }

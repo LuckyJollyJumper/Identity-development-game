@@ -42,38 +42,41 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
         else if (instance != this){ Destroy(this.gameObject); }
+        SetUpGameManagerData();
+    }
 
-        //PrepareGameData();
-        Debug.Log($"{DebugID} Game Started");
+    public void SetUpGameManagerData(){
+        _jsonSaveSystem = new JsonSaveSystem();
+        _scenesManager = GetComponentInChildren<ScenesManager>();
+        _serverData = _jsonSaveSystem.LoadServerData();
+        SaveFakePlayerData(); // CAN BE REMOVED, only used for testing without server
+        
+        // Only do this loading automatically when in Schoolmap scene
+        if (_scenesManager.GetActiveScene() == "SchoolMap"){
+            _SchoolMapCanvas = FindFirstObjectByType<UISchoolMap>();
+            LoadPlayerData();
+            UpdatePlayerHUD();
+        }
     }
 
     /// <summary>
-    /// Prepares the game data by initializing the JsonSaveSystem, loading player data from disk 
-    /// (or starting character creation if no data is found), and loading server data. Also gets 
-    /// references to ScenesManager and UISchoolMap for later use by other gameObjects.
+    /// Load player data if it is on disk otherwise start new character creation
     /// </summary>
-    public void PrepareGameData(){
-        _jsonSaveSystem = new JsonSaveSystem();
-        _scenesManager = GetComponentInChildren<ScenesManager>();
-        _SchoolMapCanvas = FindFirstObjectByType<UISchoolMap>();
-
-        SaveFakePlayerData(); // CAN BE REMOVED, only used for testing without server
-    
-        // Load player data if it is on disk otherwise start new character creation
+    public void LoadPlayerData(){
         (bool playerPresent, PlayerData data) = _jsonSaveSystem.LoadPlayerData();
         _playerData = data;
+        _jsonSaveSystem.SavePlayerData(_playerData);
         if (!playerPresent){
             Debug.Log($"{DebugID} No player found on disk, creating new one");
             SetPlayerID(); // Assign a unique playerID from the server
             _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
         }
         else{
-            _scenesManager.LoadScene(ScenesManager.Scenes.SchoolMap);
-            UpdatePlayerHUD();
+            Debug.Log($"{DebugID} Player {_playerData.PlayerName} found on disk, loading existing data");
+            // Load the schoolmapif we are in the title Scene
+            if (_scenesManager.GetActiveScene() != "SchoolMap"){ _scenesManager.LoadScene(ScenesManager.Scenes.SchoolMap); }
         }
         
-        // Load server data for access during play
-        _serverData = _jsonSaveSystem.LoadServerData();
     }
 
     /// <summary>
@@ -112,6 +115,7 @@ public class GameManager : MonoBehaviour
         };
         if (!_serverData.Players.Any(l => l.PlayerID == p4.PlayerID && l.PlayerName == p4.PlayerName)){ _serverData.Players.Add(p4); }
         Debug.Log($"{DebugID} Fake player data saved to server");
+        _jsonSaveSystem.SaveServerData(_serverData);
     }
 
 
@@ -146,7 +150,7 @@ public class GameManager : MonoBehaviour
         GetServerData(); // Make sure we have the latest server data to assign a unique playerID
         int id = this._serverData.NextPlayerID;
         this._playerData.PlayerID = id;
-        this._serverData.NextPlayerID += 1;
+        this._serverData.NextPlayerID ++;
         _jsonSaveSystem.SaveServerData(this._serverData);
         SaveGame();
     }
