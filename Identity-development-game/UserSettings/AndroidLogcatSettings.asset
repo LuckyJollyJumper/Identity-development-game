@@ -3,7 +3,7 @@
     "m_SelectedProcess": {
         "deviceId": "R5CX60HV53B",
         "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
-        "processId": 13447,
+        "processId": 27147,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -60,6 +60,30 @@
             "deviceId": "R5CX60HV53B",
             "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
             "processId": 13447,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CX60HV53B",
+            "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
+            "processId": 31337,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CX60HV53B",
+            "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
+            "processId": 13664,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CX60HV53B",
+            "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
+            "processId": 23052,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CX60HV53B",
+            "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
+            "processId": 27147,
             "exited": false
         }
     ],
