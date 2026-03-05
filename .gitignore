@@ -14,6 +14,7 @@ Temp/
 Packages/
 Library/
 *.log
+_Recovery/
 
 # Unity asset packs that should not be commited to version control
 VirtualJoyStick/
