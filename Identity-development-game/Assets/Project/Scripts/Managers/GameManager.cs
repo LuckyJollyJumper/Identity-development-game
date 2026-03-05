@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         }
         else if (instance != this){ Destroy(this.gameObject); }
 
-        PrepareGameData();
+        //PrepareGameData();
         Debug.Log($"{DebugID} Game Started");
     }
 
@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour
         _jsonSaveSystem = new JsonSaveSystem();
         _scenesManager = GetComponentInChildren<ScenesManager>();
         _SchoolMapCanvas = FindFirstObjectByType<UISchoolMap>();
+
+        SaveFakePlayerData(); // CAN BE REMOVED, only used for testing without server
     
         // Load player data if it is on disk otherwise start new character creation
         (bool playerPresent, PlayerData data) = _jsonSaveSystem.LoadPlayerData();
@@ -66,11 +68,11 @@ public class GameManager : MonoBehaviour
             _scenesManager.LoadScene(ScenesManager.Scenes.CharacterCreator);
         }
         else{
+            _scenesManager.LoadScene(ScenesManager.Scenes.SchoolMap);
             UpdatePlayerHUD();
         }
         
         // Load server data for access during play
-        SaveFakePlayerData(); // CAN BE REMOVED, only used for testing without server
         _serverData = _jsonSaveSystem.LoadServerData();
     }
 
@@ -109,7 +111,7 @@ public class GameManager : MonoBehaviour
             Points = 2103,
         };
         if (!_serverData.Players.Any(l => l.PlayerID == p4.PlayerID && l.PlayerName == p4.PlayerName)){ _serverData.Players.Add(p4); }
-        if (DebugID){ Debug.Log($"{DebugID} Fake player data saved to server"); }
+        Debug.Log($"{DebugID} Fake player data saved to server");
     }
 
 

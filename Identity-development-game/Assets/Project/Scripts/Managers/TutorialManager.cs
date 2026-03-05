@@ -15,14 +15,15 @@ public class TutorialManager : MonoBehaviour
 
     [Header("Audio Clips")]
     [SerializeField] public List<AudioClip> WelcomeAudios1;
+    [SerializeField] public List<AudioClip> WelcomeAudios2;
 
     [Header("Debug")]
     [SerializeField] private bool DebugMode = true;
     [SerializeField] private bool AlwaysStartTutorial = false;
     private string DebugID = "[TutorialManager]";
-    public QuestData TutorialQuest = new(){
+    [HideInInspector] public QuestData TutorialQuest = new(){
         QuestName = "Tutorial",
-        Description = "Called from TutorialManager, if IsActive, the ",
+        Description = "Called from TutorialManager, if IsActive",
         Goal = 3,
         CurrentProgress = 0,
         RewardCoins = 0,
@@ -55,7 +56,7 @@ public class TutorialManager : MonoBehaviour
     /// Only used on first visit of the game.
     /// </summary>
     public void StartStep1(){
-        if (DebugMode){ Debug.Log($"{DebugID} Starting tutorial step 1: Welcome message"); }
+        if (DebugMode){ Debug.Log($"{DebugID} Starting tutorial step 1"); }
 
         GameObject PopupWindowPrefab = Resources.Load<GameObject>("PopUpPanel");
         PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpTexts = new List<string>{
@@ -64,30 +65,24 @@ public class TutorialManager : MonoBehaviour
             $"Volg de pijl bij je karakter om verder te gaan"
         };
         PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpAudioClips = WelcomeAudios1;
-        PopupWindowPrefab.GetComponent<PopUpWindow>().OnPopUpClosed += () => {
-            if (DebugMode){ Debug.Log($"{DebugID} Completed step 1"); }
-            QuestManager.Instance.UpdateQuestProgress(1, TutorialQuest.QuestName);
-        };
         GameObject popupInstance = Instantiate(PopupWindowPrefab, SchoolMapCanvas.transform);
+        QuestManager.Instance.UpdateQuestProgress(1, TutorialQuest.QuestName);
+        if (DebugMode){ Debug.Log($"{DebugID} Ended step 1"); }
     }
 
     public void StartStep2(){
-        if (DebugMode){ Debug.Log($"{DebugID} Starting tutorial step 2: Movement tutorial"); }
+        if (DebugMode){ Debug.Log($"{DebugID} Starting tutorial step 2"); }
         GameObject PopupWindowPrefab = Resources.Load<GameObject>("PopUpPanel");
         PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpTexts = new List<string>{
             $"Goed zo! Objecten in de wereld met een witte wolk erboven zijn interactief",
             $"Dus elke wolk die je tegen komt kan je verder helpen in het spel",
             $"Probeer maar eens op de wolk met de tekst scorebord te klikken!"
         };
-        // PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpAudioClips = WelcomeAudios1;
-        PopupWindowPrefab.GetComponent<PopUpWindow>().OnPopUpClosed += () => {
-            if (DebugMode){ Debug.Log($"{DebugID} Completed step 2"); }
-            PointerObject.SetVisible(true);
-            PointerObject.target = NPC;
-            QuestManager.Instance.UpdateQuestProgress(1, TutorialQuest.QuestName);
-            Destroy(this.gameObject);
-        };
+        PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpAudioClips = WelcomeAudios2;
         GameObject popupInstance = Instantiate(PopupWindowPrefab, SchoolMapCanvas.transform);
+        PointerObject.SetVisible(true);
+        PointerObject.target = NPC;
+        QuestManager.Instance.UpdateQuestProgress(1, TutorialQuest.QuestName);
     }
 
     /// <summary>
