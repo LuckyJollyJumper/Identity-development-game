@@ -1,9 +1,9 @@
 {
-    "m_SelectedDeviceId": "52000212eefaa425",
+    "m_SelectedDeviceId": "R5CX60HV53B",
     "m_SelectedProcess": {
-        "deviceId": "52000212eefaa425",
+        "deviceId": "R5CX60HV53B",
         "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
-        "processId": 7035,
+        "processId": 26805,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -84,6 +84,12 @@
             "deviceId": "R5CX60HV53B",
             "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
             "processId": 27147,
+            "exited": false
+        },
+        {
+            "deviceId": "R5CX60HV53B",
+            "name": "com.UnityTechnologies.UniversalMobile3DTemplate",
+            "processId": 26805,
             "exited": false
         },
         {

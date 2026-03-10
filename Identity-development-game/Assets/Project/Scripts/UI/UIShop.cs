@@ -13,6 +13,12 @@ public class UIShop : MonoBehaviour
     [SerializeField] private GameObject Grid; // UI grid that holds the items in the shop
     private List<ItemData> ShopInventory; // The data for all the shopItems
 
+    //Used when needing to rush things because Resources.Load did not work
+    [SerializeField] private Sprite Compas_A;
+    [SerializeField] private Sprite Clock_A;
+    [SerializeField] private Sprite Pendant_D;
+    [SerializeField] private Sprite Present_A;
+
     [Header("Debug")]
     [SerializeField ] public bool DebugMode = false;
     private string DebugID = "[Shop UI]";
@@ -22,24 +28,28 @@ public class UIShop : MonoBehaviour
 
         ShopInventory = new(){
             new ItemData(){
-                ItemName = "Item1",
-                CoinCost = 10,
-                Description = "Item1"
-            },
-            new ItemData(){
-                ItemName = "Item2",
-                CoinCost = 5,
-                Description = "Item2"
-            },
-            new ItemData(){
-                ItemName = "Item3",
+                ItemName = "Compas",
                 CoinCost = 3,
-                Description = "Item3"
+                Description = "Geeft je meer snelheid met lopen",
+                Sprite = Compas_A
             },
             new ItemData(){
-                ItemName = "Item4",
-                CoinCost = 0,
-                Description = "Item4"
+                ItemName = "Zandloper",
+                CoinCost = 2,
+                Description = "Geeft je meer tijd in minigames",
+                Sprite = Clock_A
+            },
+            new ItemData(){
+                ItemName = "Ketting",
+                CoinCost = 3,
+                Description = "Item3",
+                Sprite = Pendant_D
+            },
+            new ItemData(){
+                ItemName = "?",
+                CoinCost = 10,
+                Description = "Item4",
+                Sprite = Present_A
             },
 
         };

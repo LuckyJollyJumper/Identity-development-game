@@ -13,7 +13,11 @@ public class ShopItemSlot : MonoBehaviour
     [SerializeField] private Image ItemImage;
     [SerializeField] private GameObject ConfirmationPopUp;
     [SerializeField] private TMPro.TextMeshProUGUI ConfirmationPopUpText;
+    [SerializeField] private TMPro.TextMeshProUGUI DescriptionText;
+    [SerializeField] private GameObject DescriptionPopUp;
+    [Header("Item details")]
     [SerializeField] private ItemData ShopItem;
+  
 
     void Start(){
         ConfirmationPopUp.SetActive(false);
@@ -31,6 +35,7 @@ public class ShopItemSlot : MonoBehaviour
         this.CostText.text = $"{ShopItem.CoinCost}<Sprite index=0>";
         this.ItemImage.sprite = ShopItem.Sprite;
         this.NameText.text = ShopItem.ItemName;
+        this.DescriptionText.text = ShopItem.Description;
 
         Debug.Log(this.ShopItem.ItemName);
 
@@ -47,4 +52,7 @@ public class ShopItemSlot : MonoBehaviour
     }
     public void CloseConfirmationPopUp(){ ConfirmationPopUp.SetActive(false); }
     public void OpenConfirmationPopUp(){ ConfirmationPopUp.SetActive(true); }
+
+    public void OpenDescriptionPopUp(){ DescriptionPopUp.SetActive(true); }
+    public void CloseDescriptionPopUp(){ DescriptionPopUp.SetActive(false); }
 }
