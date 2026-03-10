@@ -14,6 +14,15 @@ public class UIClothingMiniGame : MonoBehaviour
 
     }
 
+    public void CheckCorrectPlacement()
+    {
+        
+        // foreach(DropLocation l in DropLocations)
+        // {
+        //     l.PlacedItem.GetComponent<ClothingPieceItem>().ClothingSize;
+        // }
+    }
+
     public void CheckPuzzleCompletion(){
         // Debug.Log("Checking puzzle completion...");
         // if (AllPiecesCorrect()){

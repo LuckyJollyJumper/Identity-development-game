@@ -64,4 +64,41 @@ public class ClothingPieceItem : DraggableItem
         }
     }
 
+    // public static bool operator <(ClothingPieceItem obj, ClothingPieceItem other){
+    //     if (obj == null || other == null)
+    //         return false;
+
+    //     switch (other.size)
+    //     {
+    //         case ClothingSize.Small: 
+    //             if (obj.size == ClothingSize.Small){
+    //                 return false;
+    //             }else if (obj.size == ClothingSize.Medium){
+    //                 return true;
+    //             }else if (obj.size == ClothingSize.Large){
+    //                 return true;
+    //             }break;
+    //         case ClothingSize.Medium:
+    //             if (obj.size == ClothingSize.Small){
+    //                 return false;
+    //             }else if (obj.size == ClothingSize.Medium){
+    //                 return false;
+    //             }else if (obj.size == ClothingSize.Large){
+    //                 return true;    
+    //             }break;
+    //         case ClothingSize.Large:
+    //             if (obj.size == ClothingSize.Small){
+    //                 return false;
+    //             }else if (obj.size == ClothingSize.Medium){
+    //                 return false;
+    //             }else if (obj.size == ClothingSize.Large){
+    //                 return false;    
+    //             }break;
+
+    //     return ItemName == other.ItemName 
+    //             && Description == other.Description  
+    //             && CoinCost == other.CoinCost;
+    //     }
+
+    // }
 }
