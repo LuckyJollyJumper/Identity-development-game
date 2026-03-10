@@ -17,11 +17,14 @@ public class ScenesManager : MonoBehaviour{
         PuzzleMiniGame, // Minigame to solve puzzles
         ClothingMiniGame, // Minigame to sort clothing pieces
         SportMiniGame,
+        NoScene, // Used to signal that sceneswitching should be ignored, comparable to null
     }
 
     public void Awake(){ Instance = this; }
     public void LoadScene(Scenes scene){
-        SceneManager.LoadScene(scene.ToString());
+        if (scene != Scenes.NoScene){
+            SceneManager.LoadScene(scene.ToString());
+        }
     }
     public string GetActiveScene(){
         return SceneManager.GetActiveScene().name;
