@@ -12,11 +12,13 @@ public class InteractableCharacter : InteractableObject
     [TextArea][SerializeField] public List<string> DialogueTexts;
     [Tooltip("List of audio clips for the character, should be in the same order as DialogueTexts")]
     [SerializeField] public List<AudioClip> CharacterAudioClips;
+    [SerializeField] public List<string> PopUpChoiceOptions;
     
     public override void Start(){
         base.UI.GetComponent<PopUpWindowCharacter>().SetCharacterPopUpText(DialogueTexts, CharacterName);
         base.UI.GetComponent<PopUpWindowCharacter>().PopUpAudioClips = CharacterAudioClips; // Set audio clips for the pop-up
         base.UI.GetComponent<PopUpWindowCharacter>().DeleteOnClose = false; // keep to interact with it more than once
+        base.UI.GetComponent<PopUpWindowCharacter>().PopUpChoiceOptions = PopUpChoiceOptions;
         base.Start();
     }
     

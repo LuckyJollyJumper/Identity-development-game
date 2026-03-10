@@ -15,7 +15,8 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
     [Tooltip("List of texts to display in the pop-up window, in order")]
     [TextArea][SerializeField] public List<string> PopUpTexts;
     [SerializeField] public List<AudioClip> PopUpAudioClips; // Optional audio clips for each pop-up text
-    [SerializeField] public List<ChoiceField> PopUpChoiceOptions;
+    [Tooltip("Leave empty if you dont want a choice with buttons at the final PopUp. index 0 is the popuptext and index 1 and 2 are the buttons texts")]
+    [SerializeField] public List<string> PopUpChoiceOptions;
     [Tooltip("If true, the pop-up delete itself after all texts are displayed.")]
     [SerializeField] public bool DeleteOnClose = true; // If true, the pop-up GameObject will be destroyed when the interaction ends. Otherwise, it will just be deactivated.
     [Header("Debug")]
@@ -42,10 +43,20 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
     public virtual void NextPopUpText(){
         if (this.CurrentTextIndex < this.PopUpTexts.Count){
             SetPopUpText(PopUpTexts[this.CurrentTextIndex]);
-            PlayCurrenAudioClip();
+            PlayCurrentAudioClip();
         }else{
             if (DebugMode){ Debug.Log($"{DebugID} No more pop-up texts to display"); }
-            EndInteraction();
+            if (PopUpChoiceOptions.Count == 0){
+                EndInteraction();
+            }
+            else{
+                if (DebugMode){ Debug.Log($"{DebugID} Creating ChoiceField now"); }
+                SetPopUpText("");
+                GameObject chPrefab = Resources.Load<GameObject>("ChoiceField");
+                chPrefab.GetComponent<ChoiceField>().SetChoices(PopUpChoiceOptions, this.gameObject);
+                Instantiate(chPrefab, this.transform.GetChild(0));
+                PopUpChoiceOptions = new();
+            }
         }
         this.CurrentTextIndex++;
     }
@@ -59,7 +70,7 @@ public class PopUpWindow : MonoBehaviour, IPointerClickHandler
     /// <summary>
     /// Syncs the audio clips from the PopUpAudioClips list with the current text index and plays the corresponding audio clip if it exists.
     /// </summary>
-    protected void PlayCurrenAudioClip(){
+    protected void PlayCurrentAudioClip(){
         if (PopUpAudioClips.Count > this.CurrentTextIndex){
             if(PopUpAudioClips[this.CurrentTextIndex] != null){
                 if (DebugMode){ Debug.Log($"{DebugID} Playing audio clip for pop-up text index {this.CurrentTextIndex}"); }

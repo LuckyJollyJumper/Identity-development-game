@@ -1,22 +1,23 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
+/// <summary>
+/// Very ugly fix to add a choice between 2 options in the characters
+/// </summary>
 public class ChoiceField : MonoBehaviour
 {
-    public void SetChoices(List<string> buttons){
-        foreach (string b in buttons){
-            
-        }
+    [HideInInspector] public GameObject parent;
+    [SerializeField] private TextMeshProUGUI Button1;
+    [SerializeField] private TextMeshProUGUI Button2;
+    [SerializeField] private TextMeshProUGUI PopUpText;
+    public void SetChoices(List<string> buttons, GameObject parent){
+        this.PopUpText.text = buttons[0];
+        this.Button1.text = buttons[1];
+        this.Button2.text = buttons[2];
+        this.parent = parent;
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void ButtonPressed(){
+        parent.GetComponent<PopUpWindow>().EndInteraction();
     }
 }
