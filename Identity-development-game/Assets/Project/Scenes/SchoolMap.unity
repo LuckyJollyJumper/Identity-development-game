@@ -1083,7 +1083,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1769227437}
+    m_TransformParent: {fileID: 1435818152}
     m_Modifications:
     - target: {fileID: 2871554214818824431, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: m_Layer
@@ -1139,7 +1139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: CharacterName
-      value: Flora
+      value: Ahmed
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: characterName
@@ -1151,7 +1151,7 @@ PrefabInstance:
       objectReference: {fileID: 1351436713}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: DialogueTexts.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: dialogueTexts.Array.size
@@ -1159,16 +1159,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: 'DialogueTexts.Array.data[0]'
-      value: Hallo! Ik heb jou niet eerder op deze school gezien.
+      value: Dit is mijn favoriete plek om te zitten in de pauze
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: 'DialogueTexts.Array.data[1]'
-      value: Welke vakken ga jij volgen?
+      value: Het is mooi centraal en ik kan met iedereen overweg
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: 'DialogueTexts.Array.data[2]'
-      value: Ik vind het leuk om in de kantine te werken omdat ik dan anderen blij
-        kan maken met eten.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: 'dialogueTexts.Array.data[0]'
@@ -1184,9 +1183,25 @@ PrefabInstance:
       value: Ik vind in de kantine werken leuk omdat ik mensen blij kan maken met
         eten
       objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: PopUpChoiceOptions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'PopUpChoiceOptions.Array.data[0]'
+      value: Heb jij een favoriete plek om te zitten in de pauze?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'PopUpChoiceOptions.Array.data[1]'
+      value: Ja
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'PopUpChoiceOptions.Array.data[2]'
+      value: Nee
+      objectReference: {fileID: 0}
     - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.09
+      value: 5.94
       objectReference: {fileID: 0}
     - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1194,7 +1209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.349998
+      value: 17.4
       objectReference: {fileID: 0}
     - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3054,7 +3069,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1769227437}
+    m_TransformParent: {fileID: 1435818152}
     m_Modifications:
     - target: {fileID: 50883186329650234, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
       propertyPath: m_Layer
@@ -3126,7 +3141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4689004908017122933, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
       propertyPath: 'PopUpTexts.Array.data[0]'
-      value: 'Minigame nog niet '
+      value: 'Sport minigame niet beschikbaar '
       objectReference: {fileID: 0}
     - target: {fileID: 5312096166994091356, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
       propertyPath: m_Layer
@@ -9058,7 +9073,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1769227437}
+    m_TransformParent: {fileID: 1435818152}
     m_Modifications:
     - target: {fileID: 50883186329650234, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
       propertyPath: m_Layer
@@ -38925,7 +38940,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1769227437}
+    m_TransformParent: {fileID: 1435818152}
     m_Modifications:
     - target: {fileID: 2871554214818824431, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: m_Layer
@@ -38977,7 +38992,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: PopUpText
-      value: Hey!
+      value: Goedemorgen!
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: debugMode
@@ -38985,7 +39000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: CharacterName
-      value: Bas
+      value: Mevrouw Jans
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: characterName
@@ -38997,7 +39012,7 @@ PrefabInstance:
       objectReference: {fileID: 721294633}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: DialogueTexts.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: dialogueTexts.Array.size
@@ -39005,7 +39020,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: 'DialogueTexts.Array.data[0]'
-      value: Hallo! Ik heb jou niet eerder op deze school gezien.
+      value: Dit is het cultuur en maatschappij lokaal
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: 'DialogueTexts.Array.data[1]'
@@ -39013,8 +39028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: 'DialogueTexts.Array.data[2]'
-      value: Ik vind het leuk om in de kantine te werken omdat ik dan anderen blij
-        kan maken met eten.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: 'dialogueTexts.Array.data[0]'
@@ -47551,6 +47565,234 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c51d75c76cf44ae7a358c71c3de3837, type: 3}
+--- !u!1001 &1307318841
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1435818152}
+    m_Modifications:
+    - target: {fileID: 2871554214818824431, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943460827006015804, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Name
+      value: NPC (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3781973384669048782, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466499363746691931, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466499363746691931, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466499363746691931, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1059.3813
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466499363746691931, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 123.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067444072106808154, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 205.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067444072106808154, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 30.699951
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138346307764991280, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138346307764991280, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5457666950295255748, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: DebugMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: PopUpText
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: debugMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: CharacterName
+      value: Robin
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: characterName
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: InteractionObject
+      value: 
+      objectReference: {fileID: 1307318843}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: DialogueTexts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: dialogueTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'DialogueTexts.Array.data[0]'
+      value: Ik ga nu naar huis maar weet niet wat ik ga doen dan
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'DialogueTexts.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'DialogueTexts.Array.data[2]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'dialogueTexts.Array.data[0]'
+      value: Welkom op de school!\n\n Weet jij al welke vakken je gaat volgen?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'dialogueTexts.Array.data[1]'
+      value: Ik vind in de kantine werken leuk omdat ik mensen blij kan maken met
+        eten
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'dialogueTexts.Array.data[2]'
+      value: Ik vind in de kantine werken leuk omdat ik mensen blij kan maken met
+        eten
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: PopUpChoiceOptions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'PopUpChoiceOptions.Array.data[0]'
+      value: Weet jij iets leuks om te doen?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'PopUpChoiceOptions.Array.data[1]'
+      value: Ja
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'PopUpChoiceOptions.Array.data[2]'
+      value: Nee
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7390001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.7890005
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8377188
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.54610187
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 66.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875075397114526433, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -2186.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024675430755600440, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060382268427721534, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060382268427721534, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060382268427721534, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 181.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060382268427721534, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 28.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060382268427721534, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060382268427721534, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -26.400002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316917207292646464, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319621490108680658, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917088817233289917, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9025101729989394554, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+--- !u!4 &1307318842 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+  m_PrefabInstance: {fileID: 1307318841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1307318843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6829350583332474693, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+  m_PrefabInstance: {fileID: 1307318841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1309046714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51982,6 +52224,14 @@ Transform:
   - {fileID: 813121462}
   - {fileID: 1769227437}
   - {fileID: 1734719439}
+  - {fileID: 876505989}
+  - {fileID: 1307318842}
+  - {fileID: 1892558600}
+  - {fileID: 738471212}
+  - {fileID: 944565640}
+  - {fileID: 1357783108}
+  - {fileID: 1724613993}
+  - {fileID: 87334953}
   - {fileID: 78859726749595855}
   - {fileID: 250393417}
   - {fileID: 2142979659}
@@ -61723,7 +61973,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1769227437}
+    m_TransformParent: {fileID: 1435818152}
     m_Modifications:
     - target: {fileID: 50883186329650234, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
       propertyPath: m_Layer
@@ -61799,7 +62049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4689004908017122933, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
       propertyPath: 'PopUpTexts.Array.data[0]'
-      value: Start spel
+      value: 'Kleding minigame niet beschikbaar '
       objectReference: {fileID: 0}
     - target: {fileID: 5312096166994091356, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
       propertyPath: m_Layer
@@ -61811,7 +62061,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8676480893431170429, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.77
+      value: 6.7699995
       objectReference: {fileID: 0}
     - target: {fileID: 8676480893431170429, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -61819,7 +62069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8676480893431170429, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.26
+      value: -0.25999928
       objectReference: {fileID: 0}
     - target: {fileID: 8676480893431170429, guid: 4a5e2ef20a77e114f8ca35fe07091bb9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -63070,13 +63320,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 876505989}
-  - {fileID: 738471212}
-  - {fileID: 944565640}
-  - {fileID: 1357783108}
-  - {fileID: 1724613993}
-  - {fileID: 87334953}
+  m_Children: []
   m_Father: {fileID: 1435818152}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1771327199
@@ -67340,6 +67584,234 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6cb93aad3efb2044c9e0ab17af1d0ea9, type: 3}
   m_PrefabInstance: {fileID: 1889079065}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1892558599
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1435818152}
+    m_Modifications:
+    - target: {fileID: 2871554214818824431, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2943460827006015804, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Name
+      value: NPC (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3781973384669048782, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466499363746691931, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466499363746691931, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466499363746691931, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1059.3813
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466499363746691931, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 123.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067444072106808154, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 205.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067444072106808154, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 30.699951
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138346307764991280, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5138346307764991280, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5457666950295255748, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: DebugMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: PopUpText
+      value: pff
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: debugMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: CharacterName
+      value: Robin
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: characterName
+      value: Sam
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: InteractionObject
+      value: 
+      objectReference: {fileID: 1892558601}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: DialogueTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: dialogueTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'DialogueTexts.Array.data[0]'
+      value: Ik vind sporten super leuk ook al maakt het me moe
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'DialogueTexts.Array.data[1]'
+      value: Ik kan mezelf goed uitdagen en ik word elk jaar beter
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'DialogueTexts.Array.data[2]'
+      value: Hou jij van sporten?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'dialogueTexts.Array.data[0]'
+      value: Welkom op de school!\n\n Weet jij al welke vakken je gaat volgen?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'dialogueTexts.Array.data[1]'
+      value: Ik vind in de kantine werken leuk omdat ik mensen blij kan maken met
+        eten
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'dialogueTexts.Array.data[2]'
+      value: Ik vind in de kantine werken leuk omdat ik mensen blij kan maken met
+        eten
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: PopUpChoiceOptions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'PopUpChoiceOptions.Array.data[0]'
+      value: Hou jij van sporten?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'PopUpChoiceOptions.Array.data[1]'
+      value: Ja
+      objectReference: {fileID: 0}
+    - target: {fileID: 5477417865548946234, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: 'PopUpChoiceOptions.Array.data[2]'
+      value: Nee
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 27.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.2782368
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9605125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 212.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875075397114526433, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -2186.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 8024675430755600440, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060382268427721534, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060382268427721534, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060382268427721534, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 181.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060382268427721534, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 28.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060382268427721534, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060382268427721534, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -26.400002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8316917207292646464, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319621490108680658, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8917088817233289917, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9025101729989394554, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+--- !u!4 &1892558600 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+  m_PrefabInstance: {fileID: 1892558599}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1892558601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6829350583332474693, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
+  m_PrefabInstance: {fileID: 1892558599}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1895898957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71301,7 +71773,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1769227437}
+    m_TransformParent: {fileID: 1435818152}
     m_Modifications:
     - target: {fileID: 2943460827006015804, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: m_Name
@@ -78147,7 +78619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.37
+      value: 9.35
       objectReference: {fileID: 0}
     - target: {fileID: 6251383163664224294, guid: b10ed7a756007b7449ddf12f3e1f7ffd, type: 3}
       propertyPath: m_LocalRotation.w
