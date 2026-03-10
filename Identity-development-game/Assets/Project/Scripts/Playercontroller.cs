@@ -3,6 +3,7 @@ using Terresquall;
 using UnityEngine.InputSystem.EnhancedTouch;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// Player controller that moves a player GameObject using a virtual joystick,
@@ -183,6 +184,11 @@ public class Playercontroller : MonoBehaviour
     public void MouseInteract(){
         Vector2 mousePosition = Mouse.current.position.ReadValue();
         if (Mouse.current.leftButton.wasPressedThisFrame){
+            // Check if pointer is over UI elements - if so, don't process interaction
+            if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject(-1)){
+                if (DebugMode){ Debug.Log($"{DebugID} Mouse click over UI - interaction blocked"); }
+                return;
+            }
             RayCastFromTouch(mousePosition);
         }
     }
@@ -193,6 +199,11 @@ public class Playercontroller : MonoBehaviour
 
         foreach (var touch in UnityEngine.InputSystem.EnhancedTouch.Touch.activeTouches){
             if (touch.phase == UnityEngine.InputSystem.TouchPhase.Began){
+                // Check if pointer is over UI elements - if so, don't process interaction
+                if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject(touch.touchId)){
+                    if (DebugMode){ Debug.Log($"{DebugID} Touch over UI (ID: {touch.touchId}) - interaction blocked"); }
+                    continue;
+                }
                 RayCastFromTouch(touch.screenPosition);
             }
         }
