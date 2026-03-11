@@ -9,4 +9,8 @@ public class UIStartScreen : MonoBehaviour
     public void StartGame(){
         GameManager.Instance.LoadPlayerData();
     }
+
+    public void ResetPlayer(){
+        GameManager.Instance.DeleteSave();
+    }
 }

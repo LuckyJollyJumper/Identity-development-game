@@ -412,14 +412,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DropLocation
       objectReference: {fileID: 0}
-    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
-      propertyPath: m_CellSize.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
-      propertyPath: m_CellSize.y
-      value: 90
-      objectReference: {fileID: 0}
     - target: {fileID: 6407264624871929356, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -887,14 +879,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DropLocation (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
-      propertyPath: m_CellSize.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
-      propertyPath: m_CellSize.y
-      value: 90
-      objectReference: {fileID: 0}
     - target: {fileID: 6407264624871929356, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1071,14 +1055,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DropLocation (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
-      propertyPath: m_CellSize.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
-      propertyPath: m_CellSize.y
-      value: 90
-      objectReference: {fileID: 0}
     - target: {fileID: 6407264624871929356, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1180,14 +1156,6 @@ PrefabInstance:
     - target: {fileID: 1248143990430081527, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Name
       value: DropLocation (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
-      propertyPath: m_CellSize.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
-      propertyPath: m_CellSize.y
-      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6407264624871929356, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Pivot.x
@@ -1863,14 +1831,6 @@ PrefabInstance:
     - target: {fileID: 1248143990430081527, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Name
       value: DropLocation (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
-      propertyPath: m_CellSize.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
-      propertyPath: m_CellSize.y
-      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6407264624871929356, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Pivot.x
@@ -2667,14 +2627,6 @@ PrefabInstance:
     - target: {fileID: 1248143990430081527, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Name
       value: DropLocation (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
-      propertyPath: m_CellSize.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3028482206293653175, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
-      propertyPath: m_CellSize.y
-      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6407264624871929356, guid: 6e00051ca53dcbb48b10e75ae72bf27c, type: 3}
       propertyPath: m_Pivot.x
