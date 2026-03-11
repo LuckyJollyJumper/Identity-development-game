@@ -23,3 +23,13 @@ public class InteractableCharacter : InteractableObject
     }
     
 }
+
+/*
+Audio 
+
+NPC: Ryan (M) Speechify
+NPC1: Malik (M) Speechify
+NPC2:
+NPC3: 
+NPC4: Paige (V) Speechify
+*/

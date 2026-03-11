@@ -66,9 +66,11 @@ public class UIShop : MonoBehaviour
         }
         
         List<ItemData> inv = GameManager.Instance._playerData.Inventory;
-        // Use of Any because Contains does not use the overriden Equals in ItemData
-        ShopInventory.RemoveAll(item => inv.Any(i => i.Equals(item)));
-
+        if (inv != null && inv.Count != 0){
+             // Use of Any because Contains does not use the overriden Equals in ItemData
+            ShopInventory.RemoveAll(item => inv.Any(i => i.Equals(item)));
+        }
+       
         foreach (ItemData shopItem in ShopInventory){
             GameObject shopItemPrefab = Resources.Load<GameObject>("ShopSlot");
             shopItemPrefab.GetComponent<ShopItemSlot>().SetShopItemSlot(this, shopItem);

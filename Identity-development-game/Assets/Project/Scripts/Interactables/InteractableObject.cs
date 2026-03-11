@@ -36,7 +36,9 @@ public class InteractableObject : MonoBehaviour
     /// Default: turns the interactionObjects visible.
     /// </summary>
     public virtual void OnReadyForInteraction(){
-       this.InteractionObject.SetActive(true);
+        if (this.InteractionObject != null){
+            this.InteractionObject.SetActive(true);
+        }
     }
 
     /// <summary>

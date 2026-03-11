@@ -210,6 +210,15 @@ public class JsonSaveSystem
     }
 
     public void DeletePlayerFromServer(PlayerData player){
-        //TODO: 
+        GameManager.Instance._serverData = LoadServerData(); // Reload serverData
+        GameManager.Instance._serverData.Players.RemoveAll(p => p.PlayerID == player.PlayerID);
+        SaveServerData(GameManager.Instance._serverData);
+        if (DebugMode){ Debug.Log($"{DebugID} Deleted player \"{player.PlayerName}\" from server"); }
+    }
+    public void DeleteAllPlayersFromServer(){
+        GameManager.Instance._serverData = LoadServerData(); // Reload serverData
+        GameManager.Instance._serverData.Players.Clear();
+        SaveServerData(GameManager.Instance._serverData);
+        if (DebugMode){ Debug.Log($"{DebugID} Deleted all players from server"); }
     }
 }

@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
     public void SetUpGameManagerData(){
         _jsonSaveSystem = new JsonSaveSystem();
         _scenesManager = GetComponentInChildren<ScenesManager>();
+        
+        _jsonSaveSystem.DeleteAllPlayersFromServer();
         _serverData = _jsonSaveSystem.LoadServerData();
         SaveFakePlayerData(); // CAN BE REMOVED, only used for testing without server
         
@@ -73,7 +75,7 @@ public class GameManager : MonoBehaviour
         }
         else{
             Debug.Log($"{DebugID} Player {_playerData.PlayerName} found on disk, loading existing data");
-            // Load the schoolmapif we are in the title Scene
+            // Load the schoolmap if we are in the title Scene
             if (_scenesManager.GetActiveScene() != "SchoolMap"){ _scenesManager.LoadScene(ScenesManager.Scenes.SchoolMap); }
         }
         
@@ -85,35 +87,29 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void SaveFakePlayerData(){
         PlayerData p = new(){
-            PlayerID = 0,
+            PlayerID = 100,
             PlayerName = "Carla",
             Points = 3024,
         };
         if (!_serverData.Players.Any(l => l.PlayerID == p.PlayerID && l.PlayerName == p.PlayerName)){ _serverData.Players.Add(p); }
         PlayerData p1 = new(){
-            PlayerID = 1,
+            PlayerID = 101,
             PlayerName = "Yusuf",
             Points = 512,
         };
         if (!_serverData.Players.Any(l => l.PlayerID == p1.PlayerID && l.PlayerName == p1.PlayerName)){ _serverData.Players.Add(p1); }
         PlayerData p2 = new(){
-            PlayerID = 2,
+            PlayerID = 102,
             PlayerName = "Anna",
             Points = 200,
         };
         if (!_serverData.Players.Any(l => l.PlayerID == p2.PlayerID && l.PlayerName == p2.PlayerName)){ _serverData.Players.Add(p2); }
         PlayerData p3 = new(){
-            PlayerID = 3,
+            PlayerID = 103,
             PlayerName = "Max",
             Points = 2103,
         };
         if (!_serverData.Players.Any(l => l.PlayerID == p3.PlayerID && l.PlayerName == p3.PlayerName)){ _serverData.Players.Add(p3); }
-        PlayerData p4 = new(){
-            PlayerID = 4,
-            PlayerName = "Leila",
-            Points = 2103,
-        };
-        if (!_serverData.Players.Any(l => l.PlayerID == p4.PlayerID && l.PlayerName == p4.PlayerName)){ _serverData.Players.Add(p4); }
         Debug.Log($"{DebugID} Fake player data saved to server");
         _jsonSaveSystem.SaveServerData(_serverData);
     }

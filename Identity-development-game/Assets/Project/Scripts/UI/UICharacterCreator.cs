@@ -21,6 +21,7 @@ public class UICharacterCreator : MonoBehaviour
 
     public void OnNameSubmit(){
         string text = this.InputField.text;
+        GameManager.Instance.SetPlayerData("PlayerName", text);
         this.InputField.interactable = false;
         this.NamePanel.SetActive(false);
 

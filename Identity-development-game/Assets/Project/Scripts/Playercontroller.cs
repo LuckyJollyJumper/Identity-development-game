@@ -272,7 +272,9 @@ public class Playercontroller : MonoBehaviour
         // Assumes only 2 states for now
         if (newState == this.playerState) return;
         if (newState == InteractionState.Interacting){
-            if (DebugMode){ Debug.Log($"{DebugID} Setting state to Interacting"); }
+            if (DebugMode){ 
+                Debug.Log($"{DebugID} Setting state to Interacting"); 
+            }
         }
         else if (newState == InteractionState.Moving){ 
             if (DebugMode){ Debug.Log($"{DebugID} Setting state to Moving"); }

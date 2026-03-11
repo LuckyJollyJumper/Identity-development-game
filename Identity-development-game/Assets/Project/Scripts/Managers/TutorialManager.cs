@@ -10,6 +10,7 @@ public class TutorialManager : MonoBehaviour
     [Tooltip("The objects that are to be excluded when the tutorial starts, e.g. the main UI, so that the player can only interact with the tutorial pop-ups and not the rest of the UI")]
     [SerializeField] private GameObject TutorialObjects;
     [SerializeField] private Transform NPC;
+    [SerializeField] private Transform FirstActivityObject;
     [SerializeField] private UISchoolMap SchoolMapCanvas;
     [SerializeField] private GuidancePointer PointerObject;
 
@@ -24,7 +25,7 @@ public class TutorialManager : MonoBehaviour
     [HideInInspector] public QuestData TutorialQuest = new(){
         QuestName = "Tutorial",
         Description = "Called from TutorialManager, if IsActive",
-        Goal = 3,
+        Goal = 4,
         CurrentProgress = 0,
         RewardCoins = 0,
         RewardPoints = 0,
@@ -42,11 +43,12 @@ public class TutorialManager : MonoBehaviour
                 GameManager.Instance.LevelUpPlayer();
                 TutorialObjects.SetActive(true);
                 if (DebugMode){ Debug.Log($"{DebugID} Tutorial Quest completed!"); }
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
             };
         }
         else{
             if (DebugMode){ Debug.Log($"{DebugID} Player level is {GameManager.Instance._playerData.Level}, skipping tutorial"); }
+            PointerObject.SetVisible(false);
             Destroy(this.gameObject);
         }
     }
@@ -80,9 +82,14 @@ public class TutorialManager : MonoBehaviour
         };
         PopupWindowPrefab.GetComponent<PopUpWindow>().PopUpAudioClips = WelcomeAudios2;
         GameObject popupInstance = Instantiate(PopupWindowPrefab, SchoolMapCanvas.transform);
-        PointerObject.SetVisible(true);
         PointerObject.target = NPC;
         QuestManager.Instance.UpdateQuestProgress(1, TutorialQuest.QuestName);
+        NPC.gameObject.GetComponent<InteractableCharacter>().UI.GetComponent<PopUpWindowCharacter>().OnPopUpClosed += () => {
+            QuestManager.Instance.UpdateQuestProgress(1, TutorialQuest.QuestName);
+            if (DebugMode){ Debug.Log($"{DebugID} Tutorial step 3 started"); }
+            PointerObject.SetVisible(true);
+            PointerObject.target = FirstActivityObject;
+        };
     }
 
     /// <summary>
